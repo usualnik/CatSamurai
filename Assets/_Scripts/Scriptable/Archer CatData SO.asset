@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db30d390001705b4d8d5210bb590969c, type: 3}
+  m_Name: Archer CatData SO
+  m_EditorClassIdentifier: 
+  CatName: Archer
+  CatPrice: 100
+  CatDamage: 0
+  CatPrefab: {fileID: 190347989666117054, guid: 57ead9f220a11e94f8f14b8924dad1a2, type: 3}
+  UISprite: {fileID: 722094881723021290, guid: b7c51e2cf3d3da344bf499826714137f, type: 3}

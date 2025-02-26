@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f4b8fff-50d5-42cb-963b-721691d86c35" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDE3C13F-B32A-4532-9A89-1B3DF03F7908/e5/f103a463/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/UI_CatSetupCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@24b10291b18f/Editor/TMP/TMP_BaseEditorPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Cats/Cat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/RacoonsSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/GridCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/UI_ChooseCatCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MageBulletPrefabMover.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Racoons/RacoonMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Managers/RacoonsSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/UI_Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/UI_CatChooseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Managers/CatSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_CatChooseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/CatChooseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChooseCat.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI_CatSetupMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/CatsDataSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/CatDataSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_ChooseCatSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_CatSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_CatSetupMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_CatSetupCell.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Scriptable/CatDataSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cat.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cats/Tank.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/MageBulletPrefabMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/MageBulletPrefabMover1.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cats/Archer.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_ChooseCatCell.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/UI_ChooseCatMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cats/MageBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UI/GridCell.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cats/Mage.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Cats/Cat.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2sw2EhwnA94YEUMG4WJ6FxETbY1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f4b8fff-50d5-42cb-963b-721691d86c35" name="Default Changelist" comment="" />
+      <created>1739352220937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739352220937</updated>
+      <workItem from="1739352226778" duration="4806000" />
+      <workItem from="1739451178794" duration="1697000" />
+      <workItem from="1739516800366" duration="904000" />
+      <workItem from="1739518308527" duration="1139000" />
+      <workItem from="1739520254484" duration="3593000" />
+      <workItem from="1739702388268" duration="8321000" />
+      <workItem from="1739728852725" duration="721000" />
+      <workItem from="1739805886815" duration="4867000" />
+      <workItem from="1739888903490" duration="6555000" />
+      <workItem from="1740211208552" duration="10949000" />
+      <workItem from="1740497800071" duration="8091000" />
+      <workItem from="1740561977910" duration="7204000" />
+      <workItem from="1740573074868" duration="5900000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1740564848001">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1740564848001" />
+  </component>
+</project>
