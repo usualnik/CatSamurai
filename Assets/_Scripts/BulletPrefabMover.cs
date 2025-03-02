@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MageBulletPrefabMover : MonoBehaviour
+public class BulletPrefabMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
 

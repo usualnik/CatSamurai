@@ -7,20 +7,31 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Scripts" t="Include">
-          <e p="ArcherBulletPrefabMover.cs" t="Include" />
+          <e p="BulletPrefabMover.cs" t="Include" />
           <e p="Cats" t="Include">
-            <e p="Cat.cs" t="Include" />
+            <e p="BaseCat.cs" t="Include" />
+            <e p="CatArcher.cs" t="Include" />
+            <e p="CatMage.cs" t="Include" />
+            <e p="CatTank.cs" t="Include" />
           </e>
-          <e p="MageBulletPrefabMover.cs" t="Include" />
+          <e p="DealDamageToRacoon.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="RacoonsSpawner.cs" t="Include" />
           </e>
           <e p="Racoons" t="Include">
+            <e p="BaseRacoon.cs" t="Include" />
+            <e p="RacoonMeleeAttack.cs" t="Include" />
             <e p="RacoonMover.cs" t="Include" />
+            <e p="RacoonNinja.cs" t="Include" />
           </e>
           <e p="Scriptable" t="Include">
-            <e p="CatDataSO.cs" t="Include" />
+            <e p="CatsSO" t="Include">
+              <e p="CatDataSO.cs" t="Include" />
+            </e>
+            <e p="RacoonsSo" t="Include">
+              <e p="RacoonDataSO.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="GridCell.cs" t="Include" />

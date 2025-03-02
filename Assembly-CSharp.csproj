@@ -46,17 +46,24 @@
     <Analyzer Include="D:\job\Unity Hub\Unity engine\6000.0.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\Scriptable\CatDataSO.cs" />
-    <Compile Include="Assets\_Scripts\ArcherBulletPrefabMover.cs" />
-    <Compile Include="Assets\_Scripts\Cats\Cat.cs" />
-    <Compile Include="Assets\_Scripts\MageBulletPrefabMover.cs" />
+    <Compile Include="Assets\_Scripts\Racoons\BaseRacoon.cs" />
+    <Compile Include="Assets\_Scripts\Scriptable\RacoonsSo\RacoonDataSO.cs" />
+    <Compile Include="Assets\_Scripts\DealDamageToRacoon.cs" />
+    <Compile Include="Assets\_Scripts\Cats\CatMage.cs" />
+    <Compile Include="Assets\_Scripts\Racoons\RacoonNinja.cs" />
+    <Compile Include="Assets\_Scripts\Racoons\RacoonMeleeAttack.cs" />
     <Compile Include="Assets\_Scripts\UI\UI_ChooseCatMenu.cs" />
     <Compile Include="Assets\_Scripts\UI\GridCell.cs" />
+    <Compile Include="Assets\_Scripts\Cats\CatTank.cs" />
+    <Compile Include="Assets\_Scripts\Cats\CatArcher.cs" />
     <Compile Include="Assets\_Scripts\UI\UI_ChooseCatCell.cs" />
     <Compile Include="Assets\_Scripts\UI\UI_CatSetupMenu.cs" />
     <Compile Include="Assets\_Scripts\Managers\RacoonsSpawner.cs" />
+    <Compile Include="Assets\_Scripts\BulletPrefabMover.cs" />
     <Compile Include="Assets\_Scripts\Racoons\RacoonMover.cs" />
     <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\_Scripts\Cats\BaseCat.cs" />
+    <Compile Include="Assets\_Scripts\Scriptable\CatsSO\CatDataSO.cs" />
     <Compile Include="Assets\_Scripts\UI\UI_CatSetupCell.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

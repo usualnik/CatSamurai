@@ -1,5 +1,3 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,7 +13,7 @@ public class RacoonsSpawner : MonoBehaviour
     private void SpawnRacoon()
     {
         int _spawnPos = Random.Range(0, _racoonSpawnPoints.Length);
-        Instantiate(_racoonPrefab, _racoonSpawnPoints[_spawnPos]);
-        transform.parent = null;
+        GameObject racoon = Instantiate(_racoonPrefab, _racoonSpawnPoints[_spawnPos]);
+        racoon.layer = _racoonSpawnPoints[_spawnPos].gameObject.layer; // set racoon layer to spawn point layer
     }
 }

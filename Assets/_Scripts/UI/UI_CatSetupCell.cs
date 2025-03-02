@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class UI_CatSetupCell : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private bool _isCatAvalibleToChoose = true;
-    [SerializeField] private GameObject _catPrefab;
+    [SerializeField] private CatDataSO _catDataSo;
     
     private UI_CatSetupMenu _catSetupMenu;
     private Image _image;
@@ -27,16 +27,16 @@ public class UI_CatSetupCell : MonoBehaviour, IPointerDownHandler
         if (_isCatAvalibleToChoose)
         {
             _image.rectTransform.localScale += new Vector3(0.1f,0.1f,0);
-            _catSetupMenu.AddCatData(_catPrefab.GetComponent<Cat>().CatDataSo); // add this cat to list of chosen cats
+            _catSetupMenu.AddCatData(_catDataSo); // add this cat to list of chosen cats
             _isCatAvalibleToChoose = false;
-            _catSetupMenu.SetCatToSetup(true);
+            _catSetupMenu.SetCatToSetup();
         }
         else
         {
             _image.rectTransform.localScale -= new Vector3(0.1f,0.1f,0);
-            _catSetupMenu.RemoveCatData(_catPrefab.GetComponent<Cat>().CatDataSo); // remove this cat from list of chosen cats
+            _catSetupMenu.RemoveCatData(_catDataSo); // remove this cat from list of chosen cats
             _isCatAvalibleToChoose = true;
-            _catSetupMenu.SetCatToSetup(false);
+            _catSetupMenu.SetCatToSetup();
         }
 
     }

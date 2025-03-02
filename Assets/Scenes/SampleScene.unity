@@ -151,8 +151,6 @@ RectTransform:
   - {fileID: 1285970928}
   - {fileID: 661595039}
   - {fileID: 486878116}
-  - {fileID: 1783762260}
-  - {fileID: 1842400835}
   m_Father: {fileID: 1661158562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
@@ -434,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isCatAvalibleToChoose: 1
-  _catPrefab: {fileID: 190347989666117054, guid: 57ead9f220a11e94f8f14b8924dad1a2, type: 3}
+  _catDataSo: {fileID: 11400000, guid: 50a531a8cac03e4439342c649092e5c7, type: 2}
 --- !u!1 &246521562
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -718,6 +720,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -833,6 +839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -946,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -1061,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1175,6 +1193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1288,6 +1310,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -1478,6 +1504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1656,7 +1686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486878116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -165}
+  m_AnchoredPosition: {x: 250, y: -465}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &505091237
@@ -1701,6 +1731,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -1815,6 +1849,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -2152,6 +2190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -2266,6 +2308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -2369,7 +2415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 640016950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fourth Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2412,7 +2458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661595039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,7 +2481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 0}
+  m_AnchoredPosition: {x: 250, y: -350}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &669190131 stripped
@@ -2457,7 +2503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 688427185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Secon Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,6 +2631,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -2774,6 +2824,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -3349,6 +3403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -3452,7 +3510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 912588734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,7 +3533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -30}
+  m_AnchoredPosition: {x: 250, y: -120}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &960118577
@@ -3497,6 +3555,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -3611,6 +3673,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -3864,6 +3930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -3977,6 +4047,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -4092,6 +4166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -4195,7 +4273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149413569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Third Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4248,6 +4326,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -4441,6 +4523,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -4761,7 +4847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isCatAvalibleToChoose: 1
-  _catPrefab: {fileID: 453912739685068554, guid: 0a9a69f576f4a1d49a87dd087e347201, type: 3}
+  _catDataSo: {fileID: 11400000, guid: c50043c76bb890e468c7cafb93941c23, type: 2}
 --- !u!1 &1285970927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,7 +4857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1285970928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4794,7 +4880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -85}
+  m_AnchoredPosition: {x: 250, y: -235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1303907838
@@ -4891,6 +4977,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -5006,6 +5096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -5109,7 +5203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1542499434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: First Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5206,6 +5300,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -5395,6 +5493,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -5731,7 +5833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isCatAvalibleToChoose: 1
-  _catPrefab: {fileID: 243630776829447338, guid: a33debedaffe94a45872352bb0b6f481, type: 3}
+  _catDataSo: {fileID: 11400000, guid: 7bad011b43684df4eb2049c47ad7dde4, type: 2}
 --- !u!1001 &1741200681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5751,6 +5853,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -5846,41 +5952,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9055594866565731044, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
   m_PrefabInstance: {fileID: 1741200681}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1783762259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1783762260}
-  m_Layer: 0
-  m_Name: SpawnPoint (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1783762260
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783762259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 42500834}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -260}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1802310107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,6 +6085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -6108,41 +6183,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9055594866565731044, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
   m_PrefabInstance: {fileID: 1830698898}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1842400834
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1842400835}
-  m_Layer: 0
-  m_Name: SpawnPoint (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1842400835
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842400834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 42500834}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -365}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1847252779
 GameObject:
   m_ObjectHideFlags: 0
@@ -6192,8 +6232,6 @@ MonoBehaviour:
   - {fileID: 1285970928}
   - {fileID: 661595039}
   - {fileID: 486878116}
-  - {fileID: 1783762260}
-  - {fileID: 1842400835}
   _racoonPrefab: {fileID: 2328751245804191534, guid: 6c9b8fe38e6b6bd498552a96ff8c5029, type: 3}
 --- !u!1 &1868422486
 GameObject:
@@ -6289,6 +6327,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -6784,6 +6826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Cell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -6897,6 +6943,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a
@@ -7116,6 +7166,10 @@ PrefabInstance:
     - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Name
       value: Grid Cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142546778424438484, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6582107904911849352, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
       propertyPath: m_Color.a

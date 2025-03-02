@@ -9,14 +9,14 @@ public class UI_CatSetupMenu : MonoBehaviour
    [SerializeField] private UI_ChooseCatMenu _chooseCatMenu;
    
    private int _maxCatsAvailable = 3;
-   private int _chosenCats = 0;
+   private int _chosenCats;
    
-   public void SetCatToSetup(bool setCat)
+   public void SetCatToSetup()
    {
-      if (setCat && _chosenCats <= _maxCatsAvailable)
+      if (_chosenCats <= _maxCatsAvailable)
       {
          _chosenCats++;
-      }else if (!setCat && _chosenCats >= 0)
+      }else if (_chosenCats >= 0)
       {
          _chosenCats--;
       }
@@ -24,7 +24,7 @@ public class UI_CatSetupMenu : MonoBehaviour
       _catsAvailableText.text = "Котов доступно : " + (_maxCatsAvailable - _chosenCats);
    }
 
-   public void SendCatData()
+   private void SendCatData()
    {
       if (_chosenCats == _maxCatsAvailable)
       {

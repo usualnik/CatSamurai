@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7402853102592833731}
   - component: {fileID: 5762384963196546846}
   - component: {fileID: 8171683846587002470}
-  - component: {fileID: 7512850352117577684}
+  - component: {fileID: 6900286125205059675}
+  - component: {fileID: 7539265903519401814}
   m_Layer: 0
   m_Name: Cat_Mage_Prefab
   m_TagString: Untagged
@@ -77,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7512850352117577684
+--- !u!114 &6900286125205059675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,14 +87,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 243630776829447338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae0fa5a89d12b84185461c374a0216b, type: 3}
+  m_Script: {fileID: 11500000, guid: e486cf672905a9543a49ee24edbaad35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaced: 0
   CatDataSo: {fileID: 11400000, guid: 7bad011b43684df4eb2049c47ad7dde4, type: 2}
   _mageBulletPrefab: {fileID: 5711267300627990407, guid: d4b5edec70cbec34385c42438e5258aa, type: 3}
   _spawnMageBulletPosition: {fileID: 7563705460979467664}
-  _behaviour: 0
+--- !u!61 &7539265903519401814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243630776829447338}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 127.45}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 212, y: 256}
+  m_EdgeRadius: 0
 --- !u!1 &2788266225212179918
 GameObject:
   m_ObjectHideFlags: 0

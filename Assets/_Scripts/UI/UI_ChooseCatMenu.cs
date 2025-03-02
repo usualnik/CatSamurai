@@ -9,7 +9,7 @@ public class UI_ChooseCatMenu : MonoBehaviour
 {
   public GameObject CurrentChosenCat;
   public GameObject CurrentUIChooseCatCell;
-
+  
 
   [SerializeField] public List<CatDataSO> _catsData;
 
