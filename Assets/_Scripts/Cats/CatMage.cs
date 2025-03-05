@@ -7,6 +7,7 @@ public class CatMage : BaseCat
     [SerializeField] private GameObject _mageBulletPrefab;
     
     [SerializeField] private Transform _spawnMageBulletPosition;
+    
     private float _mageAttackCooldown;
 
     protected override void PerformAction()
@@ -15,6 +16,7 @@ public class CatMage : BaseCat
         if (_mageAttackCooldown <= 0)
         {
             GameObject bullet = Instantiate(_mageBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
+            bullet.transform.Rotate(Vector3.forward, 90f); // apply rotation, just for visuals
             bullet.layer = gameObject.layer;
             _mageAttackCooldown = 3f;
         }

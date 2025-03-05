@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8744881137445954847}
   - component: {fileID: 7425877128046684689}
   - component: {fileID: 6811950314150042539}
+  - component: {fileID: 8225792499002252399}
   m_Layer: 5
   m_Name: RacoonNinja
   m_TagString: Untagged
@@ -166,6 +167,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _raycastPos: {fileID: 7782372639024389276}
+  _meleeAttackDistance: 100
+  _attackCooldown: 0
+  _meleeDamage: 50
+--- !u!95 &8225792499002252399
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328751245804191534}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41ccc02882a489d43b497888772f077e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6123292598719592458
 GameObject:
   m_ObjectHideFlags: 0

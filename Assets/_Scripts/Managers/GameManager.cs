@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int Sushi { get; private set; } = 600;
+    public int Sushi { get; private set; } = 10000;
     
     [SerializeField] private TextMeshProUGUI _sushiText;
    

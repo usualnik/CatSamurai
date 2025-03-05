@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CatArcher : BaseCat
 {
+    [SerializeField] private int _archerCatHealth = 100;
     [SerializeField] private GameObject _archerBulletPrefab;
     [SerializeField] private Transform _spawnMageBulletPosition;
 
@@ -13,7 +14,17 @@ public class CatArcher : BaseCat
         if (_archerAttackCooldown <= 0)
         {
             Instantiate(_archerBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
+            _archerBulletPrefab.layer = gameObject.layer;
             _archerAttackCooldown = 1.5f;
+        }
+    }
+    
+    public override void TakeDamage(int damage)
+    {
+        _archerCatHealth -= damage;
+        if (_archerCatHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

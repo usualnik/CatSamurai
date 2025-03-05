@@ -2,5 +2,14 @@ using UnityEngine;
 
 public class CatTank : BaseCat
 {
-  // Tank logic - Tank racoons, not letting them trough
+  [SerializeField] private int _tankCatHealth = 300;
+
+  public override void TakeDamage(int damage)
+  {
+    _tankCatHealth -= damage;
+    if (_tankCatHealth <= 0)
+    {
+      Destroy(gameObject);
+    }
+  }
 }

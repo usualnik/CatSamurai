@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db30d390001705b4d8d5210bb590969c, type: 3}
+  m_Name: Heal CatData SO
+  m_EditorClassIdentifier: 
+  CatName: Heal
+  CatPrice: 300
+  CatDamage: 0
+  CatPrefab: {fileID: 3096429303317564654, guid: 6a88d7133eccdc24d9e26636ba85118c, type: 3}
+  UISprite: {fileID: -1618530097153572685, guid: e87162dcbbae06b4f80cb8d48e713831, type: 3}

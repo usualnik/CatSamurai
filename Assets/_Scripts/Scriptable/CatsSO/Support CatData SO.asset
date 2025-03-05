@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db30d390001705b4d8d5210bb590969c, type: 3}
+  m_Name: Support CatData SO
+  m_EditorClassIdentifier: 
+  CatName: Support
+  CatPrice: 50
+  CatPrefab: {fileID: 299884826339316275, guid: bfa9916c7fedc0a46a7836370ae574c7, type: 3}
+  UISprite: {fileID: -567356398874659550, guid: 1192aa8da68d49341bdeab0fef4c2517, type: 3}
