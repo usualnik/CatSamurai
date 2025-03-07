@@ -1,15 +1,21 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
 {
-    [SerializeField] private bool _thisGridCellIsAvailable = true;
-    [SerializeField] private UIChooseCatMenu _uiChooseCatMenu;
-    [SerializeField] private GameManager _gameManager;
-    
+    public bool ThisGridCellIsAvailable { get; private set; } = true;
+    public event EventHandler<OnCatPlacedEventArgs> OnCatPlaced;
+    public class OnCatPlacedEventArgs : EventArgs
+    {
+        public GridCell GridCell;
+    }
+
+    private UIChooseCatMenu _uiChooseCatMenu;
+
     private void Start()
     {
         _uiChooseCatMenu = GameObject.Find("UI_ChooseCatMenu").GetComponent<UIChooseCatMenu>();
-        _gameManager = GameObject.Find("[GameManager]").GetComponent<GameManager>();
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData) // Just a visual representation
@@ -23,18 +29,15 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
-        if (_uiChooseCatMenu.CurrentChosenCat != null && _thisGridCellIsAvailable)
+        if (_uiChooseCatMenu.CurrentChosenCat != null && ThisGridCellIsAvailable)
         {
-            _uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().SetPlaced(true);
-            _uiChooseCatMenu.CurrentChosenCat.layer = gameObject.layer;
+            GameManager.Instance.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
             
-            // HERE IS NEEDS TO BE SOME KIND OF COOLDOWN LOGIC
+            OnCatPlaced?.Invoke(this, new OnCatPlacedEventArgs(){GridCell = this});
             
-            _gameManager.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
-
-            _uiChooseCatMenu.SetCurrentCat(null);
-            _thisGridCellIsAvailable = false;
+            ThisGridCellIsAvailable = false;
+            GridManager.Instance.ShowGridUpdated();
+            
         }
         
     }

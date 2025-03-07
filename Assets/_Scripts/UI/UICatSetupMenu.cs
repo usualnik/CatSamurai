@@ -28,7 +28,7 @@ public class UICatSetupMenu : MonoBehaviour
    {
       if (_catsAvailable == 0)
       {
-         _chooseCatMenu.RetriveCatData(_chosenCatsData);
+         _chooseCatMenu.RetrieveCatData(_chosenCatsData);
          HideMenu();
       }
       else
@@ -49,6 +49,8 @@ public class UICatSetupMenu : MonoBehaviour
    {
       _chosenCatsData.Remove(catDataSo);
    }
+   
+   
 
    private void HideMenu()
    {

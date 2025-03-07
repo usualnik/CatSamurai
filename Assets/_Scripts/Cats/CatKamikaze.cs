@@ -16,8 +16,6 @@ public class CatKamikaze : BaseCat
 
     private void Attack()
     {
-        Debug.Log("KAMIKAZE ACTION");
-        
         _attackCooldown -= Time.deltaTime;
         if (_attackCooldown <= 0)
         {

@@ -6,12 +6,29 @@ using UnityEngine.UI;
 public class UIChooseCatMenu : MonoBehaviour
 {
   public GameObject CurrentChosenCat { get; private set; }
-  public CatDataSO CurrentChosenCatDataSo { get; private set; }
-  
+ 
   [SerializeField] public List<CatDataSO> _catsData;
   [SerializeField] private GameObject[] _catsImages;
-  [SerializeField] private GameManager _gameManager;
 
+  private UIChooseCatCell _uiChooseCatCell;
+  private GridCell[] _gridCells;
+
+  private void Start()
+  {
+    _gridCells = GridManager.Instance.GetCellsArray();
+    foreach (var gridCell in _gridCells)
+    {
+      gridCell.OnCatPlaced += GridCellOnOnCatPlaced;
+    }
+  }
+
+  private void GridCellOnOnCatPlaced(object sender, GridCell.OnCatPlacedEventArgs e)
+  {
+    CurrentChosenCat.layer = e.GridCell.gameObject.layer;
+    CurrentChosenCat.GetComponent<BaseCat>().SetPlaced(true);
+    StartUIChooseCatCellCooldown();
+    SetCurrentCat(null);
+  }
 
   private void ShowCatData()
   {
@@ -27,7 +44,7 @@ public class UIChooseCatMenu : MonoBehaviour
     }
   }
   
-  public void RetriveCatData(List<CatDataSO> catData)
+  public void RetrieveCatData(List<CatDataSO> catData)
   {
     _catsData = catData;
     ShowCatData();
@@ -38,16 +55,14 @@ public class UIChooseCatMenu : MonoBehaviour
     CurrentChosenCat = currentChosenCat;
   }
   
-  
-  
-  public void SetCurrentCatDataSO(CatDataSO currentCatDataSo)
+  public void SetCurrentUIChooseCatCell(UIChooseCatCell uiChooseCatCell)
   {
-    CurrentChosenCatDataSo = currentCatDataSo;
+    _uiChooseCatCell = uiChooseCatCell;
   }
 
-
-
-
-
-  
+  private void StartUIChooseCatCellCooldown()
+  {
+    _uiChooseCatCell.SetCellOnCooldown(true);
+  }
+ 
 }

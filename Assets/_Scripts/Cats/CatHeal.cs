@@ -17,7 +17,6 @@ public class CatHeal : BaseCat
 
   protected override void PerformAction()
   {
-    Debug.Log("HEALER ACTION");
     _healingCooldown -= Time.deltaTime;
     if (_healingCooldown <= 0)
     {
@@ -28,7 +27,7 @@ public class CatHeal : BaseCat
 
   private void Healing()
   {
-    Debug.Log("Heal");
+   
   }
   
   

@@ -13,8 +13,8 @@ public class CatArcher : BaseCat
         _archerAttackCooldown -= Time.deltaTime;
         if (_archerAttackCooldown <= 0)
         {
-            Instantiate(_archerBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
-            _archerBulletPrefab.layer = gameObject.layer;
+            GameObject arrow = Instantiate(_archerBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
+            arrow.layer = gameObject.layer;
             _archerAttackCooldown = 1.5f;
         }
     }

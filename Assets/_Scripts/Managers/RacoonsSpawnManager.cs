@@ -1,7 +1,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RacoonsSpawner : MonoBehaviour
+public class RacoonsSpawnManager : MonoBehaviour
 {
     [SerializeField] private RectTransform[] _racoonSpawnPoints;
 
