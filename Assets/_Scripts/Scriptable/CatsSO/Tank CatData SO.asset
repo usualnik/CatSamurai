@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db30d390001705b4d8d5210bb590969c, type: 3}
+  m_Name: Tank CatData SO
+  m_EditorClassIdentifier: 
+  CatName: Tank
+  CatPrice: 300
+  CatDamage: 0
+  CatPrefab: {fileID: 453912739685068554, guid: 0a9a69f576f4a1d49a87dd087e347201, type: 3}
+  UISprite: {fileID: -6157151721061765284, guid: e341c81994e64714cbe05617391cd461, type: 3}

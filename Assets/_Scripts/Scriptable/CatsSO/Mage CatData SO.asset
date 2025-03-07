@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db30d390001705b4d8d5210bb590969c, type: 3}
+  m_Name: Mage CatData SO
+  m_EditorClassIdentifier: 
+  CatName: Mage
+  CatPrice: 200
+  CatDamage: 0
+  CatPrefab: {fileID: 243630776829447338, guid: a33debedaffe94a45872352bb0b6f481, type: 3}
+  UISprite: {fileID: -1330621349993832296, guid: 3f68d2fa8d32bfe43b3fec103b2a54f9, type: 3}
