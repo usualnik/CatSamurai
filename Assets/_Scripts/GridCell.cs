@@ -4,11 +4,8 @@ using UnityEngine.EventSystems;
 public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
 {
     public bool ThisGridCellIsAvailable { get; private set; } = true;
-    public event EventHandler<OnCatPlacedEventArgs> OnCatPlaced;
-    public class OnCatPlacedEventArgs : EventArgs
-    {
-        public GridCell GridCell;
-    }
+    public event EventHandler OnCatPlaced;
+ 
 
     private UIChooseCatMenu _uiChooseCatMenu;
 
@@ -33,7 +30,7 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
         {
             GameManager.Instance.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
             
-            OnCatPlaced?.Invoke(this, new OnCatPlacedEventArgs(){GridCell = this});
+            OnCatPlaced?.Invoke(this, EventArgs.Empty);
             
             ThisGridCellIsAvailable = false;
             GridManager.Instance.ShowGridUpdated();

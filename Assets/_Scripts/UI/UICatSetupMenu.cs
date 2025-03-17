@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class UICatSetupMenu : MonoBehaviour
 {
+   public static UICatSetupMenu Instance { get; private set; }
+   public event EventHandler OnCatSetupApproved;
    public int _catsAvailable { get; private set; }= 5;
    
    [SerializeField] private List<CatDataSO> _chosenCatsData;
@@ -11,7 +14,12 @@ public class UICatSetupMenu : MonoBehaviour
    [SerializeField] private UIChooseCatMenu _chooseCatMenu;
    
    private const int MAXCatsAvailable = 5;
-   
+
+   private void Awake()
+   {
+      Instance = this;
+   }
+
    public void SetCatToSetup()
    {
       _catsAvailable--;
@@ -26,6 +34,8 @@ public class UICatSetupMenu : MonoBehaviour
 
    private void SendCatData()
    {
+      OnCatSetupApproved?.Invoke(this, EventArgs.Empty);
+      
       if (_catsAvailable == 0)
       {
          _chooseCatMenu.RetrieveCatData(_chosenCatsData);

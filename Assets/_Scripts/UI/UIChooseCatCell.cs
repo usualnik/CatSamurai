@@ -9,8 +9,10 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
 
    private UIChooseCatMenu _uiChooseCatMenu;
    
-   private float _cooldownTime = 5f;
+   private float _cooldownTime = 10f;
    private bool _isOnCooldown;
+
+   private const float MAX_COOLDOWN_TIME = 10f;
 
    private void Update()
    {
@@ -19,11 +21,11 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
          gameObject.transform.SetParent(null); // Hide the Object
          
          _cooldownTime -= Time.deltaTime;
-         if ((_cooldownTime <= 0))
+         if (_cooldownTime <= 0)
          {
             gameObject.transform.SetParent(_uiChooseCatMenuTransform); // Show the object
             _isOnCooldown = false;
-            _cooldownTime = 2f;
+            _cooldownTime = MAX_COOLDOWN_TIME;
          }
       }
    }

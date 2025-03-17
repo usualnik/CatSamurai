@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,9 +23,10 @@ public class UIChooseCatMenu : MonoBehaviour
     }
   }
 
-  private void GridCellOnOnCatPlaced(object sender, GridCell.OnCatPlacedEventArgs e)
+  private void GridCellOnOnCatPlaced(object sender, EventArgs e)
   {
-    CurrentChosenCat.layer = e.GridCell.gameObject.layer;
+    GridCell gridCell = sender as GridCell;
+    CurrentChosenCat.layer = gridCell.gameObject.layer;
     CurrentChosenCat.GetComponent<BaseCat>().SetPlaced(true);
     StartUIChooseCatCellCooldown();
     SetCurrentCat(null);

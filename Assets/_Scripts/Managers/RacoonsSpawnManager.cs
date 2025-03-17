@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,10 +7,23 @@ public class RacoonsSpawnManager : MonoBehaviour
     [SerializeField] private RectTransform[] _racoonSpawnPoints;
 
     [SerializeField] private GameObject _racoonPrefab;
+
+    [SerializeField] private GameManager _gameManager;
+    
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnRacoon),2f,10f);
+        _gameManager.OnGameActive += GameManagerOnOnGameActive;
     }
+
+    private void GameManagerOnOnGameActive(object sender, EventArgs e)
+    {
+        if (GameManager.Instance.State == GameManager.GameState.GameActive)
+        {
+            InvokeRepeating(nameof(SpawnRacoon),2f,10f);
+        }
+    }
+
+
     private void SpawnRacoon()
     {
         int _spawnPos = Random.Range(0, _racoonSpawnPoints.Length);
