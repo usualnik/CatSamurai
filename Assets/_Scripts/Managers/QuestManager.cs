@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _questText;
     [SerializeField] private GameObject _questWindow;
+    [SerializeField] private TextMeshProUGUI _questTimerText;
 
     private int _currentSceneIndex;
     private bool _isHavingQuestInScene;
@@ -16,10 +17,11 @@ public class QuestManager : MonoBehaviour
     private readonly int[] _sceneIndexesToShowQuests = {1, 2, 3, 6};
 
     #region Qests
-  
+    
     //Scene 1
-    private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления - 05:00";
-    private float _reinforcementTimer = 300f; // 5 mins
+    private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления!";
+    private float _firstSceneReinforcementTimer = 300f; // 5 mins
+    private bool _firstSceneReinforcementTimerStarted;
 
     #endregion
 
@@ -38,10 +40,22 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-
     private void Start()
     {
         StoryTellingManager.Instance.OnStoryTellEnd += StoryTellingManager_OnStoryTellEnd;
+    }
+
+    private void Update()
+    {
+      
+        if (_firstSceneReinforcementTimerStarted)
+        {
+            _firstSceneReinforcementTimer -= Time.deltaTime;
+            int minutes = Mathf.FloorToInt(_firstSceneReinforcementTimer / 60);
+            int seconds = Mathf.FloorToInt(_firstSceneReinforcementTimer % 60);
+
+            _questTimerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+        }
     }
 
     private void StoryTellingManager_OnStoryTellEnd(object sender, EventArgs e)
@@ -52,7 +66,6 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-
     private void ShowQuest()
     {
         _questWindow.SetActive(true);
@@ -60,12 +73,11 @@ public class QuestManager : MonoBehaviour
         {
             case 1:
                 _questText.text = _firstSceneQuestText;
-                //Start reinforcement timer
+                _firstSceneReinforcementTimerStarted = true;
                 break;
             case 2:
                 break;
         }
     }
-
-   
+    
 }

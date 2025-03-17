@@ -34,12 +34,11 @@ public class UICatSetupMenu : MonoBehaviour
 
    private void SendCatData()
    {
-      OnCatSetupApproved?.Invoke(this, EventArgs.Empty);
-      
       if (_catsAvailable == 0)
       {
          _chooseCatMenu.RetrieveCatData(_chosenCatsData);
          HideMenu();
+         OnCatSetupApproved?.Invoke(this, EventArgs.Empty);
       }
       else
       {
