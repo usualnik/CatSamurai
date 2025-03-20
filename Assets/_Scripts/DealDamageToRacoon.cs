@@ -11,7 +11,8 @@ public class DealDamageToRacoon : MonoBehaviour
             if (baseRacoon.gameObject.layer == gameObject.layer) 
             {
                 baseRacoon.TakeDamage(_bulletDamage);
-                Destroy(gameObject);
+                
+                BulletObjectPoolManager.Instance.ReturnToPool(gameObject);
             }
         }
     }

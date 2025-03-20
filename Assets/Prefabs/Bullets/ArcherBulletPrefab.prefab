@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3315421026221812511}
   - component: {fileID: 6389469224236384389}
   - component: {fileID: 3364483072511547997}
+  - component: {fileID: 1594456827248734051}
+  - component: {fileID: 5846003580900068508}
   - component: {fileID: 5322876918817068024}
   - component: {fileID: 1727616841797837922}
-  - component: {fileID: 5846003580900068508}
-  - component: {fileID: 1594456827248734051}
+  - component: {fileID: -7554920511026324939}
   m_Layer: 8
   m_Name: ArcherBulletPrefab
   m_TagString: Untagged
@@ -79,32 +80,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5322876918817068024
-MonoBehaviour:
+--- !u!50 &1594456827248734051
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5711267300627990407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16d7f35c0a25c044af2264542a24abd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 500
---- !u!114 &1727616841797837922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5711267300627990407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435e6a82bc84e4049b93ad761e9d2231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletDamage: 10
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &5846003580900068508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,30 +153,41 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!50 &1594456827248734051
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &5322876918817068024
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5711267300627990407}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 5
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16d7f35c0a25c044af2264542a24abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 500
+--- !u!114 &1727616841797837922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711267300627990407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435e6a82bc84e4049b93ad761e9d2231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletDamage: 10
+--- !u!114 &-7554920511026324939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711267300627990407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdca814742cf180439cdc7ebbcc18821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

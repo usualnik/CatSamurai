@@ -4,32 +4,146 @@ using Random = UnityEngine.Random;
 
 public class RacoonsSpawnManager : MonoBehaviour
 {
+    public static RacoonsSpawnManager Instance { get; private set; }
+    
+    [SerializeField] private GameManager _gameManager;
+
     [SerializeField] private RectTransform[] _racoonSpawnPoints;
 
-    [SerializeField] private GameObject _racoonPrefab;
+    [SerializeField] private BaseRacoon[] _racoonsPrefabs;
 
-    [SerializeField] private GameManager _gameManager;
+    [Header("Spawn Chances")] 
     
-    private void Start()
+    [Tooltip("ALL CHANCES MUST ADDS UP TO 100")] [SerializeField] private int _element0;
+    [Tooltip("ALL CHANCES MUST ADDS UP TO 100")] [SerializeField] private int _element1;
+    [Tooltip("ALL CHANCES MUST ADDS UP TO 100")] [SerializeField] private int _element2;
+
+    [Header("General Spawn Properties")]
+    
+    [SerializeField] private int _racoonsLeftAmount;
+    [SerializeField] private float _spawnTimer;
+    private bool _isCanSpawn;
+
+    
+    private float _waveTimer;
+    private float _betweenSpawnsTimer = 2;
+    private int _waveAmount;
+    
+    //private int _waveMultiplier; // this handles more racoons spawning in future levels;
+    
+    private void Awake()
     {
-        _gameManager.OnGameActive += GameManagerOnOnGameActive;
+        Instance = this;
+        
+        _waveTimer = GetNewWaveTimer();
+        _waveAmount = GetNewWaveAmount();
+        _betweenSpawnsTimer = GetNewBetweenSpawnTimer();
+
     }
 
-    private void GameManagerOnOnGameActive(object sender, EventArgs e)
+    private void Start()
     {
-        if (GameManager.Instance.State == GameManager.GameState.GameActive)
+       UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
+       InitializeSpawnChances();
+    }
+
+    private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
+    { 
+        _isCanSpawn = true;
+        
+    }
+
+    private void InitializeSpawnChances()
+    {
+        _racoonsPrefabs[0].PercentSpawnChance = _element0;
+        _racoonsPrefabs[1].PercentSpawnChance = _element1;
+        _racoonsPrefabs[2].PercentSpawnChance = _element2;
+    }
+
+    private void Update()
+    {
+       SpawnSingleRacoonsHandler();
+       SpawnWaveHandler();
+       
+    }
+
+    private void SpawnWaveHandler()
+    {
+        _waveTimer -= Time.deltaTime;
+       
+        if ( _isCanSpawn && _waveTimer <= 0 && _racoonsLeftAmount >= 0)
         {
-            InvokeRepeating(nameof(SpawnRacoon),2f,10f);
+            _betweenSpawnsTimer -= Time.deltaTime;
+           
+            if (_betweenSpawnsTimer <= 0 && _waveAmount > 0)
+            {
+                SpawnSingleRacoon();
+                _betweenSpawnsTimer = GetNewBetweenSpawnTimer();
+                _waveAmount--;
+               
+                if (_waveAmount <= 0)
+                {
+                    _waveTimer = GetNewWaveTimer();
+                    _waveAmount = GetNewWaveAmount();
+                }
+            }
+           
         }
     }
 
-
-    private void SpawnRacoon()
+    private float GetNewWaveTimer()
     {
-        int _spawnPos = Random.Range(0, _racoonSpawnPoints.Length);
-        GameObject racoon = Instantiate(_racoonPrefab, _racoonSpawnPoints[_spawnPos]);
-        racoon.layer = _racoonSpawnPoints[_spawnPos].gameObject.layer; // set racoon layer to spawn point layer
-        racoon.transform.position = _racoonSpawnPoints[_spawnPos].transform.position;
+        return Random.Range(50, 70);
+    }
+
+    private int GetNewWaveAmount()
+    {
+        return Random.Range(10, 20);
+    }
+
+    private int GetNewBetweenSpawnTimer()
+    {
+        return Random.Range(1,6);
+    }
+
+    private void SpawnSingleRacoonsHandler()
+    {
+        _spawnTimer -= Time.deltaTime;
+        
+        if (_isCanSpawn && _spawnTimer <= 0 && _racoonsLeftAmount >= 0)
+        {
+            SpawnSingleRacoon();
+            _spawnTimer = Random.Range(10f,30f);
+            _racoonsLeftAmount--;
+        }
+    }
+    
+    private void SpawnSingleRacoon()
+    {
+        int _randomSpawnPos = Random.Range(0, _racoonSpawnPoints.Length);
+        
+        int randomChance = Random.Range(0, 101);
+        int cumulativeChance = 0;
+
+        foreach (var racoon in _racoonsPrefabs)
+        {
+            cumulativeChance = cumulativeChance + racoon.PercentSpawnChance;
+            
+            if (randomChance <= cumulativeChance)
+            {
+                GameObject newRacoon = Instantiate(racoon.gameObject, _racoonSpawnPoints[_randomSpawnPos]);
+                newRacoon.layer = _racoonSpawnPoints[_randomSpawnPos].gameObject.layer;
+                newRacoon.transform.position = _racoonSpawnPoints[_randomSpawnPos].transform.position;
+              
+                break;
+            }
+        }
 
     }
+    
+    
+    
+    
+    
+    
 }

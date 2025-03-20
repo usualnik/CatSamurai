@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameState State { get; private set; } = GameState.Pause;
     public event EventHandler OnGameActive;
     public event EventHandler OnGamePlayStarted;
-    public int Sushi { get; private set; } = 10000;
+    public int Sushi { get; private set; } = 1000;
     
     [SerializeField] private TextMeshProUGUI _sushiText;
 
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         State = GameState.GameActive;
         _tutorialCanvas.gameObject.SetActive(false);
         _gameCanvas.gameObject.SetActive(true);
-        OnGameActive.Invoke(this,EventArgs.Empty);
+        OnGameActive?.Invoke(this,EventArgs.Empty);
     }
 
     public void SubtractSushi(int value)

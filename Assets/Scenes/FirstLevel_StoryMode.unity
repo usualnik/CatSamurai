@@ -2197,6 +2197,54 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9055594866565731044, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}
   m_PrefabInstance: {fileID: 257469773}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &259844666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259844667}
+  - component: {fileID: 259844668}
+  m_Layer: 0
+  m_Name: Bullet_ObjectPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &259844667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259844666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 390447754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259844668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259844666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9f89e7d691c714ba638baf8fb4450a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mageBulletPrefab: {fileID: 5711267300627990407, guid: d4b5edec70cbec34385c42438e5258aa, type: 3}
+  mageBulletsAmountToPool: 10
+  archerBulletPrefab: {fileID: 5711267300627990407, guid: b8f8a902c6dfa784a9f8929aaa1a1041, type: 3}
+  archerBulletsAmountToPool: 10
 --- !u!1 &271084428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3291,7 @@ Transform:
   - {fileID: 271084429}
   - {fileID: 1097862133}
   - {fileID: 2091359536}
+  - {fileID: 259844667}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &391335546
@@ -15047,13 +15096,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2142cd4484d22c347ac5b39de674cbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameManager: {fileID: 1660794826}
   _racoonSpawnPoints:
   - {fileID: 912588734}
   - {fileID: 1285970928}
   - {fileID: 661595039}
   - {fileID: 486878116}
-  _racoonPrefab: {fileID: 2328751245804191534, guid: 6c9b8fe38e6b6bd498552a96ff8c5029, type: 3}
-  _gameManager: {fileID: 1660794826}
+  _racoonsPrefabs:
+  - {fileID: 8744881137445954847, guid: 6c9b8fe38e6b6bd498552a96ff8c5029, type: 3}
+  - {fileID: 8744881137445954847, guid: e4cd884276bad8d43924d41d58c38384, type: 3}
+  - {fileID: 8744881137445954847, guid: 76870fbe886797c438821a702aa73133, type: 3}
+  _element0: 25
+  _element1: 25
+  _element2: 50
+  _racoonsLeftAmount: 50
+  _spawnTimer: 20
+  _waveTimer: 60
+  _betweenSpawnsTimer: 2
+  _waveAmount: 10
+  _waveMultiplier: 0
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

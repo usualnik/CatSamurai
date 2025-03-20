@@ -20,7 +20,7 @@ public class QuestManager : MonoBehaviour
     
     //Scene 1
     private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления!";
-    private float _firstSceneReinforcementTimer = 300f; // 5 mins
+    private float _firstSceneReinforcementTimer = 180f; // 3 min
     private bool _firstSceneReinforcementTimerStarted;
 
     #endregion
@@ -47,7 +47,6 @@ public class QuestManager : MonoBehaviour
 
     private void Update()
     {
-      
         if (_firstSceneReinforcementTimerStarted)
         {
             _firstSceneReinforcementTimer -= Time.deltaTime;
@@ -56,8 +55,9 @@ public class QuestManager : MonoBehaviour
 
             _questTimerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
         }
+        
     }
-
+ 
     private void StoryTellingManager_OnStoryTellEnd(object sender, EventArgs e)
     {
         if (_isHavingQuestInScene)
