@@ -11,7 +11,7 @@ public class CatHeal : BaseCat
     _healCatHealth -= damage;
     if (_healCatHealth <= 0)
     {
-      Destroy(gameObject);
+      Death();
     }
   }
 

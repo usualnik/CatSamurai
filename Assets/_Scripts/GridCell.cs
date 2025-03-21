@@ -28,14 +28,21 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     {
         if (_uiChooseCatMenu.CurrentChosenCat != null && ThisGridCellIsAvailable)
         {
-            GameManager.Instance.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
+            _uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().OnCatDeath += OnCatDeath;
             
+            GameManager.Instance.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
             OnCatPlaced?.Invoke(this, EventArgs.Empty);
             
             ThisGridCellIsAvailable = false;
             GridManager.Instance.ShowGridUpdated();
-            
+
         }
         
+    }
+
+    private void OnCatDeath(object sender, EventArgs e)
+    {
+        ThisGridCellIsAvailable = true;
+        GridManager.Instance.ShowGridUpdated();
     }
 }

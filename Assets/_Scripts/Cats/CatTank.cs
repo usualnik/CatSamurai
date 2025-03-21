@@ -9,7 +9,7 @@ public class CatTank : BaseCat
     _tankCatHealth -= damage;
     if (_tankCatHealth <= 0)
     {
-      Destroy(gameObject);
+      Death();
     }
   }
 }

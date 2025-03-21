@@ -41,7 +41,7 @@ public class CatMage : BaseCat
         _mageCatHealth -= damage;
         if (_mageCatHealth <= 0)
         {
-            Destroy(gameObject);
+            Death();
         }
     }
 }

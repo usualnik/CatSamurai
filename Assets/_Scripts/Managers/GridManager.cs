@@ -31,7 +31,13 @@ public class GridManager : MonoBehaviour
                 
                 image.color = _notAvailableColor;
                 image.raycastTarget = false;
-
+            }
+            else
+            {
+                Image image = gridCell.gameObject.GetComponent<Image>();
+                
+                image.color = Color.white;
+                image.raycastTarget = true;
             }
         }
     }

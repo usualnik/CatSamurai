@@ -36,7 +36,7 @@ public class CatKamikaze : BaseCat
         _kamikazeCatHealth -= damage;
         if (_kamikazeCatHealth <= 0)
         {
-            Destroy(gameObject);
+            Death();
         }
     }
 

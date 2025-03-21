@@ -35,7 +35,7 @@ public class CatArcher : BaseCat
         _archerCatHealth -= damage;
         if (_archerCatHealth <= 0)
         {
-            Destroy(gameObject);
+            Death();
         }
     }
 }

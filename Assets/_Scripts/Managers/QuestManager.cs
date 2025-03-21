@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
+    
+    //public event EventHandler<GameOverMessageEventArgs> OnQuestFailGameOver;
+    
 
     [SerializeField] private TextMeshProUGUI _questText;
     [SerializeField] private GameObject _questWindow;
@@ -19,8 +22,9 @@ public class QuestManager : MonoBehaviour
     #region Qests
     
     //Scene 1
+    public event EventHandler OnFirstLevelQuestComplete;
     private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления!";
-    private float _firstSceneReinforcementTimer = 180f; // 3 min
+    private float _firstSceneReinforcementTimer = 180f; // 3 min 180
     private bool _firstSceneReinforcementTimerStarted;
 
     #endregion
@@ -54,6 +58,10 @@ public class QuestManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(_firstSceneReinforcementTimer % 60);
 
             _questTimerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            if (_firstSceneReinforcementTimer <= 0)
+            {
+               OnFirstLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+            }
         }
         
     }

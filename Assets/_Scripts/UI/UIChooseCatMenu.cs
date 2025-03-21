@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class UIChooseCatMenu : MonoBehaviour
 {
+  public static UIChooseCatMenu Instance { get; private set; }
+
   public GameObject CurrentChosenCat { get; private set; }
  
   [SerializeField] public List<CatDataSO> _catsData;
@@ -13,6 +15,13 @@ public class UIChooseCatMenu : MonoBehaviour
 
   private UIChooseCatCell _uiChooseCatCell;
   private GridCell[] _gridCells;
+
+
+  private void Awake()
+  {
+    Instance = this;
+  }
+
 
   private void Start()
   {
@@ -65,6 +74,11 @@ public class UIChooseCatMenu : MonoBehaviour
   private void StartUIChooseCatCellCooldown()
   {
     _uiChooseCatCell.SetCellOnCooldown(true);
+  }
+
+  public void DeleteCurrentCat()
+  {
+    Destroy(CurrentChosenCat);
   }
  
 }
