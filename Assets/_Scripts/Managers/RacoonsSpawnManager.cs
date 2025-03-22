@@ -47,6 +47,11 @@ public class RacoonsSpawnManager : MonoBehaviour
        InitializeSpawnChances();
     }
 
+    private void OnDestroy()
+    {
+        UICatSetupMenu.Instance.OnCatSetupApproved -= UICatSetupMenu_OnCatSetupApproved;
+    }
+
     private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
     { 
         _isCanSpawn = true;

@@ -49,6 +49,11 @@ public class QuestManager : MonoBehaviour
         StoryTellingManager.Instance.OnStoryTellEnd += StoryTellingManager_OnStoryTellEnd;
     }
 
+    private void OnDestroy()
+    {
+        StoryTellingManager.Instance.OnStoryTellEnd -= StoryTellingManager_OnStoryTellEnd;
+    }
+
     private void Update()
     {
         if (_firstSceneReinforcementTimerStarted)

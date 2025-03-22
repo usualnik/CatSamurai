@@ -37,7 +37,7 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
    
    public void OnPointerClick(PointerEventData eventData)
    {
-      if (GameManager.Instance.Sushi >= Cat.CatPrice)
+      if (GameManager.Instance.Sushi >= Cat.CatPrice && !UIChooseCatMenu.Instance.CurrentChosenCat)
       {
          GameObject currentCat = Instantiate(Cat.CatPrefab, Vector3.zero, Quaternion.identity);
          _uiChooseCatMenu.SetCurrentUIChooseCatCell(this);
@@ -45,11 +45,7 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
          
          GridManager.Instance.ShowGridUpdated();
       }
-      else
-      {
-         Debug.Log("You need more money for that");
-      }
-
+      
    }
 
    public void SetCellOnCooldown(bool isOnCooldown)

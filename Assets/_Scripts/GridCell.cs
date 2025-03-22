@@ -47,6 +47,7 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     {
         ThisGridCellIsAvailable = true;
         GridManager.Instance.ShowGridUpdated();
+        CatOnThisCell.OnCatDeath -= OnCatDeath;
     }
 
     public void FreeThisCell()

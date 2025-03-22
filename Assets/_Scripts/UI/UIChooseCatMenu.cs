@@ -22,13 +22,21 @@ public class UIChooseCatMenu : MonoBehaviour
     Instance = this;
   }
 
-
-  private void Start()
+  private void OnEnable()
   {
     _gridCells = GridManager.Instance.GetAllCellsArray();
     foreach (var gridCell in _gridCells)
     {
       gridCell.OnCatPlaced += GridCellOnOnCatPlaced;
+    }
+  }
+
+  private void OnDisable()
+  {
+    _gridCells = GridManager.Instance.GetAllCellsArray();
+    foreach (var gridCell in _gridCells)
+    {
+      gridCell.OnCatPlaced -= GridCellOnOnCatPlaced;
     }
   }
 
@@ -78,7 +86,7 @@ public class UIChooseCatMenu : MonoBehaviour
 
   public void DeleteCurrentCat()
   {
-    Destroy(CurrentChosenCat);
+    Destroy(CurrentChosenCat.gameObject);
   }
  
 }

@@ -17,6 +17,7 @@ public class BaseCat : MonoBehaviour
   {
     if (_isPlaced)
     {
+      
       PerformAction();
     }
 
@@ -24,7 +25,7 @@ public class BaseCat : MonoBehaviour
 
   protected virtual void PerformAction()
   {
-
+    
   }
 
   public virtual void TakeDamage(int damage)
@@ -34,7 +35,6 @@ public class BaseCat : MonoBehaviour
 
   protected void Death()
   {
-    Debug.Log("Death");
     OnCatDeath?.Invoke(this,EventArgs.Empty);
     Destroy(gameObject);
   }

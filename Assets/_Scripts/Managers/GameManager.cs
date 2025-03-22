@@ -50,18 +50,28 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
     }
-    
+
+
+
+
     private void Start()
     {
         _sushiText.text = "SUSHI: " + Sushi;
         _tutorial = _tutorialCanvas.GetComponent<Tutorial>();
+        
         _tutorial.OnTutorialEnded += Tutorial_OnTutorialEnded;
         UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone += GameOverZone_OnRacoonEnterGameOverZone;
-        
         QuestManager.Instance.OnFirstLevelQuestComplete += QuestManager_OnFirstLevelQuestComplete;
         
-
+    }
+    
+    private void OnDestroy()
+    {
+        _tutorial.OnTutorialEnded -= Tutorial_OnTutorialEnded;
+        UICatSetupMenu.Instance.OnCatSetupApproved -= UICatSetupMenu_OnCatSetupApproved;
+        GameOverZone.Instance.OnRacoonEnterGameOverZone -= GameOverZone_OnRacoonEnterGameOverZone;
+        QuestManager.Instance.OnFirstLevelQuestComplete -= QuestManager_OnFirstLevelQuestComplete;
     }
 
     private void QuestManager_OnFirstLevelQuestComplete(object sender, EventArgs e)

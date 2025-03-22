@@ -47,6 +47,11 @@ public class StoryTellingManager : MonoBehaviour
       GameManager.Instance.OnGamePlayStarted += GameManager_OnGamePlayStarted;
    }
 
+   private void OnDestroy()
+   {
+      GameManager.Instance.OnGamePlayStarted -= GameManager_OnGamePlayStarted;
+   }
+
    private void GameManager_OnGamePlayStarted(object sender, EventArgs e)
    {
       if (_isTellingStoryInScene)
