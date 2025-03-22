@@ -13,20 +13,20 @@ public class CatArcher : BaseCat
         _archerAttackCooldown -= Time.deltaTime;
         if (_archerAttackCooldown <= 0)
         {
-            // GameObject arrow = Instantiate(_archerBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
+            GameObject arrow = Instantiate(_archerBulletPrefab, _spawnMageBulletPosition.position, Quaternion.identity, transform);
            
-            GameObject arrow =
-                BulletObjectPoolManager.Instance.GetPooledObject(BulletObjectPoolManager.BulletType.ArcherBullet);
+            // GameObject arrow =
+            //     BulletObjectPoolManager.Instance.GetPooledObject(BulletObjectPoolManager.BulletType.ArcherBullet);
+            
             if (arrow)
             {
-                arrow.transform.SetParent(gameObject.transform);
-                arrow.transform.position = _spawnMageBulletPosition.transform.position;
-                arrow.transform.rotation = gameObject.transform.rotation;
+                //arrow.transform.SetParent(gameObject.transform);
+                //arrow.transform.position = _spawnMageBulletPosition.transform.position;
+                //arrow.transform.rotation = gameObject.transform.rotation;
                 arrow.layer = gameObject.layer;
-                arrow.SetActive(true);
+               // arrow.SetActive(true);
                 _archerAttackCooldown = 1.5f;
             }
-            
         }
     }
     

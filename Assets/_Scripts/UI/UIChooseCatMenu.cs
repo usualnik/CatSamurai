@@ -8,7 +8,7 @@ public class UIChooseCatMenu : MonoBehaviour
 {
   public static UIChooseCatMenu Instance { get; private set; }
 
-  public GameObject CurrentChosenCat { get; private set; }
+  public BaseCat CurrentChosenCat { get; private set; }
  
   [SerializeField] public List<CatDataSO> _catsData;
   [SerializeField] private GameObject[] _catsImages;
@@ -25,7 +25,7 @@ public class UIChooseCatMenu : MonoBehaviour
 
   private void Start()
   {
-    _gridCells = GridManager.Instance.GetCellsArray();
+    _gridCells = GridManager.Instance.GetAllCellsArray();
     foreach (var gridCell in _gridCells)
     {
       gridCell.OnCatPlaced += GridCellOnOnCatPlaced;
@@ -35,7 +35,7 @@ public class UIChooseCatMenu : MonoBehaviour
   private void GridCellOnOnCatPlaced(object sender, EventArgs e)
   {
     GridCell gridCell = sender as GridCell;
-    CurrentChosenCat.layer = gridCell.gameObject.layer;
+    CurrentChosenCat.gameObject.layer = gridCell.gameObject.layer;
     CurrentChosenCat.GetComponent<BaseCat>().SetPlaced(true);
     StartUIChooseCatCellCooldown();
     SetCurrentCat(null);
@@ -61,7 +61,7 @@ public class UIChooseCatMenu : MonoBehaviour
     ShowCatData();
   }
 
-  public void SetCurrentCat(GameObject currentChosenCat)
+  public void SetCurrentCat(BaseCat currentChosenCat)
   {
     CurrentChosenCat = currentChosenCat;
   }

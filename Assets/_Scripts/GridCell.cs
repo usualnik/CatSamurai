@@ -4,15 +4,15 @@ using UnityEngine.EventSystems;
 public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
 {
     public bool ThisGridCellIsAvailable { get; private set; } = true;
+    public BaseCat CatOnThisCell { get; private set; }
     public event EventHandler OnCatPlaced;
- 
 
     private UIChooseCatMenu _uiChooseCatMenu;
+  
 
     private void Start()
     {
         _uiChooseCatMenu = GameObject.Find("UI_ChooseCatMenu").GetComponent<UIChooseCatMenu>();
-        
     }
 
     public void OnPointerEnter(PointerEventData eventData) // Just a visual representation
@@ -28,9 +28,12 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     {
         if (_uiChooseCatMenu.CurrentChosenCat != null && ThisGridCellIsAvailable)
         {
-            _uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().OnCatDeath += OnCatDeath;
+            CatOnThisCell = _uiChooseCatMenu.CurrentChosenCat;
             
-            GameManager.Instance.SubtractSushi(_uiChooseCatMenu.CurrentChosenCat.GetComponent<BaseCat>().CatDataSo.CatPrice);
+            CatOnThisCell.SetGridCell(this);
+            CatOnThisCell.OnCatDeath += OnCatDeath;
+            
+            GameManager.Instance.SubtractSushi(CatOnThisCell.CatDataSo.CatPrice);
             OnCatPlaced?.Invoke(this, EventArgs.Empty);
             
             ThisGridCellIsAvailable = false;
@@ -45,4 +48,11 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
         ThisGridCellIsAvailable = true;
         GridManager.Instance.ShowGridUpdated();
     }
+
+    public void FreeThisCell()
+    {
+        ThisGridCellIsAvailable = true;
+        GridManager.Instance.ShowGridUpdated();
+    }
+    
 }

@@ -41,7 +41,7 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
       {
          GameObject currentCat = Instantiate(Cat.CatPrefab, Vector3.zero, Quaternion.identity);
          _uiChooseCatMenu.SetCurrentUIChooseCatCell(this);
-         _uiChooseCatMenu.SetCurrentCat(currentCat);
+         _uiChooseCatMenu.SetCurrentCat(currentCat.GetComponent<BaseCat>());
          
          GridManager.Instance.ShowGridUpdated();
       }

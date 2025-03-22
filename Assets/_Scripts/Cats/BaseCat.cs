@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class BaseCat : MonoBehaviour
 {
-  [SerializeField] private bool _isPlaced;
+  [SerializeField] private GameObject _removeIcon;
+  
   public event EventHandler OnCatDeath;
 
   public CatDataSO CatDataSo;
+  
+  private bool _isPlaced;
+  private GridCell _currentGridCell;
+  
 
   private void Update()
   {
@@ -37,6 +42,30 @@ public class BaseCat : MonoBehaviour
   public void SetPlaced(bool isPlaced)
   {
     _isPlaced = isPlaced;
+  }
+
+  public void SetGridCell(GridCell gridCell)
+  {
+    _currentGridCell = gridCell;
+  }
+
+  public GridCell GetGridCell()
+  {
+    return _currentGridCell;
+  }
+
+  public void RemoveFromField()
+  {
+    Destroy(gameObject);
+  }
+
+  public void ShowRemoveIcon()
+  {
+    _removeIcon.gameObject.SetActive(true);
+  }
+  public void HideRemoveIcon()
+  {
+    _removeIcon.gameObject.SetActive(false);
   }
 
 

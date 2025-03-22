@@ -13,7 +13,8 @@ public class DestroyBulletsOutOfBoundsX : MonoBehaviour
     {
         if (transform.position.x > screenWidth)
         {
-            BulletObjectPoolManager.Instance.ReturnToPool(gameObject);
+            Destroy(gameObject);
+            //BulletObjectPoolManager.Instance.ReturnToPool(gameObject);
         }
     }
 }

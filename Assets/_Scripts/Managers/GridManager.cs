@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,9 +43,37 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    public GridCell[] GetCellsArray()
+    public GridCell[] GetAllCellsArray()
     {
         return _cellsArray;
+    }
+    public List<GridCell> GetAvailableCellsList()
+    {
+        List<GridCell> availableCellsList = new List<GridCell>();
+        
+        foreach (var gridCell in _cellsArray)             
+        {
+            if (gridCell.ThisGridCellIsAvailable)
+            {
+                availableCellsList.Add(gridCell);
+            }
+        }
+
+        return availableCellsList;
+    }
+    public List<GridCell> GetUnAvailableCellsList()
+    {
+        List<GridCell> unAvailableCellsList = new List<GridCell>();
+        
+        foreach (var gridCell in _cellsArray)             
+        {
+            if (!gridCell.ThisGridCellIsAvailable)
+            {
+                unAvailableCellsList.Add(gridCell);
+            }
+        }
+        
+        return unAvailableCellsList;
     }
     
 }
