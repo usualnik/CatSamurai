@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Archer CatData SO
   m_EditorClassIdentifier: 
   CatName: Archer
+  CatHealth: 100
   CatPrice: 100
-  CatDamage: 0
   CatPrefab: {fileID: 190347989666117054, guid: 57ead9f220a11e94f8f14b8924dad1a2, type: 3}
   UISprite: {fileID: 722094881723021290, guid: b7c51e2cf3d3da344bf499826714137f, type: 3}

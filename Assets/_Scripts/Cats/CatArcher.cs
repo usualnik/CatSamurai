@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 public class CatArcher : BaseCat
 {
-    [SerializeField] private int _archerCatHealth = 100;
+   
     [SerializeField] private GameObject _archerBulletPrefab;
     [SerializeField] private Transform _spawnMageBulletPosition;
 
@@ -29,15 +30,7 @@ public class CatArcher : BaseCat
             }
         }
     }
-    
-    public override void TakeDamage(int damage)
-    {
-        _archerCatHealth -= damage;
-        if (_archerCatHealth <= 0)
-        {
-            Death();
-        }
-    }
+
 }
 
     

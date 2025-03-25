@@ -7,9 +7,9 @@ public class CatKamikaze : BaseCat
     [SerializeField] private float _attackCooldown = 2f;
     
     [SerializeField] private int _meleeDamage = 50;
-    [SerializeField] private int _kamikazeCatHealth = 150;
 
-    private void Update()
+  
+    protected override void PerformAction()
     {
         Attack();
     }
@@ -28,15 +28,6 @@ public class CatKamikaze : BaseCat
                 baseRacoon.TakeDamage(_meleeDamage);
             }
             _attackCooldown = 2f;
-        }
-    }
-
-    public override void TakeDamage(int damage)
-    {
-        _kamikazeCatHealth -= damage;
-        if (_kamikazeCatHealth <= 0)
-        {
-            Death();
         }
     }
 

@@ -3,10 +3,7 @@ using UnityEngine;
 
 public class CatMage : BaseCat
 {
-    [SerializeField] private int _mageCatHealth = 100;
-
     [SerializeField] private GameObject _mageBulletPrefab;
-
     [SerializeField] private Transform _spawnMageBulletPosition;
     [SerializeField] private Transform _raycastPos;
 
@@ -44,12 +41,4 @@ public class CatMage : BaseCat
         }
     }
 
-    public override void TakeDamage(int damage)
-    {
-        _mageCatHealth -= damage;
-        if (_mageCatHealth <= 0)
-        {
-            Death();
-        }
-    }
 }
