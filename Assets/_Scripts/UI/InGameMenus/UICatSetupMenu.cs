@@ -19,6 +19,7 @@ public class UICatSetupMenu : MonoBehaviour
    {
       Instance = this;
       _catsAvailable = _maxCatsAvailable;
+      _catsAvailableText.text = "Котов доступно : " + _catsAvailable;
    }
 
    public void SetCatToSetup()

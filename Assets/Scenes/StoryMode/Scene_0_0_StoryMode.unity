@@ -10556,7 +10556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1491971923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11662,6 +11662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544e20cff2232f347ad894d41bed5f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sushi: 1000
   _sushiText: {fileID: 1030823705}
   _pauseMenu: {fileID: 1873750588}
   _gameOverMenu: {fileID: 1638840094}

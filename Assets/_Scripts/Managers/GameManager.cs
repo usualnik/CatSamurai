@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public event EventHandler OnGamePlayStarted;
-    public int Sushi { get; private set; } = 1000;
+    
+    [SerializeField] private int _sushi;
     
     [SerializeField] private TextMeshProUGUI _sushiText;
     
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     private const int MAIN_MENU_BUILD_INDEX = 0;
     private const int CHOOSE_LEVEL_SCENE_BUILD_INDEX = 1;
+    private const int FIRST_LEVEL_SCENE_INDEX = 2;
     
     private void Awake()
     {
@@ -41,15 +43,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-
-
-
     private void Start()
     {
-        _sushiText.text = "SUSHI: " + Sushi;
-        _tutorial = _tutorialCanvas.GetComponent<Tutorial>();
+        _sushiText.text = "SUSHI: " + _sushi;
+
+        if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
+        {
+            _tutorial = _tutorialCanvas.GetComponent<Tutorial>();
+            _tutorial.OnTutorialEnded += Tutorial_OnTutorialEnded;
+        }
         
-        _tutorial.OnTutorialEnded += Tutorial_OnTutorialEnded;
+        
+        
         UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone += GameOverZone_OnRacoonEnterGameOverZone;
         QuestManager.Instance.OnFirstLevelQuestComplete += QuestManager_OnFirstLevelQuestComplete;
@@ -58,7 +63,11 @@ public class GameManager : MonoBehaviour
     
     private void OnDestroy()
     {
-        _tutorial.OnTutorialEnded -= Tutorial_OnTutorialEnded;
+        if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
+        {
+            _tutorial.OnTutorialEnded -= Tutorial_OnTutorialEnded;
+        }
+
         UICatSetupMenu.Instance.OnCatSetupApproved -= UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone -= GameOverZone_OnRacoonEnterGameOverZone;
         QuestManager.Instance.OnFirstLevelQuestComplete -= QuestManager_OnFirstLevelQuestComplete;
@@ -100,8 +109,8 @@ public class GameManager : MonoBehaviour
 
     public void SubtractSushi(int value)
     {
-        Sushi -= value;
-        _sushiText.text = "SUSHI: " + Sushi;
+        _sushi -= value;
+        _sushiText.text = "SUSHI: " + _sushi;
     }
 
     public void GamePause()
@@ -147,6 +156,11 @@ public class GameManager : MonoBehaviour
     public void LoadChooseLevelScene()
     {
        SceneManager.LoadScene(CHOOSE_LEVEL_SCENE_BUILD_INDEX);
+    }
+
+    public int GetSushiAmount()
+    {
+        return _sushi;
     }
     
 }

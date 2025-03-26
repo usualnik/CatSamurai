@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _questTimerText;
 
     private int _currentSceneIndex;
+    
     #region Qests
 
     #region FirstScene
@@ -25,8 +26,77 @@ public class QuestManager : MonoBehaviour
     private bool _firstSceneTimerWarning = true;
 
     #endregion
-  
+    
+    #region SecondScene
 
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _secondSceneQuestText = "Накопите 1000 ед. суши";
+    
+    #endregion
+    
+    #region ThirdScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _thirdSceneQuestText = "Защитите мирных жителей";
+    
+    #endregion
+  
+    #region FourthScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _fourthSceneQuestText = "Убейте главаря енотов";
+    
+    #endregion
+    
+    #region FifthScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _fifthSceneQuestText = "Очистите ваши земли от енотов";
+    
+    #endregion
+    
+    #region SixthScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _sixthSceneQuestText = "Вернитесь в замок, добивая остатки врагов";
+    
+    #endregion
+    
+    #region SeventhScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _seventhSceneQuestText = "Защищайте лекарей, пока они не закончат свой ритуал";
+    
+    #endregion
+    
+    #region EighthScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _eighthSceneQuestText = "Помогите разбойникам";
+    
+    #endregion
+    
     #endregion
 
     private void Awake()
@@ -47,8 +117,7 @@ public class QuestManager : MonoBehaviour
         StoryTellingManager.Instance.OnStoryTellEnd -= StoryTellingManager_OnStoryTellEnd;
     }
 
-
-    #region FirstScene
+    #region FirstSceneBehaviour
 
     private void FirstSceneTimer()
     {
@@ -87,8 +156,6 @@ public class QuestManager : MonoBehaviour
         FirstSceneTimer();
     }
     
-    
- 
     private void StoryTellingManager_OnStoryTellEnd(object sender, EventArgs e)
     {
         ShowQuest();
@@ -110,18 +177,25 @@ public class QuestManager : MonoBehaviour
                 _firstSceneReinforcementTimerStarted = true;
                 break;
             case 3:
+                _questText.text = _secondSceneQuestText;
                 break;
             case 4:
+                _questText.text = _thirdSceneQuestText;
                 break;
             case 5:
+                _questText.text = _fourthSceneQuestText;
                 break;
             case 6:
+                _questText.text = _fifthSceneQuestText;
                 break;
             case 7:
+                _questText.text = _sixthSceneQuestText;
                 break;
             case 8:
+                _questText.text = _seventhSceneQuestText;
                 break;
             case 9:
+                _questText.text = _eighthSceneQuestText;
                 break;
             
         }
