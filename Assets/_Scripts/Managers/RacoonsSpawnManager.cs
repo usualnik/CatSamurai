@@ -20,8 +20,11 @@ public class RacoonsSpawnManager : MonoBehaviour
 
     [Header("General Spawn Properties")]
     
-    [SerializeField] private int _racoonsLeftAmount;
+    [SerializeField] private int _spawnRacoonsLeftAmount;
     [SerializeField] private float _spawnTimer;
+    private int _racoonOnSceneLeftAmount;
+    
+    
     private bool _isCanSpawn;
 
     
@@ -38,19 +41,29 @@ public class RacoonsSpawnManager : MonoBehaviour
         _waveTimer = GetNewWaveTimer();
         _waveAmount = GetNewWaveAmount();
         _betweenSpawnsTimer = GetNewBetweenSpawnTimer();
+        _racoonOnSceneLeftAmount = _spawnRacoonsLeftAmount;
 
     }
 
     private void Start()
     {
+        BaseRacoon.OnAnyRacoonDeath += StaticEvent_BaseRacoon_OnAnyRacoonDeath;
        UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
        InitializeSpawnChances();
     }
 
+  
     private void OnDestroy()
     {
         UICatSetupMenu.Instance.OnCatSetupApproved -= UICatSetupMenu_OnCatSetupApproved;
+        BaseRacoon.OnAnyRacoonDeath -= StaticEvent_BaseRacoon_OnAnyRacoonDeath;
     }
+    
+    private void StaticEvent_BaseRacoon_OnAnyRacoonDeath(object sender, EventArgs e)
+    {
+        SubtractRacoon();
+    }
+
 
     private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
     { 
@@ -76,7 +89,7 @@ public class RacoonsSpawnManager : MonoBehaviour
     {
         _waveTimer -= Time.deltaTime;
        
-        if ( _isCanSpawn && _waveTimer <= 0 && _racoonsLeftAmount >= 0)
+        if ( _isCanSpawn && _waveTimer <= 0 && _spawnRacoonsLeftAmount > 0)
         {
             _betweenSpawnsTimer -= Time.deltaTime;
            
@@ -115,16 +128,16 @@ public class RacoonsSpawnManager : MonoBehaviour
     {
         _spawnTimer -= Time.deltaTime;
         
-        if (_isCanSpawn && _spawnTimer <= 0 && _racoonsLeftAmount >= 0)
+        if (_isCanSpawn && _spawnTimer <= 0 && _spawnRacoonsLeftAmount > 0)
         {
             SpawnSingleRacoon();
             _spawnTimer = Random.Range(10f,30f);
-            _racoonsLeftAmount--;
         }
     }
     
     private void SpawnSingleRacoon()
     {
+        _spawnRacoonsLeftAmount--;
         int _randomSpawnPos = Random.Range(0, _racoonSpawnPoints.Length);
         
         int randomChance = Random.Range(0, 101);
@@ -143,7 +156,16 @@ public class RacoonsSpawnManager : MonoBehaviour
                 break;
             }
         }
+    }
 
+    private void SubtractRacoon()
+    {
+        _racoonOnSceneLeftAmount--;
+    }
+
+    public int GetRacoonsLeftAmount()
+    {
+        return _racoonOnSceneLeftAmount;
     }
     
     

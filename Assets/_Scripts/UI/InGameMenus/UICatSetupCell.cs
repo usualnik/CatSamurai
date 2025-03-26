@@ -24,7 +24,7 @@ public class UICatSetupCell : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         
-        if (_isCatAvalibleToChoose && _catSetupMenu._catsAvailable > 0)
+        if (_isCatAvalibleToChoose && _catSetupMenu.GetAvailableCats() > 0)
         {
             _image.rectTransform.localScale += new Vector3(0.1f,0.1f,0);
             _catSetupMenu.AddCatData(_catDataSo); // add this cat to list of chosen cats

@@ -7,25 +7,25 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
     
-    //public event EventHandler<GameOverMessageEventArgs> OnQuestFailGameOver;
-    
-
     [SerializeField] private TextMeshProUGUI _questText;
     [SerializeField] private GameObject _questWindow;
     [SerializeField] private TextMeshProUGUI _questTimerText;
 
     private int _currentSceneIndex;
-    private bool _isHavingQuestInScene;
-    
-    private readonly int[] _sceneIndexesToShowQuests = {1, 2, 3, 6};
-
     #region Qests
-    
+
+    #region FirstScene
+
     //Scene 1
     public event EventHandler OnFirstLevelQuestComplete;
+    public event EventHandler OnFirstLevelQuestAlmostComplete;
     private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления!";
-    private float _firstSceneReinforcementTimer = 180f; // 3 min 180
+    private float _firstSceneReinforcementTimer = 90f; // 1.5 min 
     private bool _firstSceneReinforcementTimerStarted;
+    private bool _firstSceneTimerWarning = true;
+
+    #endregion
+  
 
     #endregion
 
@@ -34,14 +34,7 @@ public class QuestManager : MonoBehaviour
         Instance = this;
         
         _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        
-        for (int i = 0; i < _sceneIndexesToShowQuests.Length; i++)
-        {
-            if (_currentSceneIndex == _sceneIndexesToShowQuests[i])
-            {
-                _isHavingQuestInScene = true;
-            }
-        }
+
     }
 
     private void Start()
@@ -54,7 +47,10 @@ public class QuestManager : MonoBehaviour
         StoryTellingManager.Instance.OnStoryTellEnd -= StoryTellingManager_OnStoryTellEnd;
     }
 
-    private void Update()
+
+    #region FirstScene
+
+    private void FirstSceneTimer()
     {
         if (_firstSceneReinforcementTimerStarted)
         {
@@ -63,20 +59,39 @@ public class QuestManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(_firstSceneReinforcementTimer % 60);
 
             _questTimerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+            if (_firstSceneReinforcementTimer <= 40 && _firstSceneTimerWarning)
+            {
+                OnFirstLevelQuestAlmostComplete?.Invoke(this,EventArgs.Empty);
+                _firstSceneTimerWarning = false;
+            }
+            
             if (_firstSceneReinforcementTimer <= 0)
             {
-               OnFirstLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+                _questTimerText.text = "0:00";
+                
+                if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+                {
+                    OnFirstLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+                }
+                
             }
         }
-        
     }
+
+    #endregion
+    
+
+    private void Update()
+    {
+        FirstSceneTimer();
+    }
+    
+    
  
     private void StoryTellingManager_OnStoryTellEnd(object sender, EventArgs e)
     {
-        if (_isHavingQuestInScene)
-        {
-            ShowQuest();
-        }
+        ShowQuest();
     }
 
     private void ShowQuest()
@@ -84,12 +99,31 @@ public class QuestManager : MonoBehaviour
         _questWindow.SetActive(true);
         switch (_currentSceneIndex)
         {
+            case 0:
+                // Main menu index
+                break;
             case 1:
+                // Choose level scene index
+                break;
+            case 2:
                 _questText.text = _firstSceneQuestText;
                 _firstSceneReinforcementTimerStarted = true;
                 break;
-            case 2:
+            case 3:
                 break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            
         }
     }
     

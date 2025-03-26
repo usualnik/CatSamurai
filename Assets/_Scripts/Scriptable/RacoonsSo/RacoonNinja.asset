@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RacoonNinja
   m_EditorClassIdentifier: 
   RacoonName: RacoonNinja
-  RacoonDamage: 0
+  RacoonHealth: 100
   RacoonPrefab: {fileID: 2328751245804191534, guid: 6c9b8fe38e6b6bd498552a96ff8c5029, type: 3}

@@ -7,17 +7,18 @@ public class UICatSetupMenu : MonoBehaviour
 {
    public static UICatSetupMenu Instance { get; private set; }
    public event EventHandler OnCatSetupApproved;
-   public int _catsAvailable { get; private set; }= 5;
    
    [SerializeField] private List<CatDataSO> _chosenCatsData;
    [SerializeField] private TextMeshProUGUI _catsAvailableText;
    [SerializeField] private UIChooseCatMenu _chooseCatMenu;
    
-   private const int MAXCatsAvailable = 5;
+   [SerializeField] private  int _maxCatsAvailable;
+   private int _catsAvailable;
 
    private void Awake()
    {
       Instance = this;
+      _catsAvailable = _maxCatsAvailable;
    }
 
    public void SetCatToSetup()
@@ -48,7 +49,7 @@ public class UICatSetupMenu : MonoBehaviour
 
    public void AddCatData(CatDataSO catDataSo)
    {
-      if (_chosenCatsData.Count < MAXCatsAvailable)
+      if (_chosenCatsData.Count < _maxCatsAvailable)
       {
          _chosenCatsData.Add(catDataSo);
       }
@@ -58,11 +59,15 @@ public class UICatSetupMenu : MonoBehaviour
    {
       _chosenCatsData.Remove(catDataSo);
    }
-   
-   
+
 
    private void HideMenu()
    {
       gameObject.SetActive(false);
+   }
+
+   public int GetAvailableCats()
+   {
+      return _catsAvailable;
    }
 }

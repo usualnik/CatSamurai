@@ -12,17 +12,13 @@ public class StoryTellingManager : MonoBehaviour
    [SerializeField] private Canvas _storyTellingCanvas;
 
    private int _currentSceneIndex;
-   private bool _isTellingStoryInScene;
-   
-   private readonly int[] _sceneIndexesToTellAStory = {1, 5, 8};
    
    #region Phrases
   
    private int _dialogIndex;
    
    //Scene 1
-   
-   private readonly string[] _firstScenePhrases =  {"Держитесь, генерал! Подкрепление уже совсем близко!", "Так держать! Их осталось совсем немного!"};
+   private readonly string[] _firstScenePhrases =  {"Держитесь, генерал! Подкрепление уже совсем близко!", "Они бросились в атаку целым лагерем!"};
 
    #endregion
 
@@ -31,39 +27,34 @@ public class StoryTellingManager : MonoBehaviour
       Instance = this;
       
       _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-      for (int i = 0; i < _sceneIndexesToTellAStory.Length; i++)
-      {
-         if (_currentSceneIndex == _sceneIndexesToTellAStory[i])
-         {
-            _isTellingStoryInScene = true;
-         }
-      }
-      
    }
 
    private void Start()
    {
       GameManager.Instance.OnGamePlayStarted += GameManager_OnGamePlayStarted;
+      QuestManager.Instance.OnFirstLevelQuestAlmostComplete += QuestManager_OnFirstLevelQuestAlmostComplete;
    }
+
+
 
    private void OnDestroy()
    {
       GameManager.Instance.OnGamePlayStarted -= GameManager_OnGamePlayStarted;
+      QuestManager.Instance.OnFirstLevelQuestAlmostComplete -= QuestManager_OnFirstLevelQuestAlmostComplete;
+   }
+   
+   private void QuestManager_OnFirstLevelQuestAlmostComplete(object sender, EventArgs e)
+   {
+      TellStory();
    }
 
    private void GameManager_OnGamePlayStarted(object sender, EventArgs e)
    {
-      if (_isTellingStoryInScene)
-      {
-         TellStory();
-      }
-     
+      TellStory();
    }
 
    private void Update()
    {
-      
       if (Input.anyKeyDown && _storyTellingCanvas.gameObject.activeInHierarchy)
       {
          _storyTellingCanvas.gameObject.SetActive(false);
@@ -77,13 +68,27 @@ public class StoryTellingManager : MonoBehaviour
          
          switch (_currentSceneIndex)
          {
+            case 0:
+               // Main menu index
+               break;
             case 1:
+               // Choose level scene index
+               break;
+            case 2:
                _storyText.text = _firstScenePhrases[_dialogIndex];
                _dialogIndex++;
                break;
-            case 2:
+            case 4:
                break;
-            case 3:
+            case 5:
+               break;
+            case 6:
+               break;
+            case 7:
+               break;
+            case 8:
+               break;
+            case 9:
                break;
          }
          

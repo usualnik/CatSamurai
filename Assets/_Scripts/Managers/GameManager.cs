@@ -6,14 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public enum GameState
-    {
-        Pause,
-        GameActive,
-        GamePlayStarted,
-        GameOver
-    }
-    public GameState State { get; private set; } = GameState.Pause;
     public event EventHandler OnGamePlayStarted;
     public int Sushi { get; private set; } = 1000;
     
@@ -24,9 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverMenu;
     [SerializeField] private TextMeshProUGUI _gameOverText;
     [SerializeField] private GameObject _levelCompleteMenu;
-    
 
-    
     [Header("Canvases")] 
     [SerializeField] private Canvas _gameCanvas;
     [SerializeField] private Canvas _tutorialCanvas;
@@ -35,7 +25,7 @@ public class GameManager : MonoBehaviour
     private Tutorial _tutorial;
 
     private const int MAIN_MENU_BUILD_INDEX = 0;
-    //private const int CHOOSE_LEVEL_SCENE_BUILD_INDEX = 1;
+    private const int CHOOSE_LEVEL_SCENE_BUILD_INDEX = 1;
     
     private void Awake()
     {
@@ -92,7 +82,6 @@ public class GameManager : MonoBehaviour
   
     private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
     {
-        State = GameState.GamePlayStarted;
         OnGamePlayStarted?.Invoke(this, EventArgs.Empty);
     }
 
@@ -104,7 +93,6 @@ public class GameManager : MonoBehaviour
 
     private void StartGameAfterTutorial()
     {
-        State = GameState.GameActive;
         _tutorialCanvas.gameObject.SetActive(false);
         _gameCanvas.gameObject.SetActive(true);
         
@@ -158,8 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadChooseLevelScene()
     {
-       // SceneManager.LoadScene(CHOOSE_LEVEL_SCENE_BUILD_INDEX);
-       Debug.Log("ChooseLevelSceneLoaded");
+       SceneManager.LoadScene(CHOOSE_LEVEL_SCENE_BUILD_INDEX);
     }
     
 }
