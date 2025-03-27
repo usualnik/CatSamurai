@@ -40,6 +40,12 @@ public class StoryTellingManager : MonoBehaviour
    
    //Scene 8
    private readonly string[] _eighthScenePhrases =  {"Еще вчера мы бы просто ограбили тебя и оставили умирать, но сегодня мы готовы присоедениться, за добротную порцию суши."};
+   
+   //Scene 9
+   private readonly string[] _nineScenePhrases =  {"Наши войны восстановили силы, пора выбираться отсюда"};
+   
+   //Scene 10
+   private readonly string[] _tenScenePhrases =  {"Генерал, все соседние поселения в огне. Мы должны схватить одного из енотов и допросить."};
 
    #endregion
 
@@ -126,8 +132,12 @@ public class StoryTellingManager : MonoBehaviour
                _dialogIndex++;
                break;
             case 10:
+               _storyText.text = _nineScenePhrases[_dialogIndex];
+               _dialogIndex++;
                break;
             case 11:
+               _storyText.text = _tenScenePhrases[_dialogIndex];
+               _dialogIndex++;
                break;
          }
          

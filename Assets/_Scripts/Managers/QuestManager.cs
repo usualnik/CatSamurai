@@ -97,6 +97,26 @@ public class QuestManager : MonoBehaviour
     
     #endregion
     
+    #region NineScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _nineSceneQuestText = "Выберитесь из леса";
+    
+    #endregion
+    
+    #region NineScene
+
+    //Scene 1
+    //public event EventHandler OnSecondLevelQuestComplete;
+    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    
+    private readonly string _tenSceneQuestText = "Захватите разведчика";
+    
+    #endregion
+    
     #endregion
 
     private void Awake()
@@ -197,6 +217,13 @@ public class QuestManager : MonoBehaviour
             case 9:
                 _questText.text = _eighthSceneQuestText;
                 break;
+            case 10:
+                _questText.text = _nineSceneQuestText;
+                break;
+            case 11:
+                _questText.text = _tenSceneQuestText;
+                break;
+    
             
         }
     }
