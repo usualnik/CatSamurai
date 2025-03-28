@@ -19,19 +19,19 @@ public class UICatSetupMenu : MonoBehaviour
    {
       Instance = this;
       _catsAvailable = _maxCatsAvailable;
-      _catsAvailableText.text = "Котов доступно : " + _catsAvailable;
+      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
    }
 
    public void SetCatToSetup()
    {
       _catsAvailable--;
-      _catsAvailableText.text = "Котов доступно : " + _catsAvailable;
+      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
    }
    
    public void RemoveCatFromSetup()
    {
       _catsAvailable++;
-      _catsAvailableText.text = "Котов доступно : " + _catsAvailable;
+      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
    }
 
    private void SendCatData()
