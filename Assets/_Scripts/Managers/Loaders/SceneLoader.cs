@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     private const int BUILD_INDEX_OFFSET = 2; // skips main menu and scene loader
     private const int MAIN_MENU_BUILD_INDEX = 0;
 
-    private void OnEnable()
+    private void Start()
     {
         foreach (var icon in _levelIcons)
         {
@@ -17,7 +17,7 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         foreach (var icon in _levelIcons)
         {

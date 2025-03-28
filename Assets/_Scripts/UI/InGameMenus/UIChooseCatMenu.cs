@@ -22,7 +22,7 @@ public class UIChooseCatMenu : MonoBehaviour
     Instance = this;
   }
 
-  private void OnEnable()
+  private void Start()
   {
     _gridCells = GridManager.Instance.GetAllCellsArray();
     foreach (var gridCell in _gridCells)
@@ -31,7 +31,7 @@ public class UIChooseCatMenu : MonoBehaviour
     }
   }
 
-  private void OnDisable()
+  private void OnDestroy()
   {
     _gridCells = GridManager.Instance.GetAllCellsArray();
     foreach (var gridCell in _gridCells)
