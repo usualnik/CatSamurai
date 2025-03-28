@@ -16,4 +16,4 @@ MonoBehaviour:
   CatHealth: 100
   CatPrice: 200
   CatPrefab: {fileID: 243630776829447338, guid: a33debedaffe94a45872352bb0b6f481, type: 3}
-  UISprite: {fileID: -1330621349993832296, guid: 3f68d2fa8d32bfe43b3fec103b2a54f9, type: 3}
+  UISprite: {fileID: 7485330228800331114, guid: 1d587b2d6853c7141a64abdd7114f89e, type: 3}
