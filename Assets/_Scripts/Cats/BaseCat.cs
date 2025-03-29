@@ -5,10 +5,9 @@ public class BaseCat : MonoBehaviour
 {
   [SerializeField] private GameObject _removeIcon;
 
- 
-  
   public event EventHandler OnCatDeath;
   public event EventHandler OnTakingDamage;
+  public event EventHandler OnTakingHealing;
   public event EventHandler<XpGainedEventArgs> OnXpGained;
   public class XpGainedEventArgs : EventArgs
   {
@@ -21,22 +20,22 @@ public class BaseCat : MonoBehaviour
   {
     public int Level;
   }
-
   public CatDataSO CatDataSo;
-  public float _currentCatHealth;
+  [SerializeField] private float _currentCatHealth;
   [HideInInspector] public float _maxCatHealth;
   
   private bool _isPlaced;
   private GridCell _currentGridCell;
   
-  //private float _gainXpModifier = 0.01f;
-  private float _gainXpSpeed = 0.1f;
+  private float _gainXpSpeed = 0.025f;
+  //private float _gainXpSpeed = 0.5f; // Debug speed
   private float _gainXpNewLevelModifier = 0.5f;
   
   private float _currentXp;
   private float _maxXpToLvlUp;
 
   private int _catLevel;
+  private const int MAX_LEVEL_CAP = 3;
 
   private void Awake()
   {
@@ -50,20 +49,68 @@ public class BaseCat : MonoBehaviour
 
   private void Update()
   {
+
     if (_isPlaced)
     {
-      PerformAction();
-      GainXp();
+      switch (_catLevel)
+      {
+        default:
+          DefaultAction();
+          break;
+        case 2:
+          SecondTierAction();
+          break;
+        case 3:
+          ThirdTierAction();
+          break;
+      }
+      
+      if (_catLevel < MAX_LEVEL_CAP)
+      {
+        GainXp();
+      }
     }
 
   }
 
-  protected virtual void PerformAction()
+  private void GainXp()
+  {
+    _currentXp += Time.deltaTime * _gainXpSpeed;
+    OnXpGained?.Invoke(this,new XpGainedEventArgs(){CurrentXpGained = _currentXp});
+   
+    if (_currentXp >= _maxXpToLvlUp)
+    {
+      LevelUp();
+    }
+  }
+  private void LevelUp()
+  {
+   
+    _catLevel++;
+    _currentXp = 0;
+    _gainXpSpeed = _gainXpSpeed * _gainXpNewLevelModifier;
+    OnLevelUp?.Invoke(this,new OnLevelUpEventArgs(){Level = _catLevel});
+  }
+  protected virtual void SecondTierAction()
+  {
+    
+  }
+  protected virtual void ThirdTierAction()
   {
     
   }
 
-  public virtual void TakeDamage(int damage)
+  protected virtual void DefaultAction()
+  {
+    
+  }
+  
+  public float GetCurrentHealth()
+  {
+    return _currentCatHealth;
+  }
+
+  public void TakeDamage(int damage)
   {
     _currentCatHealth -= damage;
     if (_currentCatHealth <= 0)
@@ -72,6 +119,21 @@ public class BaseCat : MonoBehaviour
     }
     
     OnTakingDamage?.Invoke(this,EventArgs.Empty);
+  }
+  public void TakeHealing(int healAmount)
+  {
+    Debug.Log("Menya pohilili na " + healAmount);
+    if(_currentCatHealth < _maxCatHealth)
+    {
+      _currentCatHealth += healAmount;
+      OnTakingHealing?.Invoke(this, EventArgs.Empty);
+    }
+    else if (_currentCatHealth > _maxCatHealth)
+    {
+      _currentCatHealth = _maxCatHealth;
+    }
+    
+    Debug.Log(_currentCatHealth);
   }
 
   protected void Death()
@@ -108,26 +170,6 @@ public class BaseCat : MonoBehaviour
   public void HideRemoveIcon()
   {
     _removeIcon.gameObject.SetActive(false);
-  }
-
-  private void GainXp()
-  {
-    _currentXp += Time.deltaTime * _gainXpSpeed;
-    OnXpGained?.Invoke(this,new XpGainedEventArgs(){CurrentXpGained = _currentXp});
-   
-    if (_currentXp >= _maxXpToLvlUp)
-    {
-      LevelUp();
-    }
-  }
-  private void LevelUp()
-  {
-   
-    _catLevel++;
-    _currentXp = 0;
-    _gainXpSpeed = _gainXpSpeed * _gainXpNewLevelModifier;
-    OnLevelUp?.Invoke(this,new OnLevelUpEventArgs(){Level = _catLevel});
-    
   }
 
 

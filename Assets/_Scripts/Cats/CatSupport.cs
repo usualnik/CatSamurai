@@ -1,26 +1,34 @@
-using System;
 using UnityEngine;
 
 public class CatSupport : BaseCat
 {
+  private int _farmSushiAmount = 25;
+  private float _farmSushiTimer;
+  private const float FARM_SUSHI_TIMER_MAX = 10f;
   
-  //[SerializeField] private int _farmSushiAmount = 10;
-  [SerializeField] private float _farmSushiCooldown = 2f;
-
-
-  protected override void PerformAction()
+  protected override void DefaultAction()
   {
-    _farmSushiCooldown -= Time.deltaTime;
-    if (_farmSushiCooldown <= 0)
+    _farmSushiTimer -= Time.deltaTime;
+    if (_farmSushiTimer <= 0)
     {
      FarmingSushi(); 
-      _farmSushiCooldown = 2f;
+      _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
     }
+  }
+  
+  protected override void SecondTierAction()
+  {
+       
+  }
+
+  protected override void ThirdTierAction()
+  {
+    Debug.Log("Third Tier action");
   }
 
   private void FarmingSushi()
   {
-    Debug.Log("Farm");
+    SushiManager.Instance.AddSushi(_farmSushiAmount);
   }
   
   

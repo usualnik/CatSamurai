@@ -23,8 +23,27 @@ public class UICatBars : MonoBehaviour
         _cat.OnTakingDamage += Cat_OnTakingDamage;
         _cat.OnXpGained += Cat_OnXpGained;
         _cat.OnLevelUp += Cat_OnLevelUp;
+        _cat.OnTakingHealing += Cat_OnTakingHealing;
+    }
+    private void OnDestroy()
+    {
+        _cat.OnTakingDamage -= Cat_OnTakingDamage;
+        _cat.OnXpGained -= Cat_OnXpGained;
+        _cat.OnLevelUp -= Cat_OnLevelUp;
+        _cat.OnTakingHealing -= Cat_OnTakingHealing;
+        
     }
 
+    private void Cat_OnTakingHealing(object sender, EventArgs e)
+    {
+        UpdateHealthBar();
+    }
+    private void Cat_OnTakingDamage(object sender, EventArgs e)
+    {
+        UpdateHealthBar();
+    }
+    
+    
     private void Cat_OnLevelUp(object sender, BaseCat.OnLevelUpEventArgs e)
     {
         UpdateLevelUpText(e.Level);
@@ -35,20 +54,10 @@ public class UICatBars : MonoBehaviour
         UpdateXpBar(e.CurrentXpGained);
     }
 
-    private void OnDestroy()
-    {
-        _cat.OnTakingDamage -= Cat_OnTakingDamage;
-        _cat.OnXpGained -= Cat_OnXpGained;
-    }
- 
-    private void Cat_OnTakingDamage(object sender, EventArgs e)
-    {
-        UpdateHealthBar();
-    }
-
     private void UpdateHealthBar()
     {
-        _healthBar.fillAmount = GetComponent<BaseCat>()._currentCatHealth / GetComponent<BaseCat>()._maxCatHealth;
+       
+        _healthBar.fillAmount = _cat.GetCurrentHealth() / _cat._maxCatHealth;
     }
 
     private void UpdateXpBar(float currentXp)
@@ -61,7 +70,5 @@ public class UICatBars : MonoBehaviour
         _leveltext.text = "Ур." + level;
     }
 
-
-   
 }
 

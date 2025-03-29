@@ -9,6 +9,7 @@ public class UICatSetupCell : MonoBehaviour, IPointerClickHandler
     
     private UICatSetupMenu _catSetupMenu;
     private Image _image;
+    private readonly Vector3 _selectedScale = new Vector3(0.1f,0.1f,0);
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class UICatSetupCell : MonoBehaviour, IPointerClickHandler
         
         if (_isCatAvalibleToChoose && _catSetupMenu.GetAvailableCats() > 0)
         {
-            _image.rectTransform.localScale += new Vector3(0.1f,0.1f,0);
+            _image.rectTransform.localScale += _selectedScale;
             _catSetupMenu.AddCatData(_catDataSo); // add this cat to list of chosen cats
             _isCatAvalibleToChoose = false;
             _catSetupMenu.SetCatToSetup();

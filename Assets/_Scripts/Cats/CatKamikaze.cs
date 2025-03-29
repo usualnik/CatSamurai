@@ -7,11 +7,19 @@ public class CatKamikaze : BaseCat
     [SerializeField] private float _attackCooldown = 2f;
     
     [SerializeField] private int _meleeDamage = 50;
-
   
-    protected override void PerformAction()
+    protected override void DefaultAction()
     {
         Attack();
+    }
+    protected override void SecondTierAction()
+    {
+       
+    }
+
+    protected override void ThirdTierAction()
+    {
+        Debug.Log("Third Tier action");
     }
 
     private void Attack()

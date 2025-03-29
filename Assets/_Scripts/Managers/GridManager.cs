@@ -42,7 +42,6 @@ public class GridManager : MonoBehaviour
             }
         }
     }
-
     public GridCell[] GetAllCellsArray()
     {
         return _cellsArray;
@@ -74,6 +73,12 @@ public class GridManager : MonoBehaviour
         }
         
         return unAvailableCellsList;
+    }
+
+    public BaseCat GetRandomCatFromGrid()
+    {
+        int randomCatIndex = Random.Range(0, GetUnAvailableCellsList().Count);
+        return GetUnAvailableCellsList()[randomCatIndex].CatOnThisCell;
     }
     
 }

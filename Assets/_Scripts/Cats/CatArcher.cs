@@ -9,7 +9,7 @@ public class CatArcher : BaseCat
 
     private float _archerAttackCooldown;
 
-    protected override void PerformAction()
+    protected override void DefaultAction()
     {
         _archerAttackCooldown -= Time.deltaTime;
         if (_archerAttackCooldown <= 0)
@@ -29,6 +29,15 @@ public class CatArcher : BaseCat
                 _archerAttackCooldown = 1.5f;
             }
         }
+    }
+    protected override void SecondTierAction()
+    {
+       
+    }
+
+    protected override void ThirdTierAction()
+    {
+        Debug.Log("Third Tier action");
     }
 
 }

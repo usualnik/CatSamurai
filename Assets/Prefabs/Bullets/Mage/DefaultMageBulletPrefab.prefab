@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5322876918817068024}
   - component: {fileID: -5640255292719644078}
   m_Layer: 0
-  m_Name: MageBulletPrefab
+  m_Name: DefaultMageBulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

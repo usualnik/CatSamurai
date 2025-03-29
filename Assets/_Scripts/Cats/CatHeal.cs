@@ -1,25 +1,34 @@
-using System;
 using UnityEngine;
 
 public class CatHeal : BaseCat
 {
-  //[SerializeField] private int _healAmount = 10;
-  [SerializeField] private float _healingCooldown = 2f;
+  private int _healAmount = 50;
+  private float _healingTimer;
+  private const float HEALING_TIMER_MAX = 10f;
 
 
-  protected override void PerformAction()
+  protected override void DefaultAction()
   {
-    _healingCooldown -= Time.deltaTime;
-    if (_healingCooldown <= 0)
+    _healingTimer -= Time.deltaTime;
+    if (_healingTimer <= 0)
     {
      Healing(); 
-      _healingCooldown = 2f;
+      _healingTimer = HEALING_TIMER_MAX;
     }
+  }
+  protected override void SecondTierAction()
+  {
+       
+  }
+
+  protected override void ThirdTierAction()
+  {
+    Debug.Log("Third Tier action");
   }
 
   private void Healing()
   {
-   
+    GridManager.Instance.GetRandomCatFromGrid().TakeHealing(_healAmount);
   }
   
   

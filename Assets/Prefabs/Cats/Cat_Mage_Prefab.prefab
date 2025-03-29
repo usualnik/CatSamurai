@@ -104,6 +104,8 @@ MonoBehaviour:
   _mageBulletPrefab: {fileID: 5711267300627990407, guid: d4b5edec70cbec34385c42438e5258aa, type: 3}
   _spawnMageBulletPosition: {fileID: 7563705460979467664}
   _raycastPos: {fileID: 1818632790008318267}
+  _secondTierMageBulletPrefab: {fileID: 5711267300627990407, guid: 9865f7da5d6791e4f9e6ee1591edf509, type: 3}
+  _thirdTierMageBulletPrefab: {fileID: 5711267300627990407, guid: d4ddd0471e96e9649a5d7060d0acbf7a, type: 3}
 --- !u!61 &7539265903519401814
 BoxCollider2D:
   m_ObjectHideFlags: 0

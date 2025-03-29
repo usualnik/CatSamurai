@@ -32,8 +32,8 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
             
             CatOnThisCell.SetGridCell(this);
             CatOnThisCell.OnCatDeath += OnCatDeath;
-            
-            GameManager.Instance.SubtractSushi(CatOnThisCell.CatDataSo.CatPrice);
+          
+            SushiManager.Instance.SubtractSushi(CatOnThisCell.CatDataSo.CatPrice);
             OnCatPlaced?.Invoke(this, EventArgs.Empty);
             
             ThisGridCellIsAvailable = false;

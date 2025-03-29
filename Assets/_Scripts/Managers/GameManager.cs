@@ -7,10 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public event EventHandler OnGamePlayStarted;
-    
-    [SerializeField] private int _sushi;
-    
-    [SerializeField] private TextMeshProUGUI _sushiText;
+   
     
     [Header("Pause and GameOver")]
     [SerializeField] private GameObject _pauseMenu;
@@ -28,6 +25,7 @@ public class GameManager : MonoBehaviour
     private const int MAIN_MENU_BUILD_INDEX = 0;
     private const int CHOOSE_LEVEL_SCENE_BUILD_INDEX = 1;
     private const int FIRST_LEVEL_SCENE_INDEX = 2;
+    private const int LAST_LEVEL_SCENE_INDEX = 11;
     
     private void Awake()
     {
@@ -45,16 +43,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _sushiText.text = "SUSHI: " + _sushi;
 
         if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
         {
             _tutorial = _tutorialCanvas.GetComponent<Tutorial>();
             _tutorial.OnTutorialEnded += Tutorial_OnTutorialEnded;
         }
-        
-        
-        
+
         UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone += GameOverZone_OnRacoonEnterGameOverZone;
         QuestManager.Instance.OnFirstLevelQuestComplete += QuestManager_OnFirstLevelQuestComplete;
@@ -107,12 +102,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void SubtractSushi(int value)
-    {
-        _sushi -= value;
-        _sushiText.text = "SUSHI: " + _sushi;
-    }
-
     public void GamePause()
     {
         _pauseCanvas.gameObject.SetActive(true);
@@ -158,9 +147,19 @@ public class GameManager : MonoBehaviour
        SceneManager.LoadScene(CHOOSE_LEVEL_SCENE_BUILD_INDEX);
     }
 
-    public int GetSushiAmount()
+    public void LoadNextLevel()
     {
-        return _sushi;
+        if (SceneManager.GetActiveScene().buildIndex + 1 != LAST_LEVEL_SCENE_INDEX)
+        {            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            LoadMainMenu();
+        }
+        
     }
+
+  
     
 }
