@@ -3,29 +3,60 @@ using UnityEngine;
 public class CatKamikaze : BaseCat
 {
     [SerializeField] private Transform _raycastPos;
-    [SerializeField] private float _meleeAttackDistance = 100f;
-    [SerializeField] private float _attackCooldown = 2f;
+   
+   [SerializeField] private int _meleeDamage = 50;
+    private int _secondTierMeleeDamage = 60;
+    private int _thirdTierMeleeDamage = 70;
     
-    [SerializeField] private int _meleeDamage = 50;
+    private float _meleeAttackDistance = 100f;
+    private float _attackCooldownTimer;
+    private const float ATTACK_COOLDOWN_TIMER_MAX = 2f;
+
+    
   
+    private void Start()
+    {
+        OnLevelUp += BaseCat_OnLevelUp;
+    }
+
+    private void OnDestroy()
+    {
+        OnLevelUp -= BaseCat_OnLevelUp;
+    }
+
+    private void BaseCat_OnLevelUp(object sender, OnLevelUpEventArgs e)
+    {
+        switch (e.Level)
+        {
+            case 2:
+                _meleeDamage = _secondTierMeleeDamage;
+                // + new visuals
+                break;
+            case 3:
+                _meleeDamage = _thirdTierMeleeDamage;
+                // + critical strike mechanic
+                break;
+        }
+    }
+
     protected override void DefaultAction()
     {
         Attack();
     }
     protected override void SecondTierAction()
     {
-       
+       Attack();
     }
 
     protected override void ThirdTierAction()
     {
-        Debug.Log("Third Tier action");
+       Attack();
     }
 
     private void Attack()
     {
-        _attackCooldown -= Time.deltaTime;
-        if (_attackCooldown <= 0)
+        _attackCooldownTimer -= Time.deltaTime;
+        if (_attackCooldownTimer <= 0)
         {
             Vector2 rayOrigin = new Vector2(_raycastPos.position.x,_raycastPos.position.y);
             RaycastHit2D raycastHit2D = Physics2D.Raycast(rayOrigin, Vector2.right, _meleeAttackDistance);
@@ -34,8 +65,9 @@ public class CatKamikaze : BaseCat
                                               && raycastHit2D.collider.TryGetComponent(out BaseRacoon baseRacoon))
             {
                 baseRacoon.TakeDamage(_meleeDamage);
+                _attackCooldownTimer = ATTACK_COOLDOWN_TIMER_MAX;
+
             }
-            _attackCooldown = 2f;
         }
     }
 

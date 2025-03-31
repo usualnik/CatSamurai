@@ -13,8 +13,11 @@ public class CatTank : BaseCat
     [Header("Third tier")]
     [SerializeField] private Transform _raycastPos;
      private float _meleeAttackDistance = 100f;
-     private float _attackCooldown = 5f;
+     private float _attackCooldownTimer;
+     private const float ATTACK_COOLDOWN_TIMER_MAX = 5f;
+
      private int _meleeDamage = 25;
+     
     
     protected override void SecondTierAction()
     {
@@ -32,8 +35,8 @@ public class CatTank : BaseCat
     
     private void Attack()
     {
-        _attackCooldown -= Time.deltaTime;
-        if (_attackCooldown <= 0)
+        _attackCooldownTimer -= Time.deltaTime;
+        if (_attackCooldownTimer <= 0)
         {
             Vector2 rayOrigin = new Vector2(_raycastPos.position.x,_raycastPos.position.y);
             RaycastHit2D raycastHit2D = Physics2D.Raycast(rayOrigin, Vector2.right, _meleeAttackDistance);
@@ -42,8 +45,9 @@ public class CatTank : BaseCat
                                               && raycastHit2D.collider.TryGetComponent(out BaseRacoon baseRacoon))
             {
                 baseRacoon.TakeDamage(_meleeDamage);
+                _attackCooldownTimer = ATTACK_COOLDOWN_TIMER_MAX;
+
             }
-            _attackCooldown = 2f;
         }
     }
 

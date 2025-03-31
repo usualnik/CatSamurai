@@ -100,6 +100,8 @@ MonoBehaviour:
   _currentCatHealth: 0
   _maxCatHealth: 0
   _archerBulletPrefab: {fileID: 5711267300627990407, guid: b8f8a902c6dfa784a9f8929aaa1a1041, type: 3}
+  _secondTierArcherBulletPrefab: {fileID: 5711267300627990407, guid: 1a6d557ff77bf904fb35d48751a3ea2b, type: 3}
+  _thirdTierArcherBulletPrefab: {fileID: 5711267300627990407, guid: 702b0d587dc96164689d1ab67e6e76a9, type: 3}
   _spawnMageBulletPosition: {fileID: 6011135137469168219}
 --- !u!61 &7966386289167754684
 BoxCollider2D:

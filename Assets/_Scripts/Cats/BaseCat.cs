@@ -13,7 +13,6 @@ public class BaseCat : MonoBehaviour
   {
     public float CurrentXpGained;
   }
-
   public event EventHandler<OnLevelUpEventArgs> OnLevelUp;
 
   public class OnLevelUpEventArgs : EventArgs
@@ -28,7 +27,7 @@ public class BaseCat : MonoBehaviour
   private GridCell _currentGridCell;
   
   private float _gainXpSpeed = 0.025f;
-  //private float _gainXpSpeed = 0.5f; // Debug speed
+  // private float _gainXpSpeed = 0.5f; // Debug speed
   private float _gainXpNewLevelModifier = 0.5f;
   
   private float _currentXp;
@@ -141,7 +140,7 @@ public class BaseCat : MonoBehaviour
     OnCatDeath?.Invoke(this,EventArgs.Empty);
     Destroy(gameObject);
   }
-
+  
   public void SetPlaced(bool isPlaced)
   {
     _isPlaced = isPlaced;
