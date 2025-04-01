@@ -10,7 +10,9 @@ public class SushiManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _sushiText;
 
     private float _farmSushiTimer;
-    private const float FARM_SUSHI_TIMER_MAX = 20f;
+    //private const float FARM_SUSHI_TIMER_MAX = 20f;
+    private const float FARM_SUSHI_TIMER_MAX = 5f; // Debug speed
+
 
     private int _farmSushiAmount = 25;
     private bool _canFarmSushi;

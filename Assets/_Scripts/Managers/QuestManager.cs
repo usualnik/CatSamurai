@@ -20,7 +20,7 @@ public class QuestManager : MonoBehaviour
     //Scene 1
     public event EventHandler OnFirstLevelQuestComplete;
     public event EventHandler OnFirstLevelQuestAlmostComplete;
-    private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления!";
+    private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления и отбейте атаку!";
     private float _firstSceneReinforcementTimer = 90f; // 1.5 min 
     private bool _firstSceneReinforcementTimerStarted;
     private bool _firstSceneTimerWarning = true;
@@ -30,10 +30,10 @@ public class QuestManager : MonoBehaviour
     #region SecondScene
 
     //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
-    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    public event EventHandler OnSecondLevelQuestComplete;
     
-    private readonly string _secondSceneQuestText = "Накопите 1000 ед. суши";
+    private readonly string _secondSceneQuestText = "Накопите 1000 ед. суши и отбейте атаку!";
+    private const int _secondSceneSushiAmountObjective = 1000;
     
     #endregion
     
@@ -107,7 +107,7 @@ public class QuestManager : MonoBehaviour
     
     #endregion
     
-    #region NineScene
+    #region TenScene
 
     //Scene 1
     //public event EventHandler OnSecondLevelQuestComplete;
@@ -139,7 +139,7 @@ public class QuestManager : MonoBehaviour
 
     #region FirstSceneBehaviour
 
-    private void FirstSceneTimer()
+    private void FirstSceneQuest()
     {
         if (_firstSceneReinforcementTimerStarted)
         {
@@ -169,11 +169,64 @@ public class QuestManager : MonoBehaviour
     }
 
     #endregion
-    
 
+    #region SecondSceneBehaviour
+
+    private void SecondSceneQuest()
+    {
+        if (SushiManager.Instance.GetSushiAmount() > _secondSceneSushiAmountObjective)
+        {
+            if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+            {
+                OnSecondLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+            }
+        }
+    }
+    
+    #endregion
+    
     private void Update()
     {
-        FirstSceneTimer();
+        switch (_currentSceneIndex)
+        {
+            case 0:
+                // Main menu index
+                break;
+            case 1:
+                // Choose level scene index
+                break;
+            case 2:
+                FirstSceneQuest();
+                break;
+            case 3:
+                SecondSceneQuest();
+                break;
+            case 4:
+
+                break;
+            case 5:
+
+                break;
+            case 6:
+
+                break;
+            case 7:
+
+                break;
+            case 8:
+
+                break;
+            case 9:
+
+                break;
+            case 10:
+
+                break;
+            case 11:
+
+                break;
+        }
+
     }
     
     private void StoryTellingManager_OnStoryTellEnd(object sender, EventArgs e)

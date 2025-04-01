@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public event EventHandler OnGamePlayStarted;
-   
-    
+
     [Header("Pause and GameOver")]
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _gameOverMenu;
@@ -52,10 +51,13 @@ public class GameManager : MonoBehaviour
 
         UICatSetupMenu.Instance.OnCatSetupApproved += UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone += GameOverZone_OnRacoonEnterGameOverZone;
+        
+        //Quests
         QuestManager.Instance.OnFirstLevelQuestComplete += QuestManager_OnFirstLevelQuestComplete;
+        QuestManager.Instance.OnSecondLevelQuestComplete += QuestManager_OnSecondLevelQuestComplete;
         
     }
-    
+
     private void OnDestroy()
     {
         if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
@@ -65,10 +67,17 @@ public class GameManager : MonoBehaviour
 
         UICatSetupMenu.Instance.OnCatSetupApproved -= UICatSetupMenu_OnCatSetupApproved;
         GameOverZone.Instance.OnRacoonEnterGameOverZone -= GameOverZone_OnRacoonEnterGameOverZone;
+        
+        //Quests
         QuestManager.Instance.OnFirstLevelQuestComplete -= QuestManager_OnFirstLevelQuestComplete;
+        QuestManager.Instance.OnSecondLevelQuestComplete -= QuestManager_OnSecondLevelQuestComplete;
     }
 
     private void QuestManager_OnFirstLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    private void QuestManager_OnSecondLevelQuestComplete(object sender, EventArgs e)
     {
         LevelComplete();
     }
@@ -151,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex + 1 != LAST_LEVEL_SCENE_INDEX)
         {            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
