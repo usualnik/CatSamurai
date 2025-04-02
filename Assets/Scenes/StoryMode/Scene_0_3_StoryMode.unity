@@ -8513,7 +8513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8588837149645079176, guid: 9f7797420a44c1c4cb53ae2178152c78, type: 3}
+  m_Sprite: {fileID: 627878203, guid: 773402f3ec113f44e94cabb9eb9d528c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -16075,11 +16075,11 @@ MonoBehaviour:
   - {fileID: 8744881137445954847, guid: 6c9b8fe38e6b6bd498552a96ff8c5029, type: 3}
   - {fileID: 8744881137445954847, guid: e4cd884276bad8d43924d41d58c38384, type: 3}
   - {fileID: 8744881137445954847, guid: 76870fbe886797c438821a702aa73133, type: 3}
-  _element0: 25
-  _element1: 25
-  _element2: 50
-  _spawnRacoonsLeftAmount: 0
-  _spawnTimer: 20
+  _element0: 80
+  _element1: 20
+  _element2: 0
+  _spawnRacoonsLeftAmount: 15
+  _spawnTimer: 1
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

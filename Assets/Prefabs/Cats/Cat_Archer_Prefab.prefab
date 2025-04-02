@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7966386289167754684}
   - component: {fileID: 7083245385472605269}
   - component: {fileID: 7902326998240493049}
+  - component: {fileID: 5377162366800872118}
   m_Layer: 0
   m_Name: Cat_Archer_Prefab
   m_TagString: Cat Archer
@@ -186,6 +187,33 @@ MonoBehaviour:
   _xpbar: {fileID: 4447444494454232844}
   _healthBar: {fileID: 5345798189340240814}
   _leveltext: {fileID: 132896978476678534}
+--- !u!50 &5377162366800872118
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190347989666117054}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &939294739154860600
 GameObject:
   m_ObjectHideFlags: 0

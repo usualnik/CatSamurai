@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CatMage : BaseCat
@@ -9,6 +10,7 @@ public class CatMage : BaseCat
     [SerializeField] private Transform _raycastPos;
     private float _mageAttackCooldownTimer;
     private const float MAGE_ATTACK_COOLDOWN_TIMER_MAX = 3f;
+    private float _distanceToEndOfScreen;
     
     [Header("Second Tier")]
     [SerializeField] private GameObject _secondTierMageBulletPrefab;
@@ -55,19 +57,23 @@ public class CatMage : BaseCat
     private void Attack()
     {
         _mageAttackCooldownTimer -= Time.deltaTime;
+        
         if (_mageAttackCooldownTimer <= 0)
         {
             GameObject bullet = Instantiate(_mageBulletPrefab, _spawnMageBulletPosition.position,
-                Quaternion.identity, transform);
-
-            if (bullet)
-            {
-                bullet.transform.Rotate(Vector3.forward, 90f); // apply rotation, just for visuals
-                bullet.layer = gameObject.layer;
+                    Quaternion.identity, transform);
+                
+                if (bullet)
+                {
+                    bullet.transform.Rotate(Vector3.forward, 90f); // apply rotation, just for visuals
+                    bullet.layer = gameObject.layer;
+                }
+                
                 _mageAttackCooldownTimer = MAGE_ATTACK_COOLDOWN_TIMER_MAX;
-            }
 
         }
+            
     }
-
 }
+
+

@@ -55,7 +55,15 @@ public class GameManager : MonoBehaviour
         //Quests
         QuestManager.Instance.OnFirstLevelQuestComplete += QuestManager_OnFirstLevelQuestComplete;
         QuestManager.Instance.OnSecondLevelQuestComplete += QuestManager_OnSecondLevelQuestComplete;
-        
+        QuestManager.Instance.OnThirdLevelQuestComplete += QuestManager_OnThirdLevelQuestComplete;
+        QuestManager.Instance.OnFourthLevelQuestComplete += QuestManager_OnFourthLevelQuestComplete;
+        QuestManager.Instance.OnFiveLevelQuestComplete += QuestManager_OnFiveLevelQuestComplete;
+        QuestManager.Instance.OnSixLevelQuestComplete += QuestManager_OnSixLevelQuestComplete;
+        QuestManager.Instance.OnSevenLevelQuestComplete += QuestManager_OnSevenLevelQuestComplete;
+        QuestManager.Instance.OnEightLevelQuestComplete += QuestManager_OnEightLevelQuestComplete;
+        QuestManager.Instance.OnNineLevelQuestComplete += QuestManager_OnNineLevelQuestComplete;
+        QuestManager.Instance.OnTenLevelQuestComplete += QuestManager_OnTenLevelQuestComplete;
+            
     }
 
     private void OnDestroy()
@@ -71,7 +79,18 @@ public class GameManager : MonoBehaviour
         //Quests
         QuestManager.Instance.OnFirstLevelQuestComplete -= QuestManager_OnFirstLevelQuestComplete;
         QuestManager.Instance.OnSecondLevelQuestComplete -= QuestManager_OnSecondLevelQuestComplete;
+        QuestManager.Instance.OnThirdLevelQuestComplete -= QuestManager_OnThirdLevelQuestComplete;
+        QuestManager.Instance.OnFourthLevelQuestComplete -= QuestManager_OnFourthLevelQuestComplete;
+        QuestManager.Instance.OnFiveLevelQuestComplete -= QuestManager_OnFiveLevelQuestComplete;
+        QuestManager.Instance.OnSixLevelQuestComplete -= QuestManager_OnSixLevelQuestComplete;
+        QuestManager.Instance.OnSevenLevelQuestComplete -= QuestManager_OnSevenLevelQuestComplete;
+        QuestManager.Instance.OnEightLevelQuestComplete -= QuestManager_OnEightLevelQuestComplete;
+        QuestManager.Instance.OnNineLevelQuestComplete -= QuestManager_OnNineLevelQuestComplete;
+        QuestManager.Instance.OnTenLevelQuestComplete -= QuestManager_OnTenLevelQuestComplete;
+
     }
+
+    #region QuestComplete
 
     private void QuestManager_OnFirstLevelQuestComplete(object sender, EventArgs e)
     {
@@ -81,8 +100,46 @@ public class GameManager : MonoBehaviour
     {
         LevelComplete();
     }
+    
+    private void QuestManager_OnThirdLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    
+    private void QuestManager_OnFourthLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
 
+    private void QuestManager_OnFiveLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    private void QuestManager_OnSixLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    private void QuestManager_OnSevenLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    private void QuestManager_OnEightLevelQuestComplete(object sender, EventArgs e)
+    {
+       LevelComplete();
+    }
+    
+    private void QuestManager_OnNineLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
+    
+    private void QuestManager_OnTenLevelQuestComplete(object sender, EventArgs e)
+    {
+        LevelComplete();
+    }
 
+    #endregion
+    
     #region GameOverConditions
     
     private void GameOverZone_OnRacoonEnterGameOverZone(object sender, GameOverMessageEventArgs e)
@@ -92,12 +149,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-  
     private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
     {
         OnGamePlayStarted?.Invoke(this, EventArgs.Empty);
     }
-
 
     private void Tutorial_OnTutorialEnded(object sender, EventArgs e)
     {
@@ -168,7 +223,5 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
-  
-    
+ 
 }

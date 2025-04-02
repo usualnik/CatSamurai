@@ -17,7 +17,7 @@ public class QuestManager : MonoBehaviour
 
     #region FirstScene
 
-    //Scene 1
+    //Level 1
     public event EventHandler OnFirstLevelQuestComplete;
     public event EventHandler OnFirstLevelQuestAlmostComplete;
     private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления и отбейте атаку!";
@@ -29,7 +29,7 @@ public class QuestManager : MonoBehaviour
     
     #region SecondScene
 
-    //Scene 1
+    //Level 2
     public event EventHandler OnSecondLevelQuestComplete;
     
     private readonly string _secondSceneQuestText = "Накопите 1000 ед. суши и отбейте атаку!";
@@ -39,9 +39,8 @@ public class QuestManager : MonoBehaviour
     
     #region ThirdScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
-    //public event EventHandler OnSecondLevelQuestAlmostComplete;
+    //Level 3
+    public event EventHandler OnThirdLevelQuestComplete;
     
     private readonly string _thirdSceneQuestText = "Защитите мирных жителей";
     
@@ -49,28 +48,25 @@ public class QuestManager : MonoBehaviour
   
     #region FourthScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
-    //public event EventHandler OnSecondLevelQuestAlmostComplete;
-    
-    private readonly string _fourthSceneQuestText = "Убейте главаря енотов";
+    //Level 4
+    public event EventHandler OnFourthLevelQuestComplete;
+    private readonly string _fourthSceneQuestText = "Убейте главарей енотов";
     
     #endregion
     
     #region FifthScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
-    //public event EventHandler OnSecondLevelQuestAlmostComplete;
-    
+    //Level 5
+    public event EventHandler OnFiveLevelQuestComplete;
+
     private readonly string _fifthSceneQuestText = "Очистите ваши земли от енотов";
     
     #endregion
     
     #region SixthScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
+    //Level 6
+    public event EventHandler OnSixLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
     private readonly string _sixthSceneQuestText = "Вернитесь в замок, добивая остатки врагов";
@@ -79,28 +75,28 @@ public class QuestManager : MonoBehaviour
     
     #region SeventhScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
+    //Level 7
+    public event EventHandler OnSevenLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
     private readonly string _seventhSceneQuestText = "Защищайте лекарей, пока они не закончат свой ритуал";
     
     #endregion
     
-    #region EighthScene
+    #region EightScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
+    //Level 8
+    public event EventHandler OnEightLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _eighthSceneQuestText = "Помогите разбойникам";
+    private readonly string _eightSceneQuestText = "Помогите разбойникам";
     
     #endregion
     
     #region NineScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
+    //Level 9
+    public event EventHandler OnNineLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
     private readonly string _nineSceneQuestText = "Выберитесь из леса";
@@ -109,22 +105,21 @@ public class QuestManager : MonoBehaviour
     
     #region TenScene
 
-    //Scene 1
-    //public event EventHandler OnSecondLevelQuestComplete;
+    //Level 10
+    public event EventHandler OnTenLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
     private readonly string _tenSceneQuestText = "Захватите разведчика";
     
     #endregion
     
-    #endregion
+    #endregion    
 
     private void Awake()
     {
         Instance = this;
         
         _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
     }
 
     private void Start()
@@ -139,7 +134,7 @@ public class QuestManager : MonoBehaviour
 
     #region FirstSceneBehaviour
 
-    private void FirstSceneQuest()
+    private void FirstLevelQuest()
     {
         if (_firstSceneReinforcementTimerStarted)
         {
@@ -172,7 +167,7 @@ public class QuestManager : MonoBehaviour
 
     #region SecondSceneBehaviour
 
-    private void SecondSceneQuest()
+    private void SecondLevelQuest()
     {
         if (SushiManager.Instance.GetSushiAmount() > _secondSceneSushiAmountObjective)
         {
@@ -180,6 +175,102 @@ public class QuestManager : MonoBehaviour
             {
                 OnSecondLevelQuestComplete?.Invoke(this,EventArgs.Empty);
             }
+        }
+    }
+    
+    #endregion
+    
+    #region ThirdSceneBehaviour
+
+    private void ThirdLevelQuest()
+    {
+       if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+       {
+           OnThirdLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+       }
+    }
+    
+    #endregion
+
+    #region FourthSceneBehaviour
+
+    private void FourthLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+          OnFourthLevelQuestComplete?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region FiveSceneBehaviour
+
+    private void FiveLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+            OnFiveLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region SixSceneBehaviour
+
+    private void SixLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+            OnSixLevelQuestComplete?.Invoke(this,EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region SevenSceneBehaviour
+
+    private void SevenLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+            OnSevenLevelQuestComplete?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region EightSceneBehaviour
+
+    private void EightLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+           OnEightLevelQuestComplete?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region NineSceneBehaviour
+
+    private void NineLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+            OnNineLevelQuestComplete?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    
+    #endregion
+    
+    #region TenSceneBehaviour
+
+    private void TenLevelQuest()
+    {
+        if (RacoonsSpawnManager.Instance.GetRacoonsLeftAmount() <= 0)
+        {
+            OnTenLevelQuestComplete?.Invoke(this, EventArgs.Empty);
         }
     }
     
@@ -196,34 +287,34 @@ public class QuestManager : MonoBehaviour
                 // Choose level scene index
                 break;
             case 2:
-                FirstSceneQuest();
+                FirstLevelQuest();
                 break;
             case 3:
-                SecondSceneQuest();
+                SecondLevelQuest();
                 break;
             case 4:
-
+                ThirdLevelQuest();
                 break;
             case 5:
-
+                FourthLevelQuest();
                 break;
             case 6:
-
+                FiveLevelQuest();
                 break;
             case 7:
-
+                SixLevelQuest();
                 break;
             case 8:
-
+                SevenLevelQuest();
                 break;
             case 9:
-
+                EightLevelQuest();
                 break;
             case 10:
-
+                NineLevelQuest();
                 break;
             case 11:
-
+                TenLevelQuest();
                 break;
         }
 
@@ -268,7 +359,7 @@ public class QuestManager : MonoBehaviour
                 _questText.text = _seventhSceneQuestText;
                 break;
             case 9:
-                _questText.text = _eighthSceneQuestText;
+                _questText.text = _eightSceneQuestText;
                 break;
             case 10:
                 _questText.text = _nineSceneQuestText;

@@ -6,6 +6,7 @@ public class BaseCat : MonoBehaviour
   [SerializeField] private GameObject _removeIcon;
 
   public event EventHandler OnCatDeath;
+  public event EventHandler OnCatPlaced;
   public event EventHandler OnTakingDamage;
   public event EventHandler OnTakingHealing;
   public event EventHandler<XpGainedEventArgs> OnXpGained;
@@ -144,6 +145,7 @@ public class BaseCat : MonoBehaviour
   public void SetPlaced(bool isPlaced)
   {
     _isPlaced = isPlaced;
+    OnCatPlaced?.Invoke(this,EventArgs.Empty);
   }
   public bool IsPlaced{ get => _isPlaced;}
 
