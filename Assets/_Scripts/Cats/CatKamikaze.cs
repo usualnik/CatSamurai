@@ -7,7 +7,7 @@ public class CatKamikaze : BaseCat
     private int _secondTierMeleeDamage = 60;
     private int _thirdTierMeleeDamage = 70;
     
-    private float _meleeAttackDistance = 100f;
+    private float _meleeAttackDistance = 50f;
     private const float ATTACK_COOLDOWN = 2f;
     
     private void Start()

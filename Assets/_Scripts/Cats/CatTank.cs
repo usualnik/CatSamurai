@@ -1,5 +1,3 @@
-
-using System;
 using UnityEngine;
 
 public class CatTank : BaseCat
@@ -40,7 +38,6 @@ public class CatTank : BaseCat
                  break;
          }
      }
-
 
      private new void SecondTierAction()
     {
