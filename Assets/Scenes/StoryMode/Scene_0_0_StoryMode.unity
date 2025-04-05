@@ -13064,7 +13064,14 @@ MonoBehaviour:
   _element1: 0
   _element2: 0
   _spawnRacoonsLeftAmount: 15
-  _spawnTimer: 1
+  _spawnTimerMin: 5
+  _spawnTimerMax: 7
+  _waveTimerMin: 40
+  _waveTimerMax: 45
+  _inWaveSpawnFrequencyTimerMin: 1
+  _inWaveSpawnFrequencyTimerMax: 3
+  _amountOfRacoonsInWaveMin: 5
+  _amountOfRacoonsInWaveMax: 7
 --- !u!4 &3593947746597035684
 Transform:
   m_ObjectHideFlags: 0

@@ -9,12 +9,15 @@ public class BaseRacoon : MonoBehaviour
    public static event EventHandler OnAnyRacoonDeath;
    
    private float _health;
+   private LayerMask _layer;
+
 
    private void Awake()
    {
       _health = RacoonDataSo.RacoonHealth;
+      _layer = gameObject.layer;
    }
-   
+
    public void TakeDamage(int damage)
    {
       _health -= damage;
@@ -24,5 +27,11 @@ public class BaseRacoon : MonoBehaviour
          Destroy(gameObject);
       }
    }
+
+   public LayerMask GetRacoonLayer()
+   {
+      return _layer;
+   }
+   
 
 }

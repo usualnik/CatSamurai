@@ -213,15 +213,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex + 1 != LAST_LEVEL_SCENE_INDEX)
-        {            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            LoadMainMenu();
-        }
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
  
 }

@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RacoonDataSo: {fileID: 11400000, guid: a04ea83e138b7e542b0c308d49320998, type: 2}
-  PercentSpawnChance: 25
+  PercentSpawnChance: 50
 --- !u!114 &7425877128046684689
 MonoBehaviour:
   m_ObjectHideFlags: 0

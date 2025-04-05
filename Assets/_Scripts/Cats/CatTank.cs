@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class CatTank : BaseCat
 {
-    
-    // Second Tier
-    private readonly Vector3 _upgradedScale = new Vector3(0.1f,0.1f,0);
-
+   
     //Third Tier
     [Header("Third tier")]
     [SerializeField] private Transform _raycastPos;
@@ -41,7 +38,7 @@ public class CatTank : BaseCat
 
      private new void SecondTierAction()
     {
-        gameObject.transform.localScale += _upgradedScale;
+        // bigger prefab animation
     }
 
      private new void ThirdTierAction()

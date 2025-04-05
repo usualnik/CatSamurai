@@ -28,7 +28,7 @@ public class BaseCat : MonoBehaviour
   private GridCell _currentGridCell;
   
   private float _gainXpSpeed = 0.025f;
-  // private float _gainXpSpeed = 0.5f; // Debug speed
+   //private float _gainXpSpeed = 0.5f; // Debug speed
   private float _gainXpNewLevelModifier = 0.5f;
   
   private float _currentXp;
@@ -36,6 +36,8 @@ public class BaseCat : MonoBehaviour
 
   private int _catLevel;
   private const int MAX_LEVEL_CAP = 3;
+
+  private BoxCollider2D _catCollider;
 
   private void Awake()
   {
@@ -45,6 +47,7 @@ public class BaseCat : MonoBehaviour
 
     _maxCatHealth = CatDataSo.CatHealth;
     _currentCatHealth = _maxCatHealth;
+    _catCollider = gameObject.GetComponent<BoxCollider2D>();
   }
 
   private void Update()
@@ -145,6 +148,7 @@ public class BaseCat : MonoBehaviour
   public void SetPlaced(bool isPlaced)
   {
     _isPlaced = isPlaced;
+    _catCollider.enabled = true;
     OnCatPlaced?.Invoke(this,EventArgs.Empty);
   }
   public bool IsPlaced{ get => _isPlaced;}

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64e9980fad107d49be732dc1b7c4609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RacoonDataSo: {fileID: 11400000, guid: a04ea83e138b7e542b0c308d49320998, type: 2}
+  RacoonDataSo: {fileID: 11400000, guid: 341108ae13f88424da0d4b27248acb03, type: 2}
   PercentSpawnChance: 25
 --- !u!114 &7425877128046684689
 MonoBehaviour:
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c5555d20279d547b211e00ce371fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 20
+  _speed: 60
 --- !u!114 &6811950314150042539
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6534,7 +6534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0681e611454074cbd3d6bf52554e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sushi: 1500
+  _sushi: 500
   _sushiText: {fileID: 1030823705}
 --- !u!1 &707405455
 GameObject:
@@ -15960,8 +15960,15 @@ MonoBehaviour:
   _element0: 80
   _element1: 20
   _element2: 0
-  _spawnRacoonsLeftAmount: 20
-  _spawnTimer: 1
+  _spawnRacoonsLeftAmount: 30
+  _spawnTimerMin: 2
+  _spawnTimerMax: 5
+  _waveTimerMin: 15
+  _waveTimerMax: 3
+  _inWaveSpawnTimerMin: 5
+  _inWaveSpawnTimerMax: 0
+  _amountOfRacoonsInWaveMin: 5
+  _amountOfRacoonsInWaveMax: 7
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

@@ -15637,7 +15637,14 @@ MonoBehaviour:
   _element1: 0
   _element2: 0
   _spawnRacoonsLeftAmount: 20
-  _spawnTimer: 1
+  _spawnTimerMin: 5
+  _spawnTimerMax: 7
+  _waveTimerMin: 20
+  _waveTimerMax: 25
+  _inWaveSpawnTimerMin: 1
+  _inWaveSpawnTimerMax: 3
+  _amountOfRacoonsInWaveMin: 5
+  _amountOfRacoonsInWaveMax: 7
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

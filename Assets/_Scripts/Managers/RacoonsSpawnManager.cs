@@ -20,16 +20,29 @@ public class RacoonsSpawnManager : MonoBehaviour
 
     [Header("General Spawn Properties")]
     
-    [SerializeField] private int _spawnRacoonsLeftAmount;
-    [SerializeField] private float _spawnTimer;
-    private int _racoonOnSceneLeftAmount;
-    
-    
-    private bool _isCanSpawn;
+    [SerializeField] [Tooltip("The number of Raccoons on the scene")] private int _spawnRacoonsLeftAmount;
 
+    //Single
+    [SerializeField] [Range(0,100)] [Tooltip("Min timer value to spawn single racoon")] private float _spawnTimerMin;
+    [SerializeField] [Range(0,100)] [Tooltip("Max timer value to spawn single racoon")] private float _spawnTimerMax;
     
+    
+    [Header("Wave Spawn Properties")]
+    //Wave
+    [SerializeField] [Range(0,100)] [Tooltip("Min timer value to spawn new racoon wave")] private float _waveTimerMin;
+    [SerializeField] [Range(0,100)] [Tooltip("Max timer value to spawn new racoon wave")] private float _waveTimerMax;
+    [SerializeField] [Range(0,100)] [Tooltip("Min timer value to spawn racoon in wave")] private float _inWaveSpawnTimerMin;
+    [SerializeField] [Range(0,100)] [Tooltip("Max timer value to spawn racoon in wave")] private float _inWaveSpawnTimerMax;
+    
+    [SerializeField] [Tooltip("Min value of racoons in wave")] private int _amountOfRacoonsInWaveMin;
+    [SerializeField] [Tooltip("Max value of racoons in wave")] private int _amountOfRacoonsInWaveMax;
+    
+    
+    private float _spawnTimer;
+    private int _racoonOnSceneLeftAmount;
+    private bool _isCanSpawn;
     private float _waveTimer;
-    private float _betweenSpawnsTimer = 2;
+    private float _betweenSpawnsTimer;
     private int _waveAmount;
     
     //private int _waveMultiplier; // this handles more racoons spawning in future levels;
@@ -40,7 +53,8 @@ public class RacoonsSpawnManager : MonoBehaviour
         
         _waveTimer = GetNewWaveTimer();
         _waveAmount = GetNewWaveAmount();
-        _betweenSpawnsTimer = GetNewBetweenSpawnTimer();
+        _betweenSpawnsTimer = GetNewBetweenSpawnInWaveTimer();
+        _spawnTimer = 1f;
         _racoonOnSceneLeftAmount = _spawnRacoonsLeftAmount;
 
     }
@@ -64,7 +78,6 @@ public class RacoonsSpawnManager : MonoBehaviour
         SubtractRacoon();
     }
 
-
     private void UICatSetupMenu_OnCatSetupApproved(object sender, EventArgs e)
     { 
         _isCanSpawn = true;
@@ -84,7 +97,24 @@ public class RacoonsSpawnManager : MonoBehaviour
        SpawnWaveHandler();
        
     }
-
+    
+    private float GetNewWaveTimer()
+    {
+        return Random.Range(_waveTimerMin, _waveTimerMax);
+    }
+    private float GetNewBetweenSpawnInWaveTimer()
+    {
+        return Random.Range(_inWaveSpawnTimerMin,_inWaveSpawnTimerMax);
+    }
+    private float GetNewSpawnTimer()
+    {
+        return Random.Range(_spawnTimerMin,_spawnTimerMax);
+    }
+    private int GetNewWaveAmount()
+    {
+        return Random.Range(_amountOfRacoonsInWaveMin, _amountOfRacoonsInWaveMax + 1);
+    }
+    
     private void SpawnWaveHandler()
     {
         _waveTimer -= Time.deltaTime;
@@ -96,7 +126,7 @@ public class RacoonsSpawnManager : MonoBehaviour
             if (_betweenSpawnsTimer <= 0 && _waveAmount > 0)
             {
                 SpawnSingleRacoon();
-                _betweenSpawnsTimer = GetNewBetweenSpawnTimer();
+                _betweenSpawnsTimer = GetNewBetweenSpawnInWaveTimer();
                 _waveAmount--;
                
                 if (_waveAmount <= 0)
@@ -108,22 +138,6 @@ public class RacoonsSpawnManager : MonoBehaviour
            
         }
     }
-
-    private float GetNewWaveTimer()
-    {
-        return Random.Range(50, 70);
-    }
-
-    private int GetNewWaveAmount()
-    {
-        return Random.Range(10, 20);
-    }
-
-    private int GetNewBetweenSpawnTimer()
-    {
-        return Random.Range(1,6);
-    }
-
     private void SpawnSingleRacoonsHandler()
     {
         _spawnTimer -= Time.deltaTime;
@@ -131,10 +145,10 @@ public class RacoonsSpawnManager : MonoBehaviour
         if (_isCanSpawn && _spawnTimer <= 0 && _spawnRacoonsLeftAmount > 0)
         {
             SpawnSingleRacoon();
-            _spawnTimer = Random.Range(10f,30f);
+            _spawnTimer = GetNewSpawnTimer();
         }
     }
-    
+  
     private void SpawnSingleRacoon()
     {
         _spawnRacoonsLeftAmount--;
@@ -162,6 +176,7 @@ public class RacoonsSpawnManager : MonoBehaviour
     {
         _racoonOnSceneLeftAmount--;
     }
+
 
     public int GetRacoonsLeftAmount()
     {
