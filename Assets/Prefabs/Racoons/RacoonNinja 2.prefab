@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RacoonDataSo: {fileID: 11400000, guid: 341108ae13f88424da0d4b27248acb03, type: 2}
-  PercentSpawnChance: 25
+  PercentSpawnChance: 0
 --- !u!114 &7425877128046684689
 MonoBehaviour:
   m_ObjectHideFlags: 0

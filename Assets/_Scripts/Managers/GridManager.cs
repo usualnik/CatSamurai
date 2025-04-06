@@ -1,10 +1,13 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
+    [SerializeField] private GameObject _grid;
     
     [SerializeField] private GridCell[] _cellsArray;
     
@@ -22,25 +25,42 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        GameManager.Instance.OnGamePlayStarted += GameManager_OnOnGamePlayStarted;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGamePlayStarted -= GameManager_OnOnGamePlayStarted;
+    }
+    
+    private void GameManager_OnOnGamePlayStarted(object sender, EventArgs e)
+    {
+        ShowGridUpdated();
+    }
+
     public void ShowGridUpdated()
     {
-        foreach (var gridCell in _cellsArray)             
-        {
-            if (!gridCell.ThisGridCellIsAvailable)
-            {
-                Image image = gridCell.gameObject.GetComponent<Image>();
-                
-                image.color = _notAvailableColor;
-                image.raycastTarget = false;
-            }
-            else
-            {
-                Image image = gridCell.gameObject.GetComponent<Image>();
-                
-                image.color = Color.white;
-                image.raycastTarget = true;
-            }
-        }
+        
+        _grid.SetActive(true);
+        // foreach (var gridCell in _cellsArray)             
+        // {
+        //     if (!gridCell.ThisGridCellIsAvailable)
+        //     {
+        //         Image image = gridCell.gameObject.GetComponent<Image>();
+        //         
+        //         image.color = _notAvailableColor;
+        //         image.raycastTarget = false;
+        //     }
+        //     else
+        //     {
+        //         Image image = gridCell.gameObject.GetComponent<Image>();
+        //         
+        //         image.color = Color.white;
+        //         image.raycastTarget = true;
+        //     }
+        // }
     }
     public GridCell[] GetAllCellsArray()
     {

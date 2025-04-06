@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -75,7 +76,8 @@ public class StoryTellingManager : MonoBehaviour
 
    private void GameManager_OnGamePlayStarted(object sender, EventArgs e)
    {
-      TellStory();
+
+      StartCoroutine(WaitToTellStory());
    }
 
    private void Update()
@@ -143,5 +145,9 @@ public class StoryTellingManager : MonoBehaviour
          
    }
 
-   
+   private IEnumerator WaitToTellStory()
+   {
+      yield return new WaitForSeconds(2.5f);
+      TellStory();
+   }
 }
