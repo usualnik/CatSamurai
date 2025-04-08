@@ -42,25 +42,21 @@ public class GridManager : MonoBehaviour
 
     public void ShowGridUpdated()
     {
-        
         _grid.SetActive(true);
-        // foreach (var gridCell in _cellsArray)             
-        // {
-        //     if (!gridCell.ThisGridCellIsAvailable)
-        //     {
-        //         Image image = gridCell.gameObject.GetComponent<Image>();
-        //         
-        //         image.color = _notAvailableColor;
-        //         image.raycastTarget = false;
-        //     }
-        //     else
-        //     {
-        //         Image image = gridCell.gameObject.GetComponent<Image>();
-        //         
-        //         image.color = Color.white;
-        //         image.raycastTarget = true;
-        //     }
-        // }
+        
+        foreach (var gridCell in _cellsArray)             
+        {
+            if (!gridCell.ThisGridCellIsAvailable)
+            {
+                Image image = gridCell.gameObject.GetComponent<Image>();
+                image.raycastTarget = false;
+            }
+            else
+            {
+                Image image = gridCell.gameObject.GetComponent<Image>();
+                image.raycastTarget = true;
+            }
+        }
     }
     public GridCell[] GetAllCellsArray()
     {

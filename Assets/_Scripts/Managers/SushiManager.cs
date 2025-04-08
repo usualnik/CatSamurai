@@ -56,7 +56,7 @@ public class SushiManager : MonoBehaviour
 
     private void UpdateSushiText()
     {
-        _sushiText.text = "SUSHI: " + _sushi;
+        _sushiText.text = "СУШИ: " + _sushi;
     }
 
     public void SubtractSushi(int value)
