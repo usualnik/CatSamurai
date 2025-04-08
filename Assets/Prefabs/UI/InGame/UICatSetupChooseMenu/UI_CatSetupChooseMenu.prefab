@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 893173875925860543}
   - component: {fileID: 4089547415158368695}
   - component: {fileID: 5288957398721280656}
+  - component: {fileID: 1331867672281873940}
   m_Layer: 0
   m_Name: UI_CatSetupChooseMenu
   m_TagString: Untagged
@@ -132,6 +133,28 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!95 &1331867672281873940
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111741968041846894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f29874b24a9d3c942a1a6be704b80b4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1633932836130956557
 PrefabInstance:
   m_ObjectHideFlags: 0
