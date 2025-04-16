@@ -31,6 +31,14 @@ public class UIChooseCatMenu : MonoBehaviour
     }
   }
 
+  private void Update()
+  {
+    if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+    {
+      DeleteCurrentCat();
+    }
+  }
+
   private void OnDestroy()
   {
     _gridCells = GridManager.Instance.GetAllCellsArray();

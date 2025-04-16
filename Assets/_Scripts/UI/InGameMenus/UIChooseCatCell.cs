@@ -43,7 +43,8 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
          _uiChooseCatMenu.SetCurrentUIChooseCatCell(this);
          _uiChooseCatMenu.SetCurrentCat(currentCat.GetComponent<BaseCat>());
          
-         GridManager.Instance.ShowGridUpdated();
+         GridManager.Instance.UpdateGrid();
+         GridManager.Instance.MinimizePlacedCatsAlpha();
       }
       
    }

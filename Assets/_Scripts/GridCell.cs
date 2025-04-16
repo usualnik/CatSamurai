@@ -37,8 +37,9 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
             OnCatPlaced?.Invoke(this, EventArgs.Empty);
             
             ThisGridCellIsAvailable = false;
-            GridManager.Instance.ShowGridUpdated();
-
+            GridManager.Instance.UpdateGrid();
+            
+            GridManager.Instance.MaximazePlacedCatsAlpha();
         }
         
     }
@@ -46,14 +47,14 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     private void OnCatDeath(object sender, EventArgs e)
     {
         ThisGridCellIsAvailable = true;
-        GridManager.Instance.ShowGridUpdated();
+        GridManager.Instance.UpdateGrid();
         CatOnThisCell.OnCatDeath -= OnCatDeath;
     }
 
     public void FreeThisCell()
     {
         ThisGridCellIsAvailable = true;
-        GridManager.Instance.ShowGridUpdated();
+        GridManager.Instance.UpdateGrid();
     }
     
 }
