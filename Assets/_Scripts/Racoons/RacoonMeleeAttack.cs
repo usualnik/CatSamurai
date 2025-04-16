@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(RacoonsAnimation))]
 public class RacoonMeleeAttack : MonoBehaviour
 {
     [SerializeField] private Transform _raycastPos;
@@ -7,9 +8,11 @@ public class RacoonMeleeAttack : MonoBehaviour
     private float _meleeAttackDistance = 50f;
     private const float ATTACK_COOLDOWN = 2f;
     private int _meleeDamage = 50;
+    private RacoonsAnimation _racoonsAnimation;
 
     private void Start()
     {
+        _racoonsAnimation = GetComponent<RacoonsAnimation>();
         InvokeRepeating(nameof(Attack), 0, ATTACK_COOLDOWN);
     }
 
@@ -19,8 +22,12 @@ public class RacoonMeleeAttack : MonoBehaviour
         if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.layer == gameObject.layer
                                           && raycastHit2D.collider.TryGetComponent(out BaseCat baseCat))
         {
-            
-             baseCat.TakeDamage(_meleeDamage);
+            _racoonsAnimation.PlayAttackAnimation(true);
+            baseCat.TakeDamage(_meleeDamage);
+        }
+        else
+        {
+            _racoonsAnimation.PlayAttackAnimation(false);
         }
             
     }

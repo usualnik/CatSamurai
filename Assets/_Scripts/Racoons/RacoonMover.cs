@@ -1,10 +1,12 @@
+
 using UnityEngine;
 
 public class RacoonMover : MonoBehaviour
-{
+{ 
+    
     [SerializeField] private float _speed;
-
     private bool _isCanMove = true;
+
     private void Update()
     {
         if (_isCanMove)

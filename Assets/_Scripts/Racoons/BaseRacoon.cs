@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(RacoonsAnimation))]
 public class BaseRacoon : MonoBehaviour
 {
    public RacoonDataSO RacoonDataSo;
@@ -11,11 +13,24 @@ public class BaseRacoon : MonoBehaviour
    private float _health;
    private LayerMask _layer;
 
+   private RacoonsAnimation _racoonsAnimation;
+
 
    private void Awake()
    {
       _health = RacoonDataSo.RacoonHealth;
       _layer = gameObject.layer;
+   }
+
+   private void Start()
+   {
+      _racoonsAnimation = GetComponent<RacoonsAnimation>();
+   }
+
+   private IEnumerator WaitToDestroy()
+   {
+      yield return new WaitForSeconds(1.5f);
+      Destroy(gameObject);
    }
 
    public void TakeDamage(int damage)
@@ -24,7 +39,9 @@ public class BaseRacoon : MonoBehaviour
       if (_health <= 0)
       {
          OnAnyRacoonDeath?.Invoke(this, EventArgs.Empty);
-         Destroy(gameObject);
+         _racoonsAnimation.PlayDeathAnimation();
+
+         StartCoroutine(WaitToDestroy());
       }
    }
 
