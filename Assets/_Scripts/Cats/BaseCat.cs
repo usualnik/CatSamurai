@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class BaseCat : MonoBehaviour
@@ -88,7 +89,6 @@ public class BaseCat : MonoBehaviour
   }
   private void LevelUp()
   {
-   
     _catLevel++;
     _currentXp = 0;
     _gainXpSpeed = _gainXpSpeed * _gainXpNewLevelModifier;
@@ -107,6 +107,15 @@ public class BaseCat : MonoBehaviour
   {
     
   }
+  
+  protected void Death()
+  {
+    OnCatDeath?.Invoke(this,EventArgs.Empty);
+    Destroy(gameObject);
+  }
+
+
+
   
   public float GetCurrentHealth()
   {
@@ -139,12 +148,7 @@ public class BaseCat : MonoBehaviour
     Debug.Log(_currentCatHealth);
   }
 
-  protected void Death()
-  {
-    OnCatDeath?.Invoke(this,EventArgs.Empty);
-    Destroy(gameObject);
-  }
-  
+
   public void SetPlaced(bool isPlaced)
   {
     _isPlaced = isPlaced;
