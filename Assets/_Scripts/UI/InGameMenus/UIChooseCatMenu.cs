@@ -50,7 +50,7 @@ public class UIChooseCatMenu : MonoBehaviour
 
   private void GridCellOnOnCatPlaced(object sender, EventArgs e)
   {
-    GridCell gridCell = sender as GridCell;
+   GridCell gridCell = sender as GridCell;
     CurrentChosenCat.gameObject.layer = gridCell.gameObject.layer;
     CurrentChosenCat.GetComponent<BaseCat>().SetPlaced(true);
     StartUIChooseCatCellCooldown();

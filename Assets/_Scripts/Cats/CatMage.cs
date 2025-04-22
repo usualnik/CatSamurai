@@ -60,6 +60,12 @@ public class CatMage : BaseCat
         
         if (_mageAttackCooldownTimer <= 0)
         {
+            if (SFX.Instance != null)
+            {
+                SFX.Instance.PlayMageFireballSound();
+
+            }
+            
             GameObject bullet = Instantiate(_mageBulletPrefab, _spawnMageBulletPosition.position,
                     Quaternion.identity, transform);
                 

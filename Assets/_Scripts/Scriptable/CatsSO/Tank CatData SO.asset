@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tank CatData SO
   m_EditorClassIdentifier: 
   CatName: Tank
-  CatHealth: 150
+  CatHealth: 1000
   CatPrice: 50
   CatPrefab: {fileID: 453912739685068554, guid: 0a9a69f576f4a1d49a87dd087e347201, type: 3}
   UISprite: {fileID: 3550498877838789022, guid: 43ea82ad6af428c478c02d3d3eb6e791, type: 3}

@@ -15,11 +15,14 @@ public class BaseRacoon : MonoBehaviour
 
    private RacoonsAnimation _racoonsAnimation;
 
+   private RacoonMover _racoonMover;
+
 
    private void Awake()
    {
       _health = RacoonDataSo.RacoonHealth;
       _layer = gameObject.layer;
+      _racoonMover = GetComponent<RacoonMover>();
    }
 
    private void Start()
@@ -38,6 +41,7 @@ public class BaseRacoon : MonoBehaviour
       _health -= damage;
       if (_health <= 0)
       {
+         _racoonMover.CanMove(false);
          OnAnyRacoonDeath?.Invoke(this, EventArgs.Empty);
          _racoonsAnimation.PlayDeathAnimation();
 

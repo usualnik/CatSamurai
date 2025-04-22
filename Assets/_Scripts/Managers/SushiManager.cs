@@ -48,6 +48,10 @@ public class SushiManager : MonoBehaviour
         
         if (_farmSushiTimer <= 0)
         {
+            if (SFX.Instance != null)
+            {
+                SFX.Instance.PlayAddSushiSound();
+            }
             _sushi += _farmSushiAmount;
             _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
         }

@@ -14,6 +14,11 @@ public class UIChooseLevelIcon : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (UISound.Instance != null)
+        {
+            UISound.Instance.PlayUISound();
+        }
+        
         OnClick?.Invoke(this, new UIChooseLevelIconEventArgs(){Index = _iconIndex});
     }
 }

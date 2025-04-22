@@ -50,6 +50,10 @@ public class CatSupport : BaseCat
     _farmSushiTimer -= Time.deltaTime;
     if (_farmSushiTimer <= 0)
     {
+      if (SFX.Instance != null)
+      {
+        SFX.Instance.PlayAddSushiSound();
+      }
       SushiManager.Instance.AddSushi(_farmSushiAmount);
       _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
     }

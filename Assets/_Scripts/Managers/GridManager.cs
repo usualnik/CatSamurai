@@ -57,6 +57,7 @@ public class GridManager : MonoBehaviour
 
     private void ShowGrid()
     {
+        SFX.Instance.PlayGridAnimationSound();
         _grid.SetActive(true);
     }
     private void HideGrid()

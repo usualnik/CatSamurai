@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 public class BaseCat : MonoBehaviour
@@ -89,6 +88,11 @@ public class BaseCat : MonoBehaviour
   }
   private void LevelUp()
   {
+    if (SFX.Instance != null)
+    {
+      SFX.Instance.PlayLevelUpSound();
+    }
+    
     _catLevel++;
     _currentXp = 0;
     _gainXpSpeed = _gainXpSpeed * _gainXpNewLevelModifier;

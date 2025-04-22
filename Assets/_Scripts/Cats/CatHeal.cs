@@ -49,6 +49,11 @@ public class CatHeal : BaseCat
     _healingTimer -= Time.deltaTime;
     if (_healingTimer <= 0)
     {
+      if (SFX.Instance != null)
+      {
+        SFX.Instance.PlayHealSound();
+      }
+      
       GridManager.Instance.GetRandomCatFromGrid().TakeHealing(_healAmount);
       _healingTimer = HEALING_TIMER_MAX;
     }

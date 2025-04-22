@@ -18,12 +18,19 @@ public class RacoonMeleeAttack : MonoBehaviour
 
     private void Attack()
     {
+        
         RaycastHit2D raycastHit2D = Physics2D.Raycast(new Vector2(_raycastPos.position.x, _raycastPos.position.y), Vector2.left, _meleeAttackDistance);
         if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.layer == gameObject.layer
                                           && raycastHit2D.collider.TryGetComponent(out BaseCat baseCat))
         {
+            if (SFX.Instance != null)
+            {
+                SFX.Instance.PlayRandomMeleeAttackSound();
+            }
+
             _racoonsAnimation.PlayAttackAnimation(true);
             baseCat.TakeDamage(_meleeDamage);
+            
         }
         else
         {

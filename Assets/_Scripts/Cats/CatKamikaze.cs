@@ -43,6 +43,10 @@ public class CatKamikaze : BaseCat
             if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.layer == gameObject.layer 
                                               && raycastHit2D.collider.TryGetComponent(out BaseRacoon baseRacoon))
             {
+                if (SFX.Instance != null)
+                {
+                    SFX.Instance.PlayRandomMeleeAttackSound();
+                }
                 baseRacoon.TakeDamage(_meleeDamage);
             }
     }

@@ -26,6 +26,11 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (UISound.Instance != null)
+        {
+            UISound.Instance.PlayUISound();
+        }
+
         if (_uiChooseCatMenu.CurrentChosenCat != null && ThisGridCellIsAvailable)
         {
             CatOnThisCell = _uiChooseCatMenu.CurrentChosenCat;
