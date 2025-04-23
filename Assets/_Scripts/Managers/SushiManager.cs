@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -10,17 +11,19 @@ public class SushiManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _sushiText;
 
     private float _farmSushiTimer;
-    //private const float FARM_SUSHI_TIMER_MAX = 20f;
-    private const float FARM_SUSHI_TIMER_MAX = 5f; // Debug speed
+    private const float FARM_SUSHI_TIMER_MAX = 20f;
+    //private const float FARM_SUSHI_TIMER_MAX = 5f; // Debug speed
 
 
     private int _farmSushiAmount = 25;
     private bool _canFarmSushi;
+    private SushiAnimSpawner _sushiAnimSpawner;
     
     private void Awake()
     {
         Instance = this;
         _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
+        _sushiAnimSpawner = GetComponent<SushiAnimSpawner>();
     }
 
     private void Start()
@@ -45,16 +48,25 @@ public class SushiManager : MonoBehaviour
     private void FarmSushiOverTime()
     {
         _farmSushiTimer -= Time.deltaTime;
-        
+
         if (_farmSushiTimer <= 0)
         {
-            if (SFX.Instance != null)
-            {
-                SFX.Instance.PlayAddSushiSound();
-            }
-            _sushi += _farmSushiAmount;
+            _sushiAnimSpawner.FarmSushiOverTimeAnimation();
+            StartCoroutine(WaitForSushiAnimation());
             _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
         }
+        
+    }
+
+    private IEnumerator WaitForSushiAnimation()
+    {
+        yield return new WaitForSeconds(5f);
+        
+        if (SFX.Instance != null)
+        {
+            SFX.Instance.PlayAddSushiSound();
+        }
+        _sushi += _farmSushiAmount;
         UpdateSushiText();
     }
 

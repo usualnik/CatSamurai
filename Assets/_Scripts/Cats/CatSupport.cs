@@ -54,10 +54,13 @@ public class CatSupport : BaseCat
       {
         SFX.Instance.PlayAddSushiSound();
       }
+      SushiAnimSpawner.Instance.SupportSushiFarm(transform);
       SushiManager.Instance.AddSushi(_farmSushiAmount);
       _farmSushiTimer = FARM_SUSHI_TIMER_MAX;
     }
   }
+  
+  
   
   
   

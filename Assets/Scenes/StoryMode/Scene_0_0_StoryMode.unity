@@ -3659,6 +3659,7 @@ RectTransform:
   m_Children:
   - {fileID: 247122020}
   - {fileID: 915170031}
+  - {fileID: 261757029}
   - {fileID: 567365166}
   - {fileID: 1557085355}
   - {fileID: 1650819307}
@@ -3666,7 +3667,6 @@ RectTransform:
   - {fileID: 1268893816}
   - {fileID: 947219575}
   - {fileID: 87144953}
-  - {fileID: 261757029}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8491,6 +8491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8254179195589397382}
   - component: {fileID: 293820814}
+  - component: {fileID: 8254179195589397383}
   m_Layer: 0
   m_Name: SushiManager
   m_TagString: Untagged
@@ -10207,6 +10208,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 390447754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8254179195589397383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037270397752503480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abccefa19eb4ac94086c8e3ff6fcfbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sushiTextPos: {fileID: 261757029}
+  _sushiOverTimePrefab: {fileID: 3671482228538488945, guid: 765c3b1bde847034b938b66df7565d03, type: 3}
+  _sushiSupportPrefab: {fileID: 3671482228538488945, guid: 4f0aa4b99fb820e4681d15e26b8b8e10, type: 3}
 --- !u!224 &8392567783749111432
 RectTransform:
   m_ObjectHideFlags: 0
