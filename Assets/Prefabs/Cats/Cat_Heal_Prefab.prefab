@@ -385,6 +385,7 @@ MonoBehaviour:
   CatDataSo: {fileID: 11400000, guid: 2b3a3d2596f4f8b41872f6fad7b25af8, type: 2}
   _currentCatHealth: 0
   _maxCatHealth: 0
+  _healParticleSystem: {fileID: 7664690595260092604, guid: b006f5208bb1f72428c270dd1ca3265c, type: 3}
 --- !u!95 &1747883090428350629
 Animator:
   serializedVersion: 7

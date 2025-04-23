@@ -1,11 +1,15 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CatHeal : BaseCat
 {
+  [SerializeField] private GameObject _healParticleSystem;
+  
   private int _healAmount = 50;
   private float _healingTimer;
   private const float HEALING_TIMER_MAX = 10f;
 
+  private readonly Vector3 _healPosOffset = new Vector3(0,200,0);
   
   private void Start()
   {
@@ -53,8 +57,12 @@ public class CatHeal : BaseCat
       {
         SFX.Instance.PlayHealSound();
       }
+
+      BaseCat catToHeal = GridManager.Instance.GetRandomCatFromGrid();
+      catToHeal.TakeHealing(_healAmount);
       
-      GridManager.Instance.GetRandomCatFromGrid().TakeHealing(_healAmount);
+      Instantiate(_healParticleSystem, catToHeal.transform.position + _healPosOffset, quaternion.identity, catToHeal.transform);
+      
       _healingTimer = HEALING_TIMER_MAX;
     }
     

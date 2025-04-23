@@ -138,7 +138,6 @@ public class BaseCat : MonoBehaviour
   }
   public void TakeHealing(int healAmount)
   {
-    Debug.Log("Menya pohilili na " + healAmount);
     if(_currentCatHealth < _maxCatHealth)
     {
       _currentCatHealth += healAmount;
@@ -148,8 +147,6 @@ public class BaseCat : MonoBehaviour
     {
       _currentCatHealth = _maxCatHealth;
     }
-    
-    Debug.Log(_currentCatHealth);
   }
 
 
