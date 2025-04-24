@@ -53,6 +53,11 @@ public class UIChooseCatCell : MonoBehaviour, IPointerClickHandler
             GridManager.Instance.UpdateGrid();
             GridManager.Instance.MinimizePlacedCatsAlpha();
          }
+         else if (SushiManager.Instance.GetSushiAmount() < Cat.CatPrice)
+         {
+            _uiChooseCatMenu.NotEnoughSushiToBuyCat();
+         }
+         
       }
    }
 

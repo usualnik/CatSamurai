@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class CatKamikaze : BaseCat
 {
     [SerializeField] private Transform _raycastPos;
     [SerializeField] private int _meleeDamage = 50;
+    [SerializeField] private GameObject _meleeAttackPrefab;
+    
     private int _secondTierMeleeDamage = 60;
     private int _thirdTierMeleeDamage = 70;
     
@@ -47,10 +50,19 @@ public class CatKamikaze : BaseCat
                 {
                     SFX.Instance.PlayRandomMeleeAttackSound();
                 }
+                _meleeAttackPrefab.SetActive(true);
+                StartCoroutine(WaitForMeleeAttackAnim());
                 baseRacoon.TakeDamage(_meleeDamage);
             }
+            
+    }
+
+    private IEnumerator WaitForMeleeAttackAnim()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _meleeAttackPrefab.SetActive(false);
     }
     
-    }
+}
 
 

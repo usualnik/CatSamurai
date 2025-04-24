@@ -1,9 +1,11 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BaseCat : MonoBehaviour
 {
   [SerializeField] private GameObject _removeIcon;
+  [SerializeField] private GameObject _levelUpPrefab;
 
   public event EventHandler OnCatDeath;
   public event EventHandler OnCatPlaced;
@@ -28,7 +30,7 @@ public class BaseCat : MonoBehaviour
   private GridCell _currentGridCell;
   
   private float _gainXpSpeed = 0.025f;
-   //private float _gainXpSpeed = 0.5f; // Debug speed
+  //private float _gainXpSpeed = 0.5f; // Debug speed
   private float _gainXpNewLevelModifier = 0.5f;
   
   private float _currentXp;
@@ -36,6 +38,7 @@ public class BaseCat : MonoBehaviour
 
   private int _catLevel;
   private const int MAX_LEVEL_CAP = 3;
+  private readonly Vector3 _levelUpOffset = new Vector3(0, 125, 0); // need to create empty transform for each cat later
 
   private BoxCollider2D _catCollider;
 
@@ -92,6 +95,8 @@ public class BaseCat : MonoBehaviour
     {
       SFX.Instance.PlayLevelUpSound();
     }
+
+    Instantiate(_levelUpPrefab, transform.position + _levelUpOffset, quaternion.identity, transform);
     
     _catLevel++;
     _currentXp = 0;

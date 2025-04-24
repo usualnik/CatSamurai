@@ -10,6 +10,7 @@ public class SFX : MonoBehaviour
     [SerializeField] private AudioClip _levelUp;
     [SerializeField] private AudioClip _heal;
     [SerializeField] private AudioClip _gridAnimation;
+    [SerializeField] private AudioClip _error;
 
    // private float _defaultVolume = 0.1f;
     public static SFX Instance{ get; private set; }
@@ -56,5 +57,10 @@ public class SFX : MonoBehaviour
     {
         
         _audioSource.PlayOneShot(_gridAnimation,20f);
+    }
+    public void PlayErrorSound()
+    {
+        
+        _audioSource.PlayOneShot(_error);
     }
 }

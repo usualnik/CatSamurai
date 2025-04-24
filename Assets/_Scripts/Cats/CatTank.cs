@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CatTank : BaseCat
@@ -6,6 +7,7 @@ public class CatTank : BaseCat
     //Third Tier
     [Header("Third tier")]
     [SerializeField] private Transform _raycastPos;
+    [SerializeField] private GameObject _meleeAttackPrefab;
      private float _meleeAttackDistance = 100f;
      private float _attackCooldownTimer;
      private const float ATTACK_COOLDOWN = 5f;
@@ -56,10 +58,18 @@ public class CatTank : BaseCat
                 {
                     SFX.Instance.PlayRandomMeleeAttackSound();
                 }
+                _meleeAttackPrefab.SetActive(true);
+                StartCoroutine(WaitForMeleeAttackAnim());
                 baseRacoon.TakeDamage(_meleeDamage);
 
             }
     }
+     
+     private IEnumerator WaitForMeleeAttackAnim()
+     {
+         yield return new WaitForSeconds(1.5f);
+         _meleeAttackPrefab.SetActive(false);
+     }
 }
 
 

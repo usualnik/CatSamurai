@@ -127,6 +127,7 @@ MonoBehaviour:
   - {fileID: 727659240080300093}
   - {fileID: 9206667089990014988}
   - {fileID: 2175491112131094712}
+  _notEnoughSushiAnim: {fileID: 0}
 --- !u!1001 &183202366754789602
 PrefabInstance:
   m_ObjectHideFlags: 0

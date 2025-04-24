@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _removeIcon: {fileID: 1634898349083554758}
+  _levelUpPrefab: {fileID: 2033965501540499975, guid: 8d30ed2af62e6aa4496dee3eeec14317, type: 3}
   CatDataSo: {fileID: 11400000, guid: 2b3a3d2596f4f8b41872f6fad7b25af8, type: 2}
   _currentCatHealth: 0
   _maxCatHealth: 0

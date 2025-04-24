@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class UIChooseCatMenu : MonoBehaviour
  
   [SerializeField] public List<CatDataSO> _catsData;
   [SerializeField] private GameObject[] _catsImages;
+  [SerializeField] private GameObject _notEnoughSushiAnim;
 
   private UIChooseCatCell _uiChooseCatCell;
   private GridCell[] _gridCells;
@@ -95,6 +97,19 @@ public class UIChooseCatMenu : MonoBehaviour
   public void DeleteCurrentCat()
   {
     Destroy(CurrentChosenCat.gameObject);
+  }
+
+  public void NotEnoughSushiToBuyCat()
+  {
+    SFX.Instance.PlayErrorSound();
+    _notEnoughSushiAnim.SetActive(true);
+    StartCoroutine(WaitForNotEnoughSushiAnim());
+  }
+
+  private IEnumerator WaitForNotEnoughSushiAnim()
+  {
+    yield return new WaitForSeconds(0.2f);
+    _notEnoughSushiAnim.SetActive(false);
   }
  
 }
