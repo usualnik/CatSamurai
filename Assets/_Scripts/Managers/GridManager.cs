@@ -111,29 +111,46 @@ public class GridManager : MonoBehaviour
         {
             if (!gridCell.ThisGridCellIsAvailable)
             {
-                Image catImage = gridCell.CatOnThisCell.gameObject.GetComponent<Image>();
-                if (catImage != null) 
+                Image[] catVisuals = gridCell.CatOnThisCell.gameObject.GetComponentsInChildren<Image>();
+                
+                if (catVisuals != null)
                 {
-                    Color currentColor = catImage.color; 
-                    currentColor.a = 0.5f; 
-                    catImage.color = currentColor; 
+                    foreach (var image in catVisuals)
+                    {
+                        if (image.tag == "CatVisualElements")
+                        {
+                            Color currentColor = image.color; 
+                            currentColor.a = 0.5f; 
+                            image.color = currentColor; 
+                        }
+                    }
                 }
+
             }
         }
     }
-    public void MaximazePlacedCatsAlpha()
+    public void MaximizePlacedCatsAlpha()
     {
         foreach (var gridCell in _cellsArray)             
         {
             if (!gridCell.ThisGridCellIsAvailable)
             {
-                Image catImage = gridCell.CatOnThisCell.gameObject.GetComponent<Image>();
-                if (catImage != null) 
+                
+                Image[] catVisuals = gridCell.CatOnThisCell.gameObject.GetComponentsInChildren<Image>();
+                
+                if (catVisuals != null)
                 {
-                    Color currentColor = catImage.color; 
-                    currentColor.a = 255f; 
-                    catImage.color = currentColor; 
+                    foreach (var image in catVisuals)
+                    {
+                        if (image.tag == "CatVisualElements")
+                        {
+                            Color currentColor = image.color; 
+                            currentColor.a = 1f; 
+                            image.color = currentColor; 
+                        }
+                    }
                 }
+
             }
         }
     }

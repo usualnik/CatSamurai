@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Cat Archer
-  - Cat Tank
+  - CatVisualElements
   layers:
   - Default
   - TransparentFX

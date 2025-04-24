@@ -44,7 +44,7 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
             ThisGridCellIsAvailable = false;
             GridManager.Instance.UpdateGrid();
             
-            GridManager.Instance.MaximazePlacedCatsAlpha();
+            GridManager.Instance.MaximizePlacedCatsAlpha();
         }
         
     }

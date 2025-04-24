@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2ec80b787173afa458314776b97e89ae
+guid: 595759627dc09f34bb7d97d08a7be0f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 694590665357033116
-    second: Cat_Archer_0
+      213: 3897774773970014798
+    second: Mage_Head_0
+  - first:
+      213: -8430390602877833786
+    second: Mage_Head_1
+  - first:
+      213: -8074059583843708143
+    second: Mage_Head_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,8 +82,8 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_Archer_0
+      name: Mage_Head_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 256
+        width: 76
+        height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9e78e0b78ea3a900800000000000000
-      internalID: 694590665357033116
+      spriteID: e4216f0718da71630800000000000000
+      internalID: 3897774773970014798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage_Head_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdecada96c310b80800000000000000
+      internalID: -8430390602877833786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage_Head_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11358a1369d23ff80800000000000000
+      internalID: -8074059583843708143
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9ff2ef8f6afd3f74ba97c8c9144a1e20
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cat_Archer_0: 694590665357033116
+      Mage_Head_0: 3897774773970014798
+      Mage_Head_1: -8430390602877833786
+      Mage_Head_2: -8074059583843708143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
