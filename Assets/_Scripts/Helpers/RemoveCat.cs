@@ -11,7 +11,7 @@ public class RemoveCat : MonoBehaviour, IPointerClickHandler
         }
         
         BaseCat catInfo = GetComponentInParent<BaseCat>();
-        
+        SushiManager.Instance.AddSushi(catInfo.CatDataSo.CatPrice / 2);
         RemoveCatHandler.Instance.RemoveCat(catInfo.GetGridCell(), catInfo);
     }
 }
