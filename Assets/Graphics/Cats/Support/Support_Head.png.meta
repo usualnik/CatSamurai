@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: b65562564a621994690ba57cdb78cf4a
+guid: ba90ce1005577624bab4745954550305
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 736273083833025645
-    second: Citizen_0
+      213: 5374777917398334185
+    second: Support_Head_0
+  - first:
+      213: 793319813329069584
+    second: Support_Head_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Citizen_0
+      name: Support_Head_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 126
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d648c830874c73a00800000000000000
-      internalID: 736273083833025645
+      spriteID: 9ea34210a0c079a40800000000000000
+      internalID: 5374777917398334185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Support_Head_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 126
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01622c2ca20720b00800000000000000
+      internalID: 793319813329069584
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7a20c415df77ad741af55f4ab9704bfc
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Citizen_0: 736273083833025645
+      Support_Head_0: 5374777917398334185
+      Support_Head_1: 793319813329069584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

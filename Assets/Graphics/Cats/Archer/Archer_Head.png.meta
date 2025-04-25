@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 15b76ce875cd5944da85fd3e3b859767
+guid: c380a891b8482de4b8396a6165d122f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -569875524105223744
-    second: MageRune_0
+      213: 8694193341621879375
+    second: Archer_Head_0
+  - first:
+      213: 6398388166918281392
+    second: Archer_Head_1
+  - first:
+      213: -8286646417964485919
+    second: Archer_Head_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,8 +82,8 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MageRune_0
+      name: Archer_Head_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c1c48bea356718f0800000000000000
-      internalID: -569875524105223744
+      spriteID: f4240f7c7caf7a870800000000000000
+      internalID: 8694193341621879375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Head_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b81a304324abc850800000000000000
+      internalID: 6398388166918281392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Head_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2b6f5ccfaeffc80800000000000000
+      internalID: -8286646417964485919
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5327c868eeb82a54185b22f8f71f15c5
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MageRune_0: -569875524105223744
+      Archer_Head_0: 8694193341621879375
+      Archer_Head_1: 6398388166918281392
+      Archer_Head_2: -8286646417964485919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 7275ab4071fe59f42805ff52db819cce
+guid: 5dd4ee7bd72b057418c5ddc82be25daa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6750033715232265413
-    second: Cell_0
+      213: -7132172409892320828
+    second: Archer_0
+  - first:
+      213: -1353735933490891112
+    second: Archer_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cell_0
+      name: Archer_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 100
-        height: 44
+        width: 185
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c4545a96efecad50800000000000000
-      internalID: 6750033715232265413
+      spriteID: 4c9c6872bfe650d90800000000000000
+      internalID: -7132172409892320828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 136
+        width: 75
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896f7944750963de0800000000000000
+      internalID: -1353735933490891112
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b45418803a8a0b643bd5d82fc0fc1850
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cell_0: 6750033715232265413
+      Archer_0: -7132172409892320828
+      Archer_1: -1353735933490891112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

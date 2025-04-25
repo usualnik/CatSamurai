@@ -14134,7 +14134,7 @@ MonoBehaviour:
   _element0: 80
   _element1: 20
   _element2: 0
-  _spawnRacoonsLeftAmount: 5
+  _spawnRacoonsLeftAmount: 30
   _spawnTimerMin: 2
   _spawnTimerMax: 5
   _waveTimerMin: 15

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: b65562564a621994690ba57cdb78cf4a
+guid: 2633c0e6cd6f9aa47aaa95fc14193ec4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 736273083833025645
-    second: Citizen_0
+      213: 2171745852450842852
+    second: Kamikaze_0
+  - first:
+      213: 3461328395941270046
+    second: Kamikaze_1
+  - first:
+      213: 7683957143433860809
+    second: Kamikaze_2
+  - first:
+      213: 1067352266583634326
+    second: Kamikaze_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Citizen_0
+      name: Kamikaze_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 96
+        x: 9
+        y: 63
+        width: 171
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d648c830874c73a00800000000000000
-      internalID: 736273083833025645
+      spriteID: 4e8a2cda857932e10800000000000000
+      internalID: 2171745852450842852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kamikaze_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 84
+        width: 85
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e125d0356db190030800000000000000
+      internalID: 3461328395941270046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kamikaze_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 7
+        width: 71
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c653b38f46e2aa60800000000000000
+      internalID: 7683957143433860809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kamikaze_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 72
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691fceb3b3fffce00800000000000000
+      internalID: 1067352266583634326
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 853bbaf155679b74aaa28f4c8db780f3
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Citizen_0: 736273083833025645
+      Kamikaze_0: 2171745852450842852
+      Kamikaze_1: 3461328395941270046
+      Kamikaze_2: 7683957143433860809
+      Kamikaze_3: 1067352266583634326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
