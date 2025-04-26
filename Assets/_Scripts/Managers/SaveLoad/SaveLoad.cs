@@ -44,6 +44,16 @@ public class SaveLoad : MonoBehaviour
     {
         return YG2.saves.levelsCompleted;
     }
+    
+    public void SaveSashimiValue(int value)
+    {
+        YG2.saves.sashimi += value;
+        YG2.SaveProgress();
+    }
+    public int GetSashimiValue()
+    {
+       return YG2.saves.sashimi;
+    }
 
     
     
