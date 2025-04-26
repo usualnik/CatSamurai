@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class UIChooseLevelIcon : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private int _iconIndex;
+    [SerializeField] private int _levelIndex;
     public event EventHandler<UIChooseLevelIconEventArgs> OnClick;
 
     public class UIChooseLevelIconEventArgs : EventArgs
@@ -19,6 +19,11 @@ public class UIChooseLevelIcon : MonoBehaviour, IPointerClickHandler
             UISound.Instance.PlayUISound();
         }
         
-        OnClick?.Invoke(this, new UIChooseLevelIconEventArgs(){Index = _iconIndex});
+        OnClick?.Invoke(this, new UIChooseLevelIconEventArgs(){Index = _levelIndex});
+    }
+
+    public int GetLevelIndex()
+    {
+        return _levelIndex;
     }
 }

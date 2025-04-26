@@ -190,6 +190,8 @@ public class GameManager : MonoBehaviour
 
     private void LevelComplete()
     {
+        SaveLoad.Instance.SaveCompletedLevelIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        
         Time.timeScale = 0f;
         _pauseCanvas.gameObject.SetActive(true);
         _levelCompleteMenu.SetActive(true);

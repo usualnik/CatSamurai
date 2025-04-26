@@ -32,11 +32,11 @@ public class SceneLoader : MonoBehaviour
 
     private void LoadScene(int sceneBuildIndex)
     {
-        SceneManager.LoadScene(sceneBuildIndex + BUILD_INDEX_OFFSET);
+        SceneManager.LoadScene(sceneBuildIndex);
     }
 
 
-    public void BackToMainMenuButton()
+    public void LoadMainMenu()
     {
         SceneManager.LoadScene(MAIN_MENU_BUILD_INDEX);
     }
