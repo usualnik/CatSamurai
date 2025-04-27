@@ -13918,6 +13918,7 @@ MonoBehaviour:
   _inWaveSpawnTimerMax: 3
   _amountOfRacoonsInWaveMin: 5
   _amountOfRacoonsInWaveMax: 7
+  _racoonOnSceneLeftAmount: 0
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

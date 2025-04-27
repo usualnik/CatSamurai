@@ -39,7 +39,7 @@ public class RacoonsSpawnManager : MonoBehaviour
     
     
     private float _spawnTimer;
-    private int _racoonOnSceneLeftAmount;
+    [SerializeField] private int _racoonOnSceneLeftAmount;
     private bool _isCanSpawn;
     private float _waveTimer;
     private float _betweenSpawnsTimer;

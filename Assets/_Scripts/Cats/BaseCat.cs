@@ -39,8 +39,9 @@ public class BaseCat : MonoBehaviour
   private int _catLevel;
   private const int MAX_LEVEL_CAP = 3;
   private readonly Vector3 _levelUpOffset = new Vector3(0, 125, 0); // need to create empty transform for each cat later
-
   private BoxCollider2D _catCollider;
+  
+  
 
   private void Awake()
   {
@@ -55,6 +56,7 @@ public class BaseCat : MonoBehaviour
 
   private void Update()
   {
+   
 
     if (_isPlaced)
     {

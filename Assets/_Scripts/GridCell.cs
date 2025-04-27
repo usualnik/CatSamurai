@@ -19,7 +19,7 @@ public class GridCell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
      {
          if (_uiChooseCatMenu.CurrentChosenCat != null)
          {
-             _uiChooseCatMenu.CurrentChosenCat.transform.SetParent(gameObject.transform);
+             _uiChooseCatMenu.CurrentChosenCat.transform.SetParent(gameObject.transform, false);
              _uiChooseCatMenu.CurrentChosenCat.transform.position = transform.position;
          }
      }

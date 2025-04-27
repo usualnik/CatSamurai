@@ -28,6 +28,8 @@ public class CartSpawner : MonoBehaviour
    {
       int randomSpawnPosIndex = Random.Range(0, _cartSpawnPositions.Length);
       
-      Instantiate(_cartPrefab, _cartSpawnPositions[randomSpawnPosIndex].transform.position, Quaternion.identity, _questTransform);
+//      Instantiate(_cartPrefab, _cartSpawnPositions[randomSpawnPosIndex].transform.position, Quaternion.identity, _questTransform);
+      Instantiate(_cartPrefab, _cartSpawnPositions[randomSpawnPosIndex].transform.position, Quaternion.identity, _cartSpawnPositions[randomSpawnPosIndex].transform);
+
    }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5176804501983679632}
   - component: {fileID: 1497389075041236481}
   - component: {fileID: 6840355807853730244}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Body
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -85,12 +85,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3460300981717991421}
   - component: {fileID: 65123647501187641}
+  - component: {fileID: 8422477999400881271}
   - component: {fileID: -7687517835458681842}
   - component: {fileID: 5043066575290760261}
   - component: {fileID: 6092788422821015160}
   - component: {fileID: -2360743529489728114}
   - component: {fileID: 3418394163340028481}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cat_Support_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +130,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299884826339316275}
   m_CullTransparentMesh: 1
+--- !u!114 &8422477999400881271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299884826339316275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &-7687517835458681842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +298,7 @@ GameObject:
   - component: {fileID: 7111909206590469926}
   - component: {fileID: 954284764747928078}
   - component: {fileID: 8612957235498834345}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4598879399587962102}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +411,7 @@ GameObject:
   - component: {fileID: 8002492295532798627}
   - component: {fileID: 5587675828909486759}
   - component: {fileID: 6608797917482648937}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LevelText(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +561,7 @@ GameObject:
   - component: {fileID: 2058284163784381521}
   - component: {fileID: 3793706733400784486}
   - component: {fileID: 947768617787074528}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2979843679835411794}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Support
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -674,7 +705,7 @@ GameObject:
   - component: {fileID: 4571236051221089323}
   - component: {fileID: 2662536800778118316}
   - component: {fileID: 3373842254826571010}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Head
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -749,7 +780,7 @@ GameObject:
   - component: {fileID: 2851130185724414830}
   - component: {fileID: 8908131040532641182}
   - component: {fileID: 4995926299534102400}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LevelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +855,7 @@ GameObject:
   - component: {fileID: 3319575543453138418}
   - component: {fileID: 7331309373803654768}
   - component: {fileID: 8520678415344357959}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tail
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -899,7 +930,7 @@ GameObject:
   - component: {fileID: 6445273113356892299}
   - component: {fileID: 3936587124576899552}
   - component: {fileID: 5467163150631681339}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HealthBarBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +1007,7 @@ GameObject:
   - component: {fileID: 394301043536979232}
   - component: {fileID: 6444571095646690910}
   - component: {fileID: 453708170922377121}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RemoveIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5829762591434449781}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Head_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1099,7 +1130,7 @@ GameObject:
   - component: {fileID: 6254939223189638910}
   - component: {fileID: 5124643533100927900}
   - component: {fileID: 7495035399191892668}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: XpBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4749502585177141502}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tail_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1211,7 +1242,7 @@ GameObject:
   - component: {fileID: 1757771274673968635}
   - component: {fileID: 4019153185892012873}
   - component: {fileID: 611996610848345941}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
