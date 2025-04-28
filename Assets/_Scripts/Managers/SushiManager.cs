@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class SushiManager : MonoBehaviour
 {
@@ -72,7 +73,14 @@ public class SushiManager : MonoBehaviour
 
     private void UpdateSushiText()
     {
-        _sushiText.text = "СУШИ: " + _sushi;
+        if (YG2.envir.language == "ru")
+        {
+            _sushiText.text = "СУШИ: " + _sushi;
+        }
+        else
+        {
+            _sushiText.text = "SUSHI: " + _sushi;
+        }
     }
 
     public void SubtractSushi(int value)

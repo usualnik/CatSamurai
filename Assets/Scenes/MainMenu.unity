@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 308551908}
   - component: {fileID: 308551910}
   - component: {fileID: 308551909}
+  - component: {fileID: 308551911}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -652,6 +653,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308551907}
   m_CullTransparentMesh: 1
+--- !u!114 &308551911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308551907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "\u041F\u0420\u0418\u041A\u041B\u042E\u0427\u0415\u041D\u0418\u0415"
+  _enText: ADVENTURE
 --- !u!1001 &346007316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1230,6 +1245,7 @@ GameObject:
   - component: {fileID: 574643020}
   - component: {fileID: 574643022}
   - component: {fileID: 574643021}
+  - component: {fileID: 574643023}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1355,6 +1371,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574643019}
   m_CullTransparentMesh: 1
+--- !u!114 &574643023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574643019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "(\u0421\u041A\u041E\u0420\u041E)"
+  _enText: (SOON)
 --- !u!1 &609982149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2457,7 @@ GameObject:
   - component: {fileID: 1141033025}
   - component: {fileID: 1141033027}
   - component: {fileID: 1141033026}
+  - component: {fileID: 1141033028}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2450,7 +2481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: -35}
+  m_AnchoredPosition: {x: 95.9, y: -35}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141033026
@@ -2552,6 +2583,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141033024}
   m_CullTransparentMesh: 1
+--- !u!114 &1141033028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141033024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "(\u0421\u041A\u041E\u0420\u041E)"
+  _enText: (SOON)
 --- !u!1 &1179149477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,6 +3162,7 @@ GameObject:
   - component: {fileID: 1514932414}
   - component: {fileID: 1514932416}
   - component: {fileID: 1514932415}
+  - component: {fileID: 1514932417}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3190,8 +3236,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3242,6 +3288,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514932413}
   m_CullTransparentMesh: 1
+--- !u!114 &1514932417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514932413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "\u0411\u0418\u0422\u0412\u0410 \u0417\u0410 \u0421\u0423\u0428\u0418"
+  _enText: BATTLE FOR SUSHI
 --- !u!1 &1545487568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,6 +3898,7 @@ GameObject:
   - component: {fileID: 1703025418}
   - component: {fileID: 1703025420}
   - component: {fileID: 1703025419}
+  - component: {fileID: 1703025421}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3884,7 +3945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u042E\u0416\u0415\u0422"
+  m_text: "\u0418\u0413\u0420\u0410\u0422\u042C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48f40bfc911e816419d910c41320cf2a, type: 2}
   m_sharedMaterial: {fileID: -6872058252166352567, guid: 48f40bfc911e816419d910c41320cf2a, type: 2}
@@ -3963,6 +4024,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703025417}
   m_CullTransparentMesh: 1
+--- !u!114 &1703025421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703025417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "\u0418\u0413\u0420\u0410\u0422\u042C"
+  _enText: PLAY
 --- !u!1 &1743503910
 GameObject:
   m_ObjectHideFlags: 0

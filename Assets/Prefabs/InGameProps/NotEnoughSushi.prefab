@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 2461587400294134819}
   - component: {fileID: 7484657029843660484}
   - component: {fileID: 2428103860385290593}
+  - component: {fileID: 3771829536908454441}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -271,3 +272,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3771829536908454441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186277436179073973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "\u041C\u0410\u041B\u041E \u0421\u0423\u0428\u0418!!!"
+  _enText: SUSHI!!!

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class UICatSetupMenu : MonoBehaviour
 {
@@ -19,19 +20,42 @@ public class UICatSetupMenu : MonoBehaviour
    {
       Instance = this;
       _catsAvailable = _maxCatsAvailable;
-      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      if (YG2.envir.language == "ru")
+      {
+         _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      }
+      else
+      {
+         _catsAvailableText.text = "CATS AVAILABLE : " + _catsAvailable;
+      }
+      
    }
 
    public void SetCatToSetup()
    {
       _catsAvailable--;
-      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      if (YG2.envir.language == "ru")
+      {
+         _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      }
+      else
+      {
+         _catsAvailableText.text = "CATS AVAILABLE : " + _catsAvailable;
+      }
    }
    
    public void RemoveCatFromSetup()
    {
       _catsAvailable++;
-      _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      
+      if (YG2.envir.language == "ru")
+      {
+         _catsAvailableText.text = "КОТОВ ДОСТУПНО : " + _catsAvailable;
+      }
+      else
+      {
+         _catsAvailableText.text = "CATS AVAILABLE : " + _catsAvailable;
+      }
    }
 
    private void SendCatData()
@@ -41,10 +65,6 @@ public class UICatSetupMenu : MonoBehaviour
          _chooseCatMenu.RetrieveCatData(_chosenCatsData);
          HideMenu();
          OnCatSetupApproved?.Invoke(this, EventArgs.Empty);
-      }
-      else
-      {
-         Debug.Log("Выберите всех котов");
       }
    }
 

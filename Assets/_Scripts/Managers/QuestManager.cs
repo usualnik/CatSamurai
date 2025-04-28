@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class QuestManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class QuestManager : MonoBehaviour
     //Level 1
     public event EventHandler OnFirstLevelQuestComplete;
     public event EventHandler OnFirstLevelQuestAlmostComplete;
-    private readonly string _firstSceneQuestText = "Продержитесь до прибытия подкрепления и отбейте атаку!";
+    private string _firstSceneQuestText;
     private float _firstSceneReinforcementTimer = 90f; // 1.5 min 
     private bool _firstSceneReinforcementTimerStarted;
     private bool _firstSceneTimerWarning = true;
@@ -32,7 +33,7 @@ public class QuestManager : MonoBehaviour
     //Level 2
     public event EventHandler OnSecondLevelQuestComplete;
     
-    private readonly string _secondSceneQuestText = "Накопите 1000 ед. суши и отбейте атаку!";
+    private string _secondSceneQuestText;
     private const int _secondSceneSushiAmountObjective = 1000;
     
     #endregion
@@ -42,7 +43,7 @@ public class QuestManager : MonoBehaviour
     //Level 3
     public event EventHandler OnThirdLevelQuestComplete;
     
-    private readonly string _thirdSceneQuestText = "Защитите мирных жителей";
+    private string _thirdSceneQuestText;
     
     #endregion
   
@@ -50,7 +51,7 @@ public class QuestManager : MonoBehaviour
 
     //Level 4
     public event EventHandler OnFourthLevelQuestComplete;
-    private readonly string _fourthSceneQuestText = "Убейте главарей енотов";
+    private string _fourthSceneQuestText;
     
     #endregion
     
@@ -59,7 +60,7 @@ public class QuestManager : MonoBehaviour
     //Level 5
     public event EventHandler OnFiveLevelQuestComplete;
 
-    private readonly string _fifthSceneQuestText = "Очистите ваши земли от енотов";
+    private string _fifthSceneQuestText;
     
     #endregion
     
@@ -69,7 +70,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnSixLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _sixthSceneQuestText = "Вернитесь в замок, добивая остатки врагов";
+    private string _sixthSceneQuestText;
     
     #endregion
     
@@ -79,7 +80,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnSevenLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _seventhSceneQuestText = "Защищайте лекарей, пока они не закончат свой ритуал";
+    private string _seventhSceneQuestText;
     
     #endregion
     
@@ -89,7 +90,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnEightLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _eightSceneQuestText = "Помогите разбойникам";
+    private string _eightSceneQuestText;
     
     #endregion
     
@@ -99,7 +100,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnNineLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _nineSceneQuestText = "Выберитесь из леса";
+    private string _nineSceneQuestText;
     
     #endregion
     
@@ -109,7 +110,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnTenLevelQuestComplete;
     //public event EventHandler OnSecondLevelQuestAlmostComplete;
     
-    private readonly string _tenSceneQuestText = "Захватите разведчика";
+    private string _tenSceneQuestText;
     
     #endregion
     
@@ -125,6 +126,36 @@ public class QuestManager : MonoBehaviour
     private void Start()
     {
         StoryTellingManager.Instance.OnStoryTellEnd += StoryTellingManager_OnStoryTellEnd;
+        
+        
+        //Translation
+        if (YG2.envir.language == "ru")
+        {
+             _firstSceneQuestText = "Продержитесь до прибытия подкрепления и отбейте атаку!";
+             _secondSceneQuestText = "Накопите 1000 ед. суши и отбейте атаку!";
+             _thirdSceneQuestText = "Защитите мирных жителей";
+             _fourthSceneQuestText = "Убейте главарей енотов";
+             _fifthSceneQuestText = "Очистите ваши земли от енотов";
+             _sixthSceneQuestText = "Вернитесь в замок, добивая остатки врагов";
+             _seventhSceneQuestText = "Защищайте лекарей, пока они не закончат свой ритуал";
+             _eightSceneQuestText = "Помогите разбойникам";
+             _nineSceneQuestText = "Выберитесь из леса";
+             _tenSceneQuestText = "Захватите разведчика";
+        }
+        else
+        {
+            _firstSceneQuestText = "Hold out until reinforcements arrive and repel the attack!";
+            _secondSceneQuestText = "Accumulate 1000 sushi and fight off the attack!";
+            _thirdSceneQuestText = "Protect civilians";
+            _fourthSceneQuestText = "Kill the raccoon leaders";
+            _fifthSceneQuestText = "Clear your lands of raccoons";
+            _sixthSceneQuestText = "Return to the castle, finishing off the remaining enemies";
+            _seventhSceneQuestText = "Protect the healers until they finish their ritual.";
+            _eightSceneQuestText = "Help the robbers";
+            _nineSceneQuestText = "Get out of the forest";
+            _tenSceneQuestText = "Capture the scout";
+        }
+        
     }
 
     private void OnDestroy()

@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class UICatBars : MonoBehaviour
 {
@@ -67,7 +68,16 @@ public class UICatBars : MonoBehaviour
 
     private void UpdateLevelUpText(int level)
     {
-        _leveltext.text = "Ур." + level;
+        if (YG2.envir.language == "ru")
+        {
+            _leveltext.text = "Ур." + level;
+
+        }
+        else
+        {
+            _leveltext.text = "Lv." + level;
+
+        }
     }
 
 }

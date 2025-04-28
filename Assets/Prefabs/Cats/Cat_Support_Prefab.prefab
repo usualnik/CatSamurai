@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 2606753267220270580}
   - component: {fileID: 8002492295532798627}
   - component: {fileID: 5587675828909486759}
+  - component: {fileID: 1266833170679266646}
   - component: {fileID: 6608797917482648937}
   m_Layer: 5
   m_Name: LevelText(TMP)
@@ -536,6 +537,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1266833170679266646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778728770032693021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1217ad7c06914798cbb4a9eace227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruText: "\u0423\u0440. 1"
+  _enText: Lv. 1
 --- !u!114 &6608797917482648937
 MonoBehaviour:
   m_ObjectHideFlags: 0
