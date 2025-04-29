@@ -455,7 +455,6 @@ GameObject:
   - component: {fileID: 8225792499002252399}
   - component: {fileID: 8744881137445954847}
   - component: {fileID: 7425877128046684689}
-  - component: {fileID: 6811950314150042539}
   - component: {fileID: 4494187912331209085}
   - component: {fileID: 1457179602232036076}
   m_Layer: 5
@@ -647,19 +646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 20
---- !u!114 &6811950314150042539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2328751245804191534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4435401aeeaeb4eb142621d69012d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _raycastPos: {fileID: 7782372639024389276}
 --- !u!114 &4494187912331209085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,8 +1093,9 @@ GameObject:
   - component: {fileID: 8052929439623094622}
   - component: {fileID: 4564357943608344304}
   - component: {fileID: 2337068895143457592}
+  - component: {fileID: 3617369161438423436}
   m_Layer: 5
-  m_Name: CatCheck
+  m_Name: CatAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1191,6 +1178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13997de2a1e48154bad6fcc1c6c52fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attackCooldown: 2
+  _meleeDamage: 50
+  _racoonMover: {fileID: 0}
+  _racoonsAnimation: {fileID: 0}
 --- !u!50 &2337068895143457592
 Rigidbody2D:
   serializedVersion: 5
@@ -1218,6 +1209,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3617369161438423436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842116598935890484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e461e9a7065074ba4416cb82a24a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5195631559698399615
 GameObject:
   m_ObjectHideFlags: 0

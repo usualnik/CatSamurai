@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6578075842696246817}
   - component: {fileID: 7962086480686302874}
   - component: {fileID: 8859770654172129822}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Cat_Mage_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2690177930180002158}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Tail_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 7884764458495800708}
   - component: {fileID: 863857082415228472}
   - component: {fileID: 686823350477892306}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: 'Background '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 2070301786211220054}
   - component: {fileID: 2368996631845045244}
   - component: {fileID: 6792157361954287094}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Rune
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 709463164392110478}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Bars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 4594918898972738707}
   - component: {fileID: 3865219448263238051}
   - component: {fileID: 7772906797992711749}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: RemoveIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 9110622676722005217}
   - component: {fileID: 8006127498516547982}
   - component: {fileID: 2450747057623724267}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fire_Torch (1)
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 4329846777079824257}
   - component: {fileID: 8314998096986995140}
   - component: {fileID: 8056872366186295989}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HealthBarBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5640002140632821004}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Mage
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 8725425733831974567}
   - component: {fileID: 1266985125907212386}
   - component: {fileID: 1386139532483302441}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fire_Torch
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 7451261133897232178}
   - component: {fileID: 1264885216902211503}
   - component: {fileID: 1568245886612512038}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818632790008318267}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: RayCastPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 2184401710192834602}
   - component: {fileID: 1518748401784893938}
   - component: {fileID: 8444353777447122017}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Tail
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2655960879450052607}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: R_Hand_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7563705460979467664}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: SpawnFireballPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 6887345425896949960}
   - component: {fileID: 85181009078914330}
   - component: {fileID: 5912691854668341995}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Head
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 7309430440934020092}
   - component: {fileID: 5013065240447256247}
   - component: {fileID: 8872697250671466696}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: R_Hand
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 2134526468095583466}
   - component: {fileID: 111268454843683271}
   - component: {fileID: 1348318696307388669}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: LevelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 6801422906367557695}
   - component: {fileID: 1986729175998042039}
   - component: {fileID: 1366188195568757045}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Body
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 6745998849260962657}
   - component: {fileID: 3378295890863963129}
   - component: {fileID: 1224356526484717427}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: XpBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 635397274505495025}
   - component: {fileID: 8926586451678176514}
   - component: {fileID: 3339032194356073828}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,7 +1546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2432830725522582068}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: MageVisuals
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 1220729047458889761}
   - component: {fileID: 4392477305822812604}
   - component: {fileID: 855993439666312740}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: LevelText(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

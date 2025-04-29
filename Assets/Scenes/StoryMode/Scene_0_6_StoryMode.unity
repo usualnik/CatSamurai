@@ -2563,7 +2563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0681e611454074cbd3d6bf52554e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sushi: 500
+  _sushi: 800
   _sushiText: {fileID: 777216936}
 --- !u!114 &316461876
 MonoBehaviour:
@@ -6619,7 +6619,7 @@ MonoBehaviour:
   m_text: "\u0421\u0423\u0428\u0418: 10000\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48f40bfc911e816419d910c41320cf2a, type: 2}
-  m_sharedMaterial: {fileID: -6872058252166352567, guid: 48f40bfc911e816419d910c41320cf2a, type: 2}
+  m_sharedMaterial: {fileID: -8267635136177161551, guid: 48f40bfc911e816419d910c41320cf2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14563,15 +14563,16 @@ MonoBehaviour:
   _element0: 80
   _element1: 20
   _element2: 0
-  _spawnRacoonsLeftAmount: 30
+  _spawnRacoonsLeftAmount: 25
   _spawnTimerMin: 2
   _spawnTimerMax: 5
-  _waveTimerMin: 15
-  _waveTimerMax: 20
+  _waveTimerMin: 40
+  _waveTimerMax: 45
   _inWaveSpawnTimerMin: 3
   _inWaveSpawnTimerMax: 5
-  _amountOfRacoonsInWaveMin: 5
-  _amountOfRacoonsInWaveMax: 7
+  _amountOfRacoonsInWaveMin: 3
+  _amountOfRacoonsInWaveMax: 5
+  _racoonOnSceneLeftAmount: 0
 --- !u!114 &1854674350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1809413941954333525, guid: 733e9ebccceeb834b8c6f1f811c1f84e, type: 3}

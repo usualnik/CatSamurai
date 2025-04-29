@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Heal CatData SO
   m_EditorClassIdentifier: 
   CatName: Heal
-  CatHealth: 50
+  CatHealth: 100
   CatPrice: 300
   CatPrefab: {fileID: 3096429303317564654, guid: 6a88d7133eccdc24d9e26636ba85118c, type: 3}
   UISprite: {fileID: -568921859592572885, guid: 00f95103c26f5174281fe5d9e2ed7ca1, type: 3}

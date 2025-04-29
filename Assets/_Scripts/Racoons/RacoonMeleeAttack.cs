@@ -1,45 +1,64 @@
+using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(RacoonsAnimation))]
 public class RacoonMeleeAttack : MonoBehaviour
 {
-    [SerializeField] private Transform _raycastPos;
-    private Vector2 rayOrigin;
-    private float _meleeAttackDistance = 50f;
-    private const float ATTACK_COOLDOWN = 2f;
-    private int _meleeDamage = 50;
+    [SerializeField] private float _attackCooldown = 2f;
+    [SerializeField] private int _meleeDamage = 50;
+
+    
+    private RacoonMover _racoonMover;
     private RacoonsAnimation _racoonsAnimation;
 
+    //private bool _isAttackOnCooldown;
+    private BaseCat _currentCat;
+
+    
     private void Start()
     {
-        _racoonsAnimation = GetComponent<RacoonsAnimation>();
-        InvokeRepeating(nameof(Attack), 0, ATTACK_COOLDOWN);
+       _racoonMover = GetComponentInParent<RacoonMover>();
+       _racoonsAnimation = GetComponentInParent<RacoonsAnimation>();
+       
+       gameObject.layer = GetComponentInParent<BaseRacoon>().gameObject.layer;
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //if (_isAttackOnCooldown) return;
+        
+        if (other.TryGetComponent(out BaseCat cat) && other.gameObject.layer == gameObject.layer)
+        {
+            _currentCat = cat;
+            StartCoroutine(Attack());
+        }
     }
 
-    private void Attack()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(new Vector2(_raycastPos.position.x, _raycastPos.position.y), Vector2.left, _meleeAttackDistance);
-        if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.layer == gameObject.layer
-                                          && raycastHit2D.collider.TryGetComponent(out BaseCat baseCat))
+        if (other.TryGetComponent(out BaseCat _))
         {
-            if (SFX.Instance != null)
-            {
-                SFX.Instance.PlayRandomMeleeAttackSound();
-            }
-
-            _racoonsAnimation.PlayAttackAnimation(true);
-            baseCat.TakeDamage(_meleeDamage);
-            
-        }
-        else
-        {
+            _racoonMover.CanMove(true);
             _racoonsAnimation.PlayAttackAnimation(false);
         }
-            
+    }
+
+    private IEnumerator Attack()
+    {
+        //_isAttackOnCooldown = true;
+        _racoonMover.CanMove(false);
+
+        if (SFX.Instance != null)
+            SFX.Instance.PlayRandomMeleeAttackSound();
+
+        _racoonsAnimation.PlayAttackAnimation(true);
+        _currentCat.TakeDamage(_meleeDamage);
+        
+        yield return new WaitForSeconds(_attackCooldown);
+        //_isAttackOnCooldown = false;
+        
+        if (_currentCat != null && GetComponent<Collider2D>().IsTouching(_currentCat.GetComponent<Collider2D>()))
+        {
+            StartCoroutine(Attack());
+        }
     }
 }
-
-
-
-

@@ -34,7 +34,7 @@ public class QuestManager : MonoBehaviour
     public event EventHandler OnSecondLevelQuestComplete;
     
     private string _secondSceneQuestText;
-    private const int _secondSceneSushiAmountObjective = 1000;
+    private const int _secondSceneSushiAmountObjective = 500;
     
     #endregion
     
@@ -132,7 +132,7 @@ public class QuestManager : MonoBehaviour
         if (YG2.envir.language == "ru")
         {
              _firstSceneQuestText = "Продержитесь до прибытия подкрепления и отбейте атаку!";
-             _secondSceneQuestText = "Накопите 1000 ед. суши и отбейте атаку!";
+             _secondSceneQuestText = "Накопите 500 ед. суши и отбейте атаку!";
              _thirdSceneQuestText = "Защитите мирных жителей";
              _fourthSceneQuestText = "Убейте главарей енотов";
              _fifthSceneQuestText = "Очистите ваши земли от енотов";
@@ -145,7 +145,7 @@ public class QuestManager : MonoBehaviour
         else
         {
             _firstSceneQuestText = "Hold out until reinforcements arrive and repel the attack!";
-            _secondSceneQuestText = "Accumulate 1000 sushi and fight off the attack!";
+            _secondSceneQuestText = "Accumulate 500 sushi and fight off the attack!";
             _thirdSceneQuestText = "Protect civilians";
             _fourthSceneQuestText = "Kill the raccoon leaders";
             _fifthSceneQuestText = "Clear your lands of raccoons";

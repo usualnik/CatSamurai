@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Support CatData SO
   m_EditorClassIdentifier: 
   CatName: Support
-  CatHealth: 50
+  CatHealth: 100
   CatPrice: 50
   CatPrefab: {fileID: 299884826339316275, guid: bfa9916c7fedc0a46a7836370ae574c7, type: 3}
   UISprite: {fileID: -2319647246568103040, guid: 4fd78a547377d1e4ea75b5dc1123f4cc, type: 3}

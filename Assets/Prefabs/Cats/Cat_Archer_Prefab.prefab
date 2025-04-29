@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7083245385472605269}
   - component: {fileID: 7902326998240493049}
   - component: {fileID: 5377162366800872118}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Cat_Archer_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6011135137469168219}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: SpawnArrowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7630162878719867876}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Bars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5027554489980740966}
   - component: {fileID: 8197394850336944571}
   - component: {fileID: 2839909344216461534}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: XpBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 6101880286754409888}
   - component: {fileID: 7066687262141524751}
   - component: {fileID: 2012026536696750121}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HealthBarBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 5396412552755313424}
   - component: {fileID: 7430202517311097407}
   - component: {fileID: 4645980637965491490}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Head
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982023721672544187}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Head_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4410715871358255080}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Tail_Bone
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 8247591083716439605}
   - component: {fileID: 1740834164064146135}
   - component: {fileID: 3559794217437189285}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Body
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 6924752505261349249}
   - component: {fileID: 7264613215620582278}
   - component: {fileID: 5680475491559737174}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: RemoveIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 8141900005604615202}
   - component: {fileID: 6106273868807910617}
   - component: {fileID: 3269471238815477305}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Tail
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 4223554025309924403}
   - component: {fileID: 9211949892008130615}
   - component: {fileID: 7240555574925561423}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 748149757876793408}
   - component: {fileID: 4661410755131942276}
   - component: {fileID: 8540766480855204669}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: LevelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8116432199462131753}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Support
   m_TagString: CatVisualElements
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 5960390796019570193}
   - component: {fileID: 6416651422600784857}
   - component: {fileID: 4447444494454232844}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 8533161668287786719}
   - component: {fileID: 6432895781609931636}
   - component: {fileID: 5345798189340240814}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 132896978476678534}
   - component: {fileID: 5837972920980120776}
   - component: {fileID: 5419805467633682871}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: LevelText(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
