@@ -96,7 +96,8 @@ public class UIChooseCatMenu : MonoBehaviour
 
   public void DeleteCurrentCat()
   {
-    Destroy(CurrentChosenCat.gameObject);
+    Destroy(CurrentChosenCat?.gameObject);
+    
   }
 
   public void NotEnoughSushiToBuyCat()

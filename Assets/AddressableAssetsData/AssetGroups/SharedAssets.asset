@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SharedAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: SharedAssets
+  m_GUID: 9b99f3b9d08b9274c861cf074d8c7849
+  m_SerializeEntries:
+  - m_GUID: 00d020efc4803f7458a09c7ee80ad569
+    m_Address: Assets/Animations/Archer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0216a081906be2c4bbd76fda4b2f279e
+    m_Address: Assets/Animations/UIChooseCatSetupMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e7962af57d1a9a4bb4344c2c54a4137
+    m_Address: Assets/Prefabs/Helpers
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 178e978d542c2aa449369dc4229b0d06
+    m_Address: Assets/ParticleSystem/New Render Texture.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bdcacdc7b5532f49824a28bd484798b
+    m_Address: Assets/Animations/Scene3CartEvent
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dda82b3a4c5459448bf7cfa687246fa
+    m_Address: Assets/Animations/Mage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23003693f3df11747b6b3ae6f02c1058
+    m_Address: Assets/Graphics/InGameBackgrounds
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 231a73f875172f9488f005a2a857d057
+    m_Address: Assets/Prefabs/Bullets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27e8e70ac3fbd204e95464dc694785c5
+    m_Address: Assets/Animations/Grid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 294a10f56e92e6949850feb22e902845
+    m_Address: Assets/Animations/InGameProps
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29d26a84ed95cf5488e654c500a10c4c
+    m_Address: Assets/Prefabs/Animation
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b6bad69c71c2be4cb5e0737d0a58e72
+    m_Address: Assets/Graphics/Cats
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3131c884ae6533e4bac72f83d5cfd5d0
+    m_Address: Assets/Prefabs/Cats
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3206f4fef79327749882d3226757af0f
+    m_Address: Assets/Prefabs/Canvases
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35cfa2d95408069419c15e5e952d7d01
+    m_Address: Assets/Animations/Kamikaze
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a38dcbc2f7f0754db2a1671c542c010
+    m_Address: Assets/Animations/Heal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4048173e3e3ccf04b99a0b320d7960ca
+    m_Address: Assets/Materials/HealLeaf_Mat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b9d7e91b8dd9a64d9f1364c404aefec
+    m_Address: Assets/Animations/Tutorial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51d8b9fdbee80b44caad6c47406928e2
+    m_Address: Assets/Animations/StoryTelling
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d524ed3c8eb93247af486abd181502c
+    m_Address: Assets/Animations/Quests
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d4833cd7dccdd148ab18143294a1d9d
+    m_Address: Assets/Graphics/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78be32003ed9a944893e119dee134acf
+    m_Address: Assets/Graphics/HelperImages
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 883fa8bed0370ae4384fef3eb63f8d69
+    m_Address: Assets/Audio/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 939d0e0b7c3ad3047aa145c9ae0612d4
+    m_Address: Assets/Animations/Tank
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba6ca8e5dd7891541b10f4d1c0f3ecfe
+    m_Address: Assets/Audio/Background
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c07f4fc32a1ecba48bb5c22c61bc4d1a
+    m_Address: Assets/Graphics/Racoons
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1580a01ae334ab49955536546bc7b8c
+    m_Address: Assets/Graphics/Tutorial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6fbc9bf697c43c4da3fe2fda81e6998
+    m_Address: Assets/Prefabs/Racoons
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c87d1d389e098d144a904d90286b7657
+    m_Address: Assets/Graphics/InGameProps
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9127dd8f5fa1144083b203cb18ca40d
+    m_Address: Assets/Prefabs/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9967e9fc84a54e438e2ddec3274470b
+    m_Address: Assets/Animations/Support
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc4cb2256015841448c2a3aa0a4a2cd6
+    m_Address: Assets/Prefabs/ParticleSystems
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e34cd7f38189de04e89f913673f4547d
+    m_Address: Assets/Animations/Racoons
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a39ecbcba89eb48af855a3bc9e7164
+    m_Address: Assets/Graphics/Fonts
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9ca38a75ff26d94ca2a283d09fff4ed
+    m_Address: Assets/Audio/SFX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0550735889155e4d921fa05424e313c
+    m_Address: Assets/Prefabs/Audio
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f503d526653b27349b915d87244206c9
+    m_Address: Assets/Prefabs/InGameProps
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6c6357cb7a4b92e45a9d77ff565e3817, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 019122d8a97c8224f85762511ab9110b, type: 2}
+    - {fileID: 11400000, guid: 6c56c984acc1cbe42b9535cb24a0c74f, type: 2}

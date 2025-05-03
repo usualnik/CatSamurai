@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
-        if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
+        if (SceneContext.Instance.GetSceneIndex() == FIRST_LEVEL_SCENE_INDEX)
         {
             _tutorial = _tutorialCanvas.GetComponent<Tutorial>();
             _tutorial.OnTutorialEnded += Tutorial_OnTutorialEnded;
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (SceneManager.GetActiveScene().buildIndex == FIRST_LEVEL_SCENE_INDEX)
+        if (SceneContext.Instance.GetSceneIndex() == FIRST_LEVEL_SCENE_INDEX)
         {
             _tutorial.OnTutorialEnded -= Tutorial_OnTutorialEnded;
         }
@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
 
     private void LevelComplete()
     {
-        SaveLoad.Instance.SaveCompletedLevelIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        SaveLoad.Instance.SaveCompletedLevelIndex(SceneContext.Instance.GetSceneIndex() + 1);
         
         Time.timeScale = 0f;
         _pauseCanvas.gameObject.SetActive(true);
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneContext.Instance.GetSceneIndex());
     }
 
     public void LoadMainMenu()
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneContext.Instance.GetSceneIndex() + 1);
     }
  
 }

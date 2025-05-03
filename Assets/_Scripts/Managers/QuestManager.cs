@@ -120,7 +120,7 @@ public class QuestManager : MonoBehaviour
     {
         Instance = this;
         
-        _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
     }
 
     private void Start()
@@ -398,8 +398,7 @@ public class QuestManager : MonoBehaviour
             case 11:
                 _questText.text = _tenSceneQuestText;
                 break;
-    
-            
+
         }
     }
     

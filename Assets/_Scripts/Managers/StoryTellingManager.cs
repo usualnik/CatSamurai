@@ -65,7 +65,8 @@ public class StoryTellingManager : MonoBehaviour
    {
       Instance = this;
       
-      _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+      _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
+
    }
 
    private void Start()

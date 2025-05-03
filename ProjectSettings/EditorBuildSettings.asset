@@ -42,5 +42,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryMode/Scene_0_9_StoryMode.unity
     guid: eb2d7e4f656acdd41997ad1ffa139f70
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ad969972aae4ddd4fb96bb915efb4a32, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
