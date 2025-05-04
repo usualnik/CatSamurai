@@ -64,9 +64,6 @@ public class StoryTellingManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
-      
-      _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
-
    }
 
    private void Start()
@@ -104,7 +101,8 @@ public class StoryTellingManager : MonoBehaviour
    private void TellStory()
    {
       _storyTellingCanvas.gameObject.SetActive(true);
-         
+      _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
+      
          switch (_currentSceneIndex)
          {
             case 0:

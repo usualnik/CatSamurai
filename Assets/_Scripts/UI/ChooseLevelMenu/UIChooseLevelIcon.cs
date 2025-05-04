@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class UIChooseLevelIcon : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private int _levelIndex;
+    [SerializeField] private GameObject _loadingScreen;
     public event EventHandler<UIChooseLevelIconEventArgs> OnClick;
 
     public class UIChooseLevelIconEventArgs : EventArgs
@@ -18,6 +19,8 @@ public class UIChooseLevelIcon : MonoBehaviour, IPointerClickHandler
         {
             UISound.Instance.PlayUISound();
         }
+        
+        _loadingScreen.SetActive(true);
         
         OnClick?.Invoke(this, new UIChooseLevelIconEventArgs(){Index = _levelIndex});
     }

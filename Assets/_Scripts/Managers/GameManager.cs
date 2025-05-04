@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverMenu;
     [SerializeField] private TextMeshProUGUI _gameOverText;
     [SerializeField] private GameObject _levelCompleteMenu;
+    [SerializeField] private GameObject _loadingPanel;
+    
 
     [Header("Canvases")] 
     [SerializeField] private Canvas _gameCanvas;
@@ -200,22 +203,26 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneContext.Instance.GetSceneIndex());
+        _loadingPanel.SetActive(true);
+        Addressables.LoadSceneAsync(SceneContext.Instance.GetSceneAddress(SceneContext.Instance.GetSceneIndex()), LoadSceneMode.Single, true);
     }
 
     public void LoadMainMenu()
     {
+        _loadingPanel.SetActive(true);
         SceneManager.LoadScene(MAIN_MENU_BUILD_INDEX);
     }
 
     public void LoadChooseLevelScene()
     {
+        _loadingPanel.SetActive(true);
        SceneManager.LoadScene(CHOOSE_LEVEL_SCENE_BUILD_INDEX);
     }
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneContext.Instance.GetSceneIndex() + 1);
+       _loadingPanel.SetActive(true);
+       Addressables.LoadSceneAsync(SceneContext.Instance.GetSceneAddress(SceneContext.Instance.GetSceneIndex() + 1), LoadSceneMode.Single, true);
     }
  
 }

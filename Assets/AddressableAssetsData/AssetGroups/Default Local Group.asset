@@ -14,57 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 14265dda077328d49bc022e86e0144d0
-  m_SerializeEntries:
-  - m_GUID: 0649260246a29574a9e8c0ecb9582b67
-    m_Address: Assets/Scenes/StoryMode/Scene_0_6_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 107a4b136f2f5ee428ed042ffb72ea9e
-    m_Address: Assets/Scenes/StoryMode/Scene_0_8_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 286da6d52e43e69469b530c9bdeb0b31
-    m_Address: Assets/Scenes/StoryMode/Scene_0_0_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2cda990e2423bbf4892e6590ba056729
-    m_Address: Assets/Scenes/StoryMode/Scene_0_2_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 31d6c52dad8185b48a2dcef3678203d1
-    m_Address: Assets/Scenes/StoryMode/Scene_0_4_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a9a9779630381304d92c99ee03f37c5c
-    m_Address: Assets/Scenes/StoryMode/Scene_0_7_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cddd8451c7aea354386da8747e08c8a3
-    m_Address: Assets/Scenes/StoryMode/Scene_0_5_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d61b442bebf1be84b88e4b2e86d814c6
-    m_Address: Assets/Scenes/StoryMode/Scene_0_1_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e345c45e805228342abc1aaca9617c46
-    m_Address: Assets/Scenes/StoryMode/Scene_0_3_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eb2d7e4f656acdd41997ad1ffa139f70
-    m_Address: Assets/Scenes/StoryMode/Scene_0_9_StoryMode.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c6357cb7a4b92e45a9d77ff565e3817, type: 2}
   m_SchemaSet:

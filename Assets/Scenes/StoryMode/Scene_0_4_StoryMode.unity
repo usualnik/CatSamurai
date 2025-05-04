@@ -7927,6 +7927,7 @@ MonoBehaviour:
   _gameOverMenu: {fileID: 8222446627717973451}
   _gameOverText: {fileID: 8222446627717973450}
   _levelCompleteMenu: {fileID: 8222446627717973453}
+  _loadingPanel: {fileID: 8222446627717973448}
   _gameCanvas: {fileID: 815329027046115504}
   _tutorialCanvas: {fileID: 7422322791410376580}
   _pauseCanvas: {fileID: 8222446627717973449}
@@ -15073,6 +15074,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5e67d0829a51e46a4abd51a7cfe688, type: 3}
+--- !u!1 &8222446627717973448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5968048116483037032, guid: fe5e67d0829a51e46a4abd51a7cfe688, type: 3}
+  m_PrefabInstance: {fileID: 8222446627717973447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &8222446627717973449 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 4990887521706795831, guid: fe5e67d0829a51e46a4abd51a7cfe688, type: 3}

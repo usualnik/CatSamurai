@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using YG;
 
 public class QuestManager : MonoBehaviour
@@ -118,9 +117,7 @@ public class QuestManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        
-        _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
+        Instance = this;      
     }
 
     private void Start()
@@ -155,6 +152,8 @@ public class QuestManager : MonoBehaviour
             _nineSceneQuestText = "Get out of the forest";
             _tenSceneQuestText = "Capture the scout";
         }
+        
+         
         
     }
 
@@ -309,6 +308,7 @@ public class QuestManager : MonoBehaviour
     
     private void Update()
     {
+        _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
         switch (_currentSceneIndex)
         {
             case 0:
@@ -358,6 +358,7 @@ public class QuestManager : MonoBehaviour
 
     private void ShowQuest()
     {
+        _currentSceneIndex = SceneContext.Instance.GetSceneIndex();
         _questWindow.SetActive(true);
         switch (_currentSceneIndex)
         {
