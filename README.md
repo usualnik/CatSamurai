@@ -6,15 +6,15 @@ A tower defense game inspired by Plants vs Zombies, fully developed from scratch
 
 ### Core Stack:
 
--Unity 2021 LTS (URP, 2D Physics)
+- Unity 2021 LTS (URP, 2D Physics)
 
--Addressables for dynamic asset loading
+- Addressables for dynamic asset loading
 
--ScriptableObjects for game data/configs
+- ScriptableObjects for game data/configs
 
--Event-driven architecture (UnityEvents + custom delegates)
+- Event-driven architecture (UnityEvents + custom delegates)
 
--YG SDK plugin for Yandex Game Platform integration
+- YG SDK plugin for Yandex Game Platform integration
 
 🎮 Key Features:
 5+ plant types with unique abilities (ScriptableObject-based)
