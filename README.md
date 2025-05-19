@@ -16,14 +16,15 @@ A tower defense game inspired by Plants vs Zombies, fully developed from scratch
 
 - YG SDK plugin for Yandex Game Platform integration
 
-🎮 Key Features:
-5+ plant types with unique abilities (ScriptableObject-based)
+### Key Features:
 
-3 zombie variants with behavior trees
+- 6 combat units (3 upgrade tiers each = 18 unique variations)
 
-Adaptive difficulty system
+- 3 enemy archetypes (Default (balanced) / Fast (low HP) / Tank (armored)
 
-Mobile-friendly UI (UGUI + touch controls)
+- 10 story levels with between-level narrative via animated text boxes
+
+- Mobile-friendly UI (UGUI + touch controls)
 
  [[Yandex Games link](https://yandex.ru/games/app/427803?lang=ru)]
 
