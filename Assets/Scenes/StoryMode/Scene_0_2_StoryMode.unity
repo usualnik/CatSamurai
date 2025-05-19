@@ -10772,7 +10772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4203079624195765992, guid: 1a828833b1e23be44ae6c2a72a9003a4, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5447209393078887721, guid: 1a828833b1e23be44ae6c2a72a9003a4, type: 3}
       propertyPath: m_Pivot.x
