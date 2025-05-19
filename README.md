@@ -1,1 +1,1 @@
-![](https://github.com/usualnik/CatSamurai/Assets/YandexGifRU.gif)
+![](Assets/YandexGifRU.gif)
