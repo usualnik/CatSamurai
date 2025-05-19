@@ -1,4 +1,4 @@
-# Cat samurai
+# 🐱 Cat samurai
 
 ## Plants vs Zombies-like Game
 
