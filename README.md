@@ -27,7 +27,9 @@ A tower defense game inspired by Plants vs Zombies, fully developed from scratch
 - Mobile-friendly UI (UGUI + touch controls)
 
 
+ [[Yandex Games link](https://yandex.ru/games/app/427803?lang=ru)]
+
 ![](Assets/YandexGifRU.gif)
 
 
- [[Yandex Games link](https://yandex.ru/games/app/427803?lang=ru)]
+
